@@ -43,13 +43,17 @@ struct ContentView: View {
 
                         Picker("Section", selection: $selectedSection) {
                             Text("Scanner").tag(0)
-                            Text("Findings").tag(1)
+                            Text("Exploits").tag(1)
+                            Text("Findings").tag(2)
                         }
                         .pickerStyle(.segmented)
 
-                        if selectedSection == 0 {
+                        switch selectedSection {
+                        case 0:
                             scannerSection
-                        } else {
+                        case 1:
+                            ExploitCatalogView()
+                        default:
                             findingsSection
                         }
                     }
