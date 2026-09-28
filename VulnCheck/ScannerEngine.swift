@@ -59,11 +59,13 @@ final class ScannerEngine {
             ))
 
             if let finalURL = httpResponse.url, finalURL.host != url.host {
+                let requestedHost = url.host ?? "?"
+                let destinationHost = finalURL.host ?? "?"
                 findings.append(Finding(
                     title: "Redirected to a different host",
                     severity: .info,
                     detail: "The request ended on a different host than requested.",
-                    evidence: "(url.host ?? "?") → (finalURL.host ?? "?")",
+                    evidence: "(requestedHost) → (destinationHost)",
                     remediation: "Verify that the cross-host redirect is intentional."
                 ))
             }
