@@ -37,11 +37,12 @@ enum SecurityChecks {
         }
 
         if headers["x-content-type-options"]?.lowercased() != "nosniff" {
+            let value = headers["x-content-type-options"] ?? "<missing>"
             findings.append(Finding(
                 title: "X-Content-Type-Options is missing or weak",
                 severity: .low,
                 detail: "The response does not explicitly use X-Content-Type-Options: nosniff.",
-                evidence: "X-Content-Type-Options: (headers["x-content-type-options"] ?? "<missing>")",
+                evidence: "X-Content-Type-Options: (value)",
                 remediation: "Set X-Content-Type-Options: nosniff."
             ))
         }
