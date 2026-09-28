@@ -34,11 +34,12 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(.systemGroupedBackground)
+                Color(.systemBackground)
                     .ignoresSafeArea()
 
-                ScrollView {
-                    VStack(spacing: 18) {
+                GeometryReader { geometry in
+                    ScrollView {
+                        VStack(spacing: 16) {
                         header
 
                         Picker("Section", selection: $selectedSection) {
@@ -58,8 +59,14 @@ struct ContentView: View {
                         }
                     }
                     .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
+                        .frame(maxWidth: .infinity, minHeight: geometry.size.height, alignment: .top)
+                        .padding(.horizontal, 16)
+                        .padding(.top, 8)
+                        .padding(.bottom, max(16, geometry.safeAreaInsets.bottom + 8))
+                    }
+                    .scrollIndicators(.hidden)
                 }
+                .ignoresSafeArea(edges: .bottom)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
