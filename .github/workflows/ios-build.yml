@@ -10,46 +10,49 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: ios-build-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
     name: Build VulnCheck
-    runs-on: macos-15
+    runs-on: macos-15-intel
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Show toolchain
+      - name: Show Xcode
         run: |
           xcodebuild -version
-          swift --version
+          xcrun --sdk iphoneos --show-sdk-version
 
       - name: Install XcodeGen
-        run: brew install xcodegen
+        run: |
+          brew update
+          brew install xcodegen
 
       - name: Generate Xcode project
-        run: xcodegen generate
-
-      - name: Build iOS app
         run: |
-          xcodebuild             -project VulnCheck.xcodeproj             -scheme VulnCheck             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             clean build
+          xcodegen generate
+          test -f VulnCheck.xcodeproj/project.pbxproj
 
-      - name: Create unsigned IPA
+      - name: Build iOS device app
+        run: |
+          set -o pipefail
+          xcodebuild             -project VulnCheck.xcodeproj             -scheme VulnCheck             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             clean build | tee build.log
+
+      - name: Package unsigned IPA
         run: |
           set -euo pipefail
           APP_PATH="build/Build/Products/Release-iphoneos/VulnCheck.app"
           test -d "$APP_PATH"
           rm -rf Payload VulnCheck.ipa
           mkdir Payload
-          cp -R "$APP_PATH" Payload/
+          cp -R "$APP_PATH" Payload/VulnCheck.app
           /usr/bin/zip -qry VulnCheck.ipa Payload
-          test -f VulnCheck.ipa
+          test -s VulnCheck.ipa
 
       - name: Upload IPA
+        if: success()
         uses: actions/upload-artifact@v5
         with:
           name: VulnCheck-IPA-unsigned
@@ -57,10 +60,11 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Upload app bundle
+      - name: Upload build log
+        if: always()
         uses: actions/upload-artifact@v5
         with:
-          name: VulnCheck-iOS-App
-          path: build/Build/Products/Release-iphoneos/VulnCheck.app
-          if-no-files-found: error
-          retention-days: 14
+          name: VulnCheck-build-log
+          path: build.log
+          if-no-files-found: ignore
+          retention-days: 7
