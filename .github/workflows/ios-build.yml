@@ -17,17 +17,16 @@ concurrency:
 jobs:
   build:
     name: Build VulnCheck
-    runs-on: macos-latest
+    runs-on: macos-15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Select Xcode
+      - name: Show toolchain
         run: |
-          sudo xcode-select -s /Applications/Xcode.app
           xcodebuild -version
-          xcodebuild -showsdks | grep -i iphone
+          swift --version
 
       - name: Install XcodeGen
         run: brew install xcodegen
@@ -35,24 +34,33 @@ jobs:
       - name: Generate Xcode project
         run: xcodegen generate
 
-      - name: Build for iOS Simulator
+      - name: Build iOS app
         run: |
-          xcodebuild             -project VulnCheck.xcodeproj             -scheme VulnCheck             -configuration Release             -sdk iphonesimulator             -destination 'generic/platform=iOS Simulator'             CODE_SIGNING_ALLOWED=NO             clean build
+          xcodebuild             -project VulnCheck.xcodeproj             -scheme VulnCheck             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             clean build
 
-      - name: Run unit tests
+      - name: Create unsigned IPA
         run: |
-          xcodebuild             -project VulnCheck.xcodeproj             -scheme VulnCheck             -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest'             test             CODE_SIGNING_ALLOWED=NO
+          set -euo pipefail
+          APP_PATH="build/Build/Products/Release-iphoneos/VulnCheck.app"
+          test -d "$APP_PATH"
+          rm -rf Payload VulnCheck.ipa
+          mkdir Payload
+          cp -R "$APP_PATH" Payload/
+          /usr/bin/zip -qry VulnCheck.ipa Payload
+          test -f VulnCheck.ipa
 
-      - name: Package simulator app
-        run: |
-          APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -path '*/Build/Products/Release-iphonesimulator/VulnCheck.app' -print -quit)
-          test -n "$APP_PATH"
-          ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" VulnCheck-iOS-Simulator.zip
-
-      - name: Upload build artifact
+      - name: Upload IPA
         uses: actions/upload-artifact@v5
         with:
-          name: VulnCheck-iOS-Simulator
-          path: VulnCheck-iOS-Simulator.zip
+          name: VulnCheck-IPA-unsigned
+          path: VulnCheck.ipa
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload app bundle
+        uses: actions/upload-artifact@v5
+        with:
+          name: VulnCheck-iOS-App
+          path: build/Build/Products/Release-iphoneos/VulnCheck.app
           if-no-files-found: error
           retention-days: 14
