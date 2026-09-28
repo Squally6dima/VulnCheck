@@ -1,0 +1,30 @@
+name: VulnCheck
+options:
+  bundleIdPrefix: com.squally6dima
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    TARGETED_DEVICE_FAMILY: "1,2"
+targets:
+  VulnCheck:
+    type: application
+    platform: iOS
+    sources:
+      - path: VulnCheck
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.squally6dima.VulnCheck
+        INFOPLIST_KEY_CFBundleDisplayName: VulnCheck
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.developer-tools
+    scheme:
+      testTargets:
+        - VulnCheckTests
+  VulnCheckTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: VulnCheckTests
+    dependencies:
+      - target: VulnCheck
