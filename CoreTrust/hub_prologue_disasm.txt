@@ -1,0 +1,212 @@
+======================================================================
+[HUB PROLOG DISASM] program = kcache.raw
+[HUB PROLOG DISASM] range   = fffffff008e90470 .. fffffff008e90750
+[HUB PROLOG DISASM] output  = /home/femboychik/femboychik/hub_prologue_disasm.txt
+======================================================================
+  0xfffffff008e90470  pacibsp
+  0xfffffff008e90474  sub sp,sp,#0x80
+  0xfffffff008e90478  stp x28,x27,[sp, #0x20]
+  0xfffffff008e9047c  stp x26,x25,[sp, #0x30]
+  0xfffffff008e90480  stp x24,x23,[sp, #0x40]
+  0xfffffff008e90484  stp x22,x21,[sp, #0x50]
+  0xfffffff008e90488  stp x20,x19,[sp, #0x60]
+  0xfffffff008e9048c  stp x29,x30,[sp, #0x70]
+  0xfffffff008e90490  add x29,sp,#0x70   [load/addr]
+  0xfffffff008e90494  cbz x0,0xfffffff008e907bc
+  0xfffffff008e90498  mov x25,x3
+  0xfffffff008e9049c  cbz x3,0xfffffff008e907c0
+  0xfffffff008e904a0  mov x20,x4
+  0xfffffff008e904a4  mov x21,x2
+  0xfffffff008e904a8  mov x22,x1
+  0xfffffff008e904ac  mov x24,x0
+  0xfffffff008e904b0  str xzr,[sp, #0x18]
+  0xfffffff008e904b4  bl 0xfffffff008eacaf8
+  0xfffffff008e904b8  mov x19,x0
+  0xfffffff008e904bc  mov x0,x24
+  0xfffffff008e904c0  bl 0xfffffff008eacb28
+  0xfffffff008e904c4  mov x23,x0
+  0xfffffff008e904c8  adrp x27,-0xff8192000   [load/addr]
+  0xfffffff008e904cc  ldr x27,[x27, #0x358]   [load/addr]
+      -> ref 0xfffffff007e6e358 (READ)
+  0xfffffff008e904d0  cbz x22,0xfffffff008e90520
+  0xfffffff008e904d4  mov x0,x22
+  0xfffffff008e904d8  mov x1,x21
+  0xfffffff008e904dc  bl 0xfffffff008eac638
+  0xfffffff008e904e0  mov x26,x0
+  0xfffffff008e904e4  mov x0,x25
+  0xfffffff008e904e8  mov x1,x20
+  0xfffffff008e904ec  bl 0xfffffff008eac638
+  0xfffffff008e904f0  mov x25,x0
+  0xfffffff008e904f4  cbz x26,0xfffffff008e90534
+  0xfffffff008e904f8  mov x0,x26
+  0xfffffff008e904fc  bl 0xfffffff008eac508
+  0xfffffff008e90500  cbz w0,0xfffffff008e90644
+  0xfffffff008e90504  ldr w8,[x27]   [load/addr]
+      -> ref 0xfffffff00ad543f8 (READ)
+  0xfffffff008e90508  cmp w8,#0xb
+  0xfffffff008e9050c  b.lt 0xfffffff008e905dc
+  0xfffffff008e90510  str x19,[sp]
+  0xfffffff008e90514  adrp x0,-0xff89cd000   [load/addr]
+  0xfffffff008e90518  add x0,x0,#0x5af   [load/addr]
+  0xfffffff008e9051c  b 0xfffffff008e905d0
+  0xfffffff008e90520  mov x0,x25
+  0xfffffff008e90524  mov x1,x20
+  0xfffffff008e90528  bl 0xfffffff008eac638
+  0xfffffff008e9052c  mov x25,x0
+  0xfffffff008e90530  mov x26,#0x0
+  0xfffffff008e90534  mov w28,#0x1
+  0xfffffff008e90538  mov x0,x24
+  0xfffffff008e9053c  bl 0xfffffff008e8b4c4
+  0xfffffff008e90540  cbz x0,0xfffffff008e905b4
+  0xfffffff008e90544  mov x20,x0
+  0xfffffff008e90548  bl 0xfffffff008eac668
+  0xfffffff008e9054c  cbz w0,0xfffffff008e90584
+  0xfffffff008e90550  mov x0,x24
+  0xfffffff008e90554  bl 0xfffffff008e8b58c
+  0xfffffff008e90558  cbz w0,0xfffffff008e90584
+  0xfffffff008e9055c  ldr w8,[x27]   [load/addr]
+      -> ref 0xfffffff00ad543f8 (READ)
+  0xfffffff008e90560  cmp w8,#0x3
+  0xfffffff008e90564  b.lt 0xfffffff008e9057c
+  0xfffffff008e90568  mov x8,x19
+  0xfffffff008e9056c  str x8,[sp]
+  0xfffffff008e90570  adrp x0,-0xff89cd000   [load/addr]
+  0xfffffff008e90574  add x0,x0,#0x62b   [load/addr]
+  0xfffffff008e90578  bl 0xfffffff008eabee8
+  0xfffffff008e9057c  mov w21,#0x0
+  0xfffffff008e90580  b 0xfffffff008e9075c
+  0xfffffff008e90584  tbz w28,#0x0,0xfffffff008e905e4
+  0xfffffff008e90588  mov x0,x23
+  0xfffffff008e9058c  bl 0xfffffff008eaca78
+  0xfffffff008e90590  cbz x0,0xfffffff008e9064c
+  0xfffffff008e90594  mov x24,x0
+  0xfffffff008e90598  bl 0xfffffff008eacaa8
+  0xfffffff008e9059c  cbz x0,0xfffffff008e90658
+  0xfffffff008e905a0  mov x25,x0
+  0xfffffff008e905a4  cmp x22,x0
+  0xfffffff008e905a8  b.eq 0xfffffff008e90660
+  0xfffffff008e905ac  mov x23,#0x0
+  0xfffffff008e905b0  b 0xfffffff008e90670
+  0xfffffff008e905b4  ldr w8,[x27]   [load/addr]
+      -> ref 0xfffffff00ad543f8 (READ)
+  0xfffffff008e905b8  cmp w8,#0xb
+  0xfffffff008e905bc  b.lt 0xfffffff008e905dc
+  0xfffffff008e905c0  mov x8,x19
+  0xfffffff008e905c4  str x8,[sp]
+  0xfffffff008e905c8  adrp x0,-0xff89cd000   [load/addr]
+  0xfffffff008e905cc  add x0,x0,#0x5ed   [load/addr]
+  0xfffffff008e905d0  bl 0xfffffff008eabee8
+  0xfffffff008e905d4  mov w21,#0x0
+  0xfffffff008e905d8  b 0xfffffff008e9077c
+  0xfffffff008e905dc  mov w21,#0x0
+  0xfffffff008e905e0  b 0xfffffff008e90798
+  0xfffffff008e905e4  mov x0,x26
+  0xfffffff008e905e8  bl 0xfffffff008eac538
+  0xfffffff008e905ec  cbz x0,0xfffffff008e90588
+  0xfffffff008e905f0  cbz x25,0xfffffff008e90588
+  0xfffffff008e905f4  mov x0,x25
+  0xfffffff008e905f8  bl 0xfffffff008eac538
+  0xfffffff008e905fc  cbz x0,0xfffffff008e90588
+  0xfffffff008e90600  mov x0,x26
+  0xfffffff008e90604  bl 0xfffffff008eac538
+  0xfffffff008e90608  mov x24,x0
+  0xfffffff008e9060c  mov x0,x25
+  0xfffffff008e90610  bl 0xfffffff008eac538
+  0xfffffff008e90614  mov x1,x0
+  0xfffffff008e90618  mov x0,x24
+  0xfffffff008e9061c  bl 0xfffffff008eacc18
+  0xfffffff008e90620  cbnz w0,0xfffffff008e90588
+  0xfffffff008e90624  ldr w8,[x27]   [load/addr]
+      -> ref 0xfffffff00ad543f8 (READ)
+  0xfffffff008e90628  cmp w8,#0x3
+  0xfffffff008e9062c  b.lt 0xfffffff008e9057c
+  0xfffffff008e90630  mov x8,x19
+  0xfffffff008e90634  str x8,[sp]
+  0xfffffff008e90638  adrp x0,-0xff89cd000   [load/addr]
+  0xfffffff008e9063c  add x0,x0,#0x668   [load/addr]
+  0xfffffff008e90640  b 0xfffffff008e90578
+  0xfffffff008e90644  mov w28,#0x0
+  0xfffffff008e90648  b 0xfffffff008e90538
+  0xfffffff008e9064c  mov x23,#0x0
+  0xfffffff008e90650  cbnz x22,0xfffffff008e90684
+  0xfffffff008e90654  b 0xfffffff008e906a0
+  0xfffffff008e90658  mov x23,#0x0
+  0xfffffff008e9065c  b 0xfffffff008e90678
+  0xfffffff008e90660  mov x0,x24
+  0xfffffff008e90664  bl 0xfffffff008e8b4c4
+  0xfffffff008e90668  mov x23,x0
+  0xfffffff008e9066c  str x0,[sp, #0x18]
+  0xfffffff008e90670  mov x0,x25
+  0xfffffff008e90674  bl 0xfffffff008eace08
+  0xfffffff008e90678  mov x0,x24
+  0xfffffff008e9067c  bl 0xfffffff008eacb38
+  0xfffffff008e90680  cbz x22,0xfffffff008e906a0
+  0xfffffff008e90684  cbnz x23,0xfffffff008e906a0
+  0xfffffff008e90688  add x0,sp,#0x18   [load/addr]
+  0xfffffff008e9068c  add x3,sp,#0x10   [load/addr]
+  0xfffffff008e90690  mov x1,x22
+  0xfffffff008e90694  mov x2,x21
+  0xfffffff008e90698  bl 0xfffffff008e8f2d4
+  0xfffffff008e9069c  ldr x23,[sp, #0x18]   [load/addr]
+      -> ref 0xStack[-0x68] (READ)
+  0xfffffff008e906a0  cbz x23,0xfffffff008e90758
+  0xfffffff008e906a4  adrp x1,-0xff89d1000   [load/addr]
+  0xfffffff008e906a8  add x1,x1,#0x170   [load/addr]
+  0xfffffff008e906ac  mov x0,x23
+  0xfffffff008e906b0  bl 0xfffffff008e97150
+  0xfffffff008e906b4  mov x22,x0
+  0xfffffff008e906b8  adrp x1,-0xff89d1000   [load/addr]
+  0xfffffff008e906bc  add x1,x1,#0xb3   [load/addr]
+  0xfffffff008e906c0  mov x0,x23
+  0xfffffff008e906c4  bl 0xfffffff008e97150
+  0xfffffff008e906c8  mov x24,x0
+  0xfffffff008e906cc  adrp x1,-0xff89cd000   [load/addr]
+  0xfffffff008e906d0  add x1,x1,#0x6a3   [load/addr]
+  0xfffffff008e906d4  mov x0,x23
+  0xfffffff008e906d8  bl 0xfffffff008e97150
+  0xfffffff008e906dc  mov x25,x0
+  0xfffffff008e906e0  adrp x1,-0xff89cd000   [load/addr]
+  0xfffffff008e906e4  add x1,x1,#0x6c4   [load/addr]
+  0xfffffff008e906e8  mov x0,x23
+  0xfffffff008e906ec  bl 0xfffffff008e97150
+  0xfffffff008e906f0  mov x26,x0
+  0xfffffff008e906f4  bl 0xfffffff008eac668
+  0xfffffff008e906f8  mov w21,#0x1
+  0xfffffff008e906fc  cbz w0,0xfffffff008e90734
+  0xfffffff008e90700  cbnz w26,0xfffffff008e90734
+  0xfffffff008e90704  cbnz w25,0xfffffff008e90734
+  0xfffffff008e90708  orr w8,w22,w24
+  0xfffffff008e9070c  tbz w8,#0x0,0xfffffff008e90734
+  0xfffffff008e90710  ldr w8,[x27]   [load/addr]
+      -> ref 0xfffffff00ad543f8 (READ)
+  0xfffffff008e90714  cmp w8,#0x3
+  0xfffffff008e90718  b.lt 0xfffffff008e90730
+  0xfffffff008e9071c  mov x8,x19
+  0xfffffff008e90720  str x8,[sp]
+  0xfffffff008e90724  adrp x0,-0xff89cd000   [load/addr]
+  0xfffffff008e90728  add x0,x0,#0x6e8   [load/addr]
+  0xfffffff008e9072c  bl 0xfffffff008eabee8
+  0xfffffff008e90730  mov w21,#0x0
+  0xfffffff008e90734  ldr x16,[x23]   [load/addr]
+  0xfffffff008e90738  mov x17,x23
+  0xfffffff008e9073c  movk x17,#0xcda1, LSL #48
+  0xfffffff008e90740  autda x16,x17
+  0xfffffff008e90744  ldr x8,[x16, #0x28]!   [load/addr]
+  0xfffffff008e90748  mov x0,x23
+  0xfffffff008e9074c  movk x16,#0x3a87, LSL #48
+  0xfffffff008e90750  blraa x8,x16   <<< INDIRECT
+    ^ context:
+      add x0,x0,#0x6e8
+      bl 0xfffffff008eabee8
+      mov w21,#0x0
+      ldr x16,[x23]
+      mov x17,x23
+      movk x17,#0xcda1, LSL #48
+      autda x16,x17
+      ldr x8,[x16, #0x28]!
+      mov x0,x23
+      movk x16,#0x3a87, LSL #48
+
+======================================================================
+[HUB PROLOG DISASM] instructions=185, indirect=1, load_like=31
+======================================================================

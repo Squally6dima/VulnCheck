@@ -1,0 +1,171 @@
+======================================================================
+[FINAL DECOMPILE] program = kcache.raw
+[FINAL DECOMPILE] output  = /home/femboychik/femboychik/final_decompile.txt
+======================================================================
+
+======================================================================
+[FN] fffffff00a723218 | LibTC_PPL_load_core
+======================================================================
+  entry    : 0xfffffff00a723218
+  name     : FUN_fffffff00a723218
+  size     : 124 bytes
+  params   : 10
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a723218
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+               ulong *param_8,undefined8 *param_9,ulong *param_10)
+
+{
+  bool bVar1;
+  ulong uVar2;
+  byte bVar3;
+  undefined1 extraout_q0 [16];
+  
+  bVar3 = 4;
+  while( true ) {
+    uVar2 = FUN_fffffff00a723294
+                      (param_1,param_2,param_3,param_4,param_5,param_6,(ulong)bVar3,param_7,param_8,
+                       param_9,param_10,0,0);
+    if ((int)uVar2 == 0) {
+      return;
+    }
+    if ((int)uVar2 == 0xb) break;
+    bVar1 = 0x1a < bVar3;
+    param_1 = extraout_q0;
+    bVar3 = bVar3 + 1;
+    if (bVar1) {
+      return;
+    }
+  }
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e97150 | AMFI_signing_attr_lookup
+======================================================================
+  entry    : 0xfffffff008e97150
+  name     : FUN_fffffff008e97150
+  size     : 392 bytes
+  params   : 8
+
+--- PSEUDOCODE ---
+
+/* WARNING: Removing unreachable block (ram,0xfffffff008e97240) */
+
+bool FUN_fffffff008e97150
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,
+               long param_8)
+
+{
+  short sVar1;
+  undefined1 auVar2 [16];
+  long *plVar3;
+  undefined *local_a0;
+  ulong local_98;
+  code *local_90;
+  undefined *local_88;
+  undefined8 *puStack_80;
+  undefined8 *local_78;
+  long local_70;
+  undefined8 local_68;
+  undefined8 *local_60;
+  undefined8 local_58;
+  undefined8 local_50;
+  undefined8 local_48;
+  undefined8 *local_40;
+  undefined8 local_38;
+  undefined2 local_30;
+  long local_28;
+  
+  if (param_8 == 0) {
+    param_8 = 0;
+  }
+  puStack_80 = &local_48;
+  local_48 = 0;
+  local_38 = DAT_fffffff00763a010;
+  local_30 = 1;
+  local_78 = &local_68;
+  local_68 = 0;
+  local_58 = DAT_fffffff00763a010;
+  local_50 = 0;
+  local_a0 = PTR_DAT_fffffff007e6e2d0;
+  local_98 = DAT_fffffff00763a018;
+  local_90 = FUN_fffffff008e972d8;
+  local_88 = &DAT_fffffff007e6a760;
+  local_70 = param_8;
+  if (param_8 == 0) {
+    local_70 = 0;
+  }
+  auVar2._8_8_ = 0;
+  auVar2._0_8_ = DAT_fffffff00763a018;
+  local_60 = local_78;
+  local_40 = puStack_80;
+  local_28 = param_8;
+  plVar3 = FUN_fffffff008e95a7c(auVar2,param_2,param_3,param_4,param_5,param_6,param_7);
+  (*local_90)(&local_a0,plVar3);
+  auVar2 = thunk_FUN_fffffff00a1ecc0c(param_7 + 0x18);
+  thunk_FUN_fffffff00a8ad960
+            (auVar2,param_2,param_3,param_4,param_5,param_6,(byte *)(local_40 + 3),2,0xee60,1,
+             local_60[3]);
+  sVar1 = *(short *)(local_40 + 3);
+  thunk_FUN_fffffff00a8adfc0((long)&local_68,8);
+  thunk_FUN_fffffff00a8adfc0((long)&local_48,8);
+  return sVar1 == 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e8f2d4 | AMFI_pre_coretrust_check
+======================================================================
+  entry    : 0xfffffff008e8f2d4
+  name     : CT_T5_FUN_fffffff008e8f2d4
+  size     : 112 bytes
+  params   : 11
+
+--- PSEUDOCODE ---
+
+/* CoreTrust/AMFI Tier 5 hits:
+     - code signature (T5 @ fffffff00763555f) */
+
+void CT_T5_FUN_fffffff008e8f2d4
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,
+               uint *param_8,long param_9,undefined ********param_10,undefined ********param_11)
+
+{
+  code *pcVar1;
+  long lVar2;
+  ulong unaff_x30;
+  undefined1 extraout_q0 [16];
+  
+  lVar2 = thunk_FUN_fffffff00a6ac7a8(param_8,param_9);
+  if (lVar2 == 0) {
+    *param_10 = (undefined *******)"no code signature";
+    return;
+  }
+  if (((unaff_x30 ^ unaff_x30 << 1) >> 0x3e & 1) != 0) {
+                    /* WARNING: Does not return */
+    pcVar1 = (code *)SoftwareBreakpoint(0xc471,0xfffffff008e8f328);
+    (*pcVar1)();
+  }
+  FUN_fffffff008e93340
+            (extraout_q0,param_2,param_3,param_4,param_5,param_6,param_7,lVar2,(long *)0x0,param_10,
+             param_11);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FINAL DECOMPILE] done. targets=3, not_found=0
+======================================================================

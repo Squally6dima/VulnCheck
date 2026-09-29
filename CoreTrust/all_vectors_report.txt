@@ -1,0 +1,744 @@
+========================================================================
+[ALL VECTORS] program = kcache.raw
+[ALL VECTORS] output  = /home/femboychik/femboychik/all_vectors_report.txt
+========================================================================
+
+========================================================================
+[SECTION 1 — DECOMPILE PRIORITY FUNCTIONS]
+========================================================================
+
+------------------------------------------------------------------------
+[FN] fffffff00a723528 | LibTC_real_parser_PPL
+------------------------------------------------------------------------
+  entry  : 0xfffffff00a723528
+  name   : FUN_fffffff00a723528
+  size   : 444 bytes
+  crypto : not found
+  memory : e, n, t, i, t, l, e, m, e, n, t
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff00a723528
+                (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+                undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 param_7,
+                undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11)
+
+{
+  bool bVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  bool bVar6;
+  uint uVar7;
+  undefined8 uVar8;
+  undefined **ppuVar10;
+  ulong *puVar11;
+  ulong uVar12;
+  ulong uVar13;
+  ulong uVar14;
+  undefined8 extraout_d0;
+  undefined8 extraout_var;
+  undefined4 uVar15;
+  undefined1 auVar16 [12];
+  undefined4 uVar17;
+  undefined1 auVar18 [12];
+  undefined1 auVar19 [16];
+  undefined8 local_b0;
+  undefined4 uStack_a8;
+  undefined4 uStack_a4;
+  undefined4 uStack_a0;
+  short local_9c;
+  undefined2 uStack_9a;
+  undefined8 uStack_98;
+  undefined8 local_90;
+  long lStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined **ppuVar9;
+  
+  uVar17 = param_4._0_4_;
+  auVar18 = param_4._4_12_;
+  uVar15 = param_3._0_4_;
+  auVar16 = param_3._4_12_;
+  uStack_a8 = 0;
+  uStack_98 = 0;
+  local_9c = 0;
+  uStack_9a = 0;
+  local_60 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  lStack_88 = 0;
+  local_90 = 0;
+  local_b0 = 0xc;
+  uStack_a4 = (undefined4)DAT_fffffff00700e090;
+  uStack_a0 = (undefined4)((ulong)DAT_fffffff00700e090 >> 0x20);
+  auVar19 = FUN_fffffff00a2a03fc
+                      ((long *)DAT_fffffff007c5b790,param_9,(undefined ********)0x0,
+                       (undefined ********)0x4180,(undefined ********)0x17,0);
+  ppuVar9 = auVar19._8_8_;
+  uVar14 = auVar19._0_8_;
+  if (auVar19._0_4_ == 0) {
+    FUN_fffffff00aa24d30(ppuVar9,param_8,(ulong)param_9);
+    uVar12 = 0x4180;
+    uVar13 = 0x17;
+    auVar19 = FUN_fffffff00a2a03fc
+                        ((long *)DAT_fffffff007c5b790,param_11,(undefined ********)0x0,
+                         (undefined ********)0x4180,(undefined ********)0x17,0);
+    ppuVar10 = auVar19._8_8_;
+    uVar14 = auVar19._0_8_;
+    if (auVar19._0_4_ == 0) {
+      puVar11 = param_11;
+      auVar19 = FUN_fffffff00aa24d30(ppuVar10,param_10,(ulong)param_11);
+      auVar2._4_12_ = auVar16;
+      auVar2._0_4_ = uVar15;
+      auVar4._4_12_ = auVar18;
+      auVar4._0_4_ = uVar17;
+      FUN_fffffff00a725dc0
+                (auVar19,param_2,auVar2,auVar4,param_5,param_6,(ulong)ppuVar9,(ulong)param_9,
+                 (long)puVar11,uVar12,uVar13);
+      auVar19._8_8_ = extraout_var;
+      auVar19._0_8_ = extraout_d0;
+      auVar3._4_12_ = auVar16;
+      auVar3._0_4_ = uVar15;
+      auVar5._4_12_ = auVar18;
+      auVar5._0_4_ = uVar17;
+      FUN_fffffff00a725dc0
+                (auVar19,param_2,auVar3,auVar5,param_5,param_6,(ulong)ppuVar10,(ulong)param_11,
+                 (long)puVar11,uVar12,uVar13);
+      uVar8 = FUN_fffffff00a725590((int *)&local_b0);
+      uVar7 = 0xb;
+      if (uStack_98._1_1_ != '#' || local_9c != 3) {
+        uVar7 = (uint)uVar8;
+      }
+      uVar14 = (ulong)uVar7;
+      if (uVar7 != 0) goto LAB_fffffff00a723648;
+      bVar6 = lStack_88 != 0;
+    }
+    else {
+LAB_fffffff00a723648:
+      bVar6 = false;
+    }
+    if (ppuVar10 != (undefined **)0x0) {
+      auVar19 = FUN_fffffff00a725ea4((ulong)ppuVar10,(ulong)param_11);
+      FUN_fffffff00a2a279c
+                (auVar19,param_2,uVar15,uVar17,param_5,param_6,DAT_fffffff007c5b790,ppuVar10,
+                 (ulong)param_11,0,(undefined **)0x0);
+    }
+    if ((int)uVar14 == 0) {
+      bVar1 = false;
+      if (ppuVar9 != (undefined **)0x0) {
+        bVar1 = bVar6;
+      }
+      if (!bVar1) {
+        return uVar14;
+      }
+      goto LAB_fffffff00a72367c;
+    }
+  }
+  if (ppuVar9 == (undefined **)0x0) {
+    return uVar14;
+  }
+LAB_fffffff00a72367c:
+  auVar19 = FUN_fffffff00a725ea4((ulong)ppuVar9,(ulong)param_9);
+  FUN_fffffff00a2a279c
+            (auVar19,param_2,uVar15,uVar17,param_5,param_6,DAT_fffffff007c5b790,ppuVar9,
+             (ulong)param_9,0,(undefined **)0x0);
+  return uVar14;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e86f50 | TC_selector2_real_loader
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e86f50
+  name   : FUN_fffffff008e86f50
+  size   : 16 bytes
+  crypto : not found
+  memory : e, n, t, i, t, l, e, m, e, n, t
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e86f50
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+               ulong *param_8,undefined8 param_9,undefined8 param_10,ulong param_11,ulong param_12)
+
+{
+  CT_T6_FUN_fffffff008e86cec
+            (param_1,param_2,param_3,param_4,param_5,param_6,param_7,param_8,(undefined8 *)0x0,
+             (ulong *)0x0,param_11,param_12);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e932d8 | CoreTrust_wrapper_0x10
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e932d8
+  name   : FUN_fffffff008e932d8
+  size   : 104 bytes
+  crypto : not found
+  memory : e, n, t, i, t, l, e, m, e, n, t
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+bool FUN_fffffff008e932d8(long param_1)
+
+{
+  ulong uVar1;
+  uint local_24;
+  
+  local_24 = 0x400;
+  uVar1 = thunk_FUN_fffffff00a3b16a4
+                    (*(undefined4 ***)(param_1 + 0x410),(undefined4 ***)(param_1 + 8),&local_24);
+  if ((int)uVar1 != 0) {
+    thunk_FUN_fffffff00a8c28ac((byte *)"AMFI: vn_getpath() returned %d.\n");
+    *(undefined1 *)(param_1 + 8) = 0;
+  }
+  return (int)uVar1 == 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e93270 | CoreTrust_wrapper_0x08
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e93270
+  name   : FUN_fffffff008e93270
+  size   : 104 bytes
+  crypto : not found
+  memory : e, n, t, i, t, l, e, m, e, n, t
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e93270(undefined8 *param_1)
+
+{
+  code *pcVar1;
+  ulong unaff_x30;
+  
+  *param_1 = &PTR_FUN_fffffff007e6a1d8;
+  if ((byte *)param_1[0x83] != (byte *)0x0) {
+    thunk_FUN_fffffff00a392474((byte *)param_1[0x83]);
+  }
+  if (((unaff_x30 ^ unaff_x30 << 1) >> 0x3e & 1) != 0) {
+                    /* WARNING: Does not return */
+    pcVar1 = (code *)SoftwareBreakpoint(0xc471,0xfffffff008e932d4);
+    (*pcVar1)();
+  }
+  thunk_FUN_fffffff00a1e5464((long *)&DAT_fffffff007e6b930,param_1);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff00a7239c8 | LibTC_lookup_fn
+------------------------------------------------------------------------
+  entry  : 0xfffffff00a7239c8
+  name   : CT_T6_FUN_fffffff00a7239c8
+  size   : 800 bytes
+  crypto : not found
+  memory : e, n, t, i, t, l, e, m, e, n, t
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+/* CoreTrust/AMFI Tier 6 hits:
+     - static trust cache (T6 @ fffffff007093fd2)
+     - trust cache (T6 @ fffffff007093e6a)
+     - trust cache (T6 @ fffffff007093eb7)
+     - trust cache (T6 @ fffffff007093f00)
+     - trust cache (T6 @ fffffff007093f43)
+     - trust cache (T6 @ fffffff007093f7c)
+     - trust cache (T6 @ fffffff007093fd2) */
+
+void CT_T6_FUN_fffffff00a7239c8
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6)
+
+{
+  uint *puVar1;
+  ulong *puVar2;
+  undefined8 uVar3;
+  ulong uVar4;
+  ulong uVar5;
+  ulong uVar6;
+  ulong uVar7;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 extraout_q0_01 [16];
+  undefined1 extraout_q0_02 [16];
+  undefined1 auVar8 [16];
+  undefined1 extraout_q0_03 [16];
+  uint local_7c;
+  ulong *local_78;
+  uint *local_70;
+  uint *local_68;
+  
+  local_78 = (ulong *)0x0;
+  local_70 = (uint *)0x0;
+  local_7c = 0;
+  DAT_fffffff007c08a08 = 1;
+  if (((DAT_fffffff007c089e0 != 0) &&
+      (uVar3 = FUN_fffffff00aa362e4
+                         (param_1,param_2,param_3,param_4,param_5,param_6,(uint *)0x0,
+                          "chosen/memory-map",(ulong *)&local_70), (int)uVar3 == 1)) &&
+     (uVar3 = FUN_fffffff00aa360d0
+                        (extraout_q0,param_2,param_3,param_4,param_5,param_6,local_70,"TrustCache",
+                         (ulong *)&local_78,&local_7c,DAT_fffffff007c5e380,
+                         DAT_fffffff007c5e390 - (long)DAT_fffffff007c5e380), puVar2 = local_78,
+     (int)uVar3 == 1)) {
+    if (local_7c != 0x10) {
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (extraout_q0_00,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"unexpected size for TrustCache property: %u != %zu @%s:%d");
+    }
+    local_68 = (uint *)0x0;
+    uVar3 = FUN_fffffff00aa025f0(*local_78,(long *)&local_68);
+    puVar1 = local_68;
+    if ((int)uVar3 != 0) {
+      puVar1 = (uint *)0x0;
+    }
+    uVar5 = puVar2[1];
+    if (uVar5 == 0) {
+      if ((puVar1 != (uint *)0x0) && (*puVar1 != 0)) {
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (extraout_q0_01,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)
+                   "trust cache segment is zero length but trust caches are available: %u @%s:%d");
+      }
+    }
+    else {
+      if (*puVar1 == 0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (extraout_q0_01,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)
+                   "trust cache segment isn\'t zero but no trust caches available: %lu @%s:%d");
+      }
+      if (uVar5 < (ulong)*puVar1 * 4 + 4) {
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (extraout_q0_01,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)"trust cache segment length smaller than required: %lu | %lu @%s:%d");
+      }
+      uVar7 = (ulong)puVar1[1];
+      uVar4 = (long)puVar1 + uVar7;
+      auVar8 = extraout_q0_01;
+      if (CARRY8((ulong)puVar1,uVar7)) {
+LAB_fffffff00a723be4:
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (auVar8,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)"trust cache module start overflows: %u | %lu | %u @%s:%d");
+      }
+      uVar5 = uVar5 + (long)puVar1;
+      if (uVar5 < uVar4 || uVar5 - uVar4 == 0) {
+LAB_fffffff00a723c80:
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (auVar8,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)"trust cache module begins after segment ends: %u | %lx | %lx @%s:%d");
+      }
+      uVar4 = (**(code **)(DAT_fffffff007c58cf0 + 0x120))
+                        (DAT_fffffff007c089e0,0,&DAT_fffffff007c08a10,uVar4,uVar5 - uVar4);
+      if ((uVar4 & 0xff00) != 0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_fffffff00aa0c4f8
+                  (extraout_q0_02,param_2,param_3,param_4,param_5,param_6,
+                   (byte *)"failed to load static trust cache module: %u @%s:%d");
+      }
+      DAT_fffffff007c08a09 = 1;
+      DAT_fffffff007c08e7c = DAT_fffffff007c08e7c + 1;
+      if (1 < *puVar1) {
+        uVar4 = 1;
+        auVar8 = extraout_q0_02;
+        do {
+          uVar6 = (ulong)(puVar1 + 1)[uVar4];
+          uVar7 = (long)puVar1 + uVar6;
+          if (CARRY8((ulong)puVar1,uVar6)) goto LAB_fffffff00a723be4;
+          if (uVar5 < uVar7 || uVar5 - uVar7 == 0) goto LAB_fffffff00a723c80;
+          if ((*(byte *)(DAT_fffffff007c089e0 + 9) & 1) != 0) {
+            uVar3 = FUN_fffffff00a1e541c((undefined8 *)&DAT_fffffff007c6bc70,0x8004);
+            uVar7 = (**(code **)(DAT_fffffff007c58cf0 + 0x120))
+                              (DAT_fffffff007c089e0,1,uVar3,uVar7,uVar5 - uVar7);
+            auVar8 = extraout_q0_03;
+            if ((uVar7 & 0xff00) == 0) {
+              DAT_fffffff007c08a09 = 1;
+              DAT_fffffff007c08e80 = DAT_fffffff007c08e80 + 1;
+            }
+          }
+          uVar4 = uVar4 + 1;
+        } while (uVar4 < *puVar1);
+      }
+    }
+  }
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[SECTION 3 — VTABLE RESOLVE & METHOD DECOMPILE]
+========================================================================
+
+--- img4_parser_vtable @ fffffff007c1b3e8 ---
+  not found: base pointer is NULL or unreadable
+
+========================================================================
+[SECTION 2 — DATA DUMPS]
+========================================================================
+
+--- img4_parser_base @ fffffff007c1b3e8 (size=0x100) ---
+  +0000: 0x0000000000000000
+  +0008: 0x0000000000000000
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000000
+  +0020: 0x0000000000000000
+  +0028: 0x0000000000000000
+  +0030: 0xfffffff00ad586b8
+  +0038: 0x0000000000000000
+  +0040: 0x0000000000000000
+  +0048: 0xfffffff00a8ae830  -> code: FUN_fffffff00a8ae830
+  +0050: 0xfffffff00a8ae7cc  -> code: FUN_fffffff00a8ae7cc
+  +0058: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +0060: 0xfffffff00a857f9c
+  +0068: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +0070: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +0078: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +0080: 0xfffffff00a8ae7bc  -> code: FUN_fffffff00a8ae7bc
+  +0088: 0xfffffff00a854cc8
+  +0090: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +0098: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +00a0: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +00a8: 0xfffffff00a8ae6f0  -> code: FUN_fffffff00a8ae6f0
+  +00b0: 0xfffffff00a857b90  -> code: FUN_fffffff00a857b90
+  +00b8: 0xfffffff00a98a6ec  -> code: FUN_fffffff00a98a6ec
+  +00c0: 0x0000000000000000
+  +00c8: 0x0000000000000000
+  +00d0: 0x0000000000000000
+  +00d8: 0xfffffff00a8aedf8  -> code: FUN_fffffff00a8aedf8
+  +00e0: 0xfffffff00a8aebe4  -> code: FUN_fffffff00a8aebe4
+  +00e8: 0xfffffff00a854d28  -> code: FUN_fffffff00a854d28
+  +00f0: 0xfffffff00a854d1c  -> code: FUN_fffffff00a854d1c
+  +00f8: 0xfffffff00a854d14  -> code: FUN_fffffff00a854d14
+
+--- selector_policy_table @ fffffff007c08a40 (size=0x300) ---
+  +0000: 0x0000000000000000
+  +0008: 0xffffffff0000ffff
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000000
+  +0020: 0xffffffff0000ffff
+  +0028: 0x0000000000000000
+  +0030: 0x0000000000000000
+  +0038: 0xffffffff00000002
+  +0040: 0x0000000064747273
+  +0048: 0xfffffff00709404d
+  +0050: 0xffffffff0000ffff
+  +0058: 0x000000006c747273
+  +0060: 0x0000000000000000
+  +0068: 0xffffffff00000005
+  +0070: 0x000000006c747273
+  +0078: 0xfffffff00709406b
+  +0080: 0xffffffff0000ffff
+  +0088: 0x0000000074726476
+  +0090: 0x0000000000000000
+  +0098: 0xffffffff00000006
+  +00a0: 0x000000006c747273
+  +00a8: 0xfffffff00709407c
+  +00b0: 0xffffffff00000007
+  +00b8: 0x000000006c747273
+  +00c0: 0xfffffff00709408d
+  +00c8: 0xffffffff0000ffff
+  +00d0: 0x000000006c747273
+  +00d8: 0x0000000000000000
+  +00e0: 0xffffffff00000200
+  +00e8: 0x000000006c747273
+  +00f0: 0xfffffff0070940ab
+  +00f8: 0xffffffff0000ffff
+  +0100: 0x000000006c747273
+  +0108: 0x0000000000000000
+  +0110: 0xffffffff00000202
+  +0118: 0x0000000074726262
+  +0120: 0xfffffff0070940c3
+  +0128: 0xffffffff00000100
+  +0130: 0x0000000074726373
+  +0138: 0xfffffff0070940dc
+  +0140: 0xffffffff00000100
+  +0148: 0x0000000074726361
+  +0150: 0xfffffff0070940ed
+  +0158: 0xffffffff00000105
+  +0160: 0x0000000074726361
+  +0168: 0xfffffff0070940ff
+  +0170: 0xffffffff00000200
+  +0178: 0x000000006c747273
+  +0180: 0xfffffff007094114
+  +0188: 0xffffffff00000107
+  +0190: 0x0000000074726162
+  +0198: 0xfffffff00709411f
+  +01a0: 0xffffffff00000106
+  +01a8: 0x0000000074726361
+  +01b0: 0xfffffff00709413f
+  +01b8: 0xffffffff00000105
+  +01c0: 0x0000000074726373
+  +01c8: 0xfffffff007094159
+  +01d0: 0xffffffff0000000a
+  +01d8: 0x000000006c747273
+  +01e0: 0xfffffff00709416d
+  +01e8: 0xffffffff00000009
+  +01f0: 0x000000006c747273
+  +01f8: 0xfffffff007094192
+  +0200: 0xffffffff00000108
+  +0208: 0x0000000067746364
+  +0210: 0xfffffff0070941b6
+  +0218: 0xffffffff0000010e
+  +0220: 0x0000000067746364
+  +0228: 0xfffffff0070941c7
+  +0230: 0x0000000200000107
+  +0238: 0x0000000074726162
+  +0240: 0xfffffff00709411f
+  +0248: 0xffffffff0000010d
+  +0250: 0x0000000067746364
+  +0258: 0xfffffff0070941e5
+  +0260: 0xffffffff0000010f
+  +0268: 0x0000000067746364
+  +0270: 0xfffffff007094204
+  +0278: 0xffffffff00000100
+  +0280: 0x0000000074726372
+  +0288: 0xfffffff007094227
+  +0290: 0x0000000000000000
+  +0298: 0xfffffff007c5e598
+  +02a0: 0x0000000000000000
+  +02a8: 0x80600001ffffffff
+  +02b0: 0xfffffff007c08cd0
+  +02b8: 0x0000000000000000
+  +02c0: 0xfffffff007094320
+  +02c8: 0x0000000000000000
+  +02d0: 0xfffffff0070bdf5a
+  +02d8: 0xfffffff00709432c
+  +02e0: 0x0000000000000001
+  +02e8: 0x0000000000000000
+  +02f0: 0x0000000000000000
+  +02f8: 0xfffffff007c08cd0
+
+--- tc_load_disabled_flag_ptr @ fffffff007c08e58 (size=0x40) ---
+  +0000: 0x0000000000000000
+  +0008: 0x0000000000000000
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000001
+  +0020: 0x0000000000000000
+  +0028: 0x0000000000000000
+  +0030: 0xfffffff007c5e5f0
+  +0038: 0x0000000000000000
+
+--- system_state_gate_globals @ fffffff00ad94570 (size=0x40) ---
+  +0000: 0x0000000000000000
+  +0008: 0x0000000000000000
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000000
+  +0020: 0x0000000000000000
+  +0028: 0x0000000000000000
+  +0030: 0x0000000000000000
+  +0038: 0x0000000000000000
+
+--- amfi_trust_cache_interface @ fffffff00ae8a128 (size=0x100) ---
+  +0000: 0xfffffff00763174b
+  +0008: 0x0000000000000001
+  +0010: 0x0100000000000000
+  +0018: 0x0000000000000000
+  +0020: 0xfffffff007c05a00
+  +0028: 0x0000000000000000
+  +0030: 0x80400002ffffffff
+  +0038: 0xfffffff007e690d4
+  +0040: 0x0000000000000000
+  +0048: 0xfffffff007632a15
+  +0050: 0xfffffff00a705260  -> code: FUN_fffffff00a705260
+  +0058: 0xfffffff0076306cb
+  +0060: 0xfffffff007632a2e
+  +0068: 0x0000000000000001
+  +0070: 0x0000000000002828
+  +0078: 0x0000000000000000
+  +0080: 0x0000000000000000
+  +0088: 0x0000000000000000
+  +0090: 0x0000000000000000
+  +0098: 0x0000000000000000
+  +00a0: 0x0000000000000000
+  +00a8: 0x0000000000000000
+  +00b0: 0x0000000000000000
+  +00b8: 0x0000000000000000
+  +00c0: 0x0000000000000000
+  +00c8: 0x0000000000000000
+  +00d0: 0x0000000000000000
+  +00d8: 0x0000000000000000
+  +00e0: 0x0000000000000000
+  +00e8: 0x0000000000000000
+  +00f0: 0x0000000000000000
+  +00f8: 0x0000000000000000
+
+--- task_vtable (IOTaskHasEntitlement at +0x1d8) @ fffffff007c58cf0 (size=0x300) ---
+  +0000: 0x0000000000000000
+  +0008: 0xfffffff00ad582e0
+  +0010: 0xfffffff00ad58308
+  +0018: 0x0000000000000000
+  +0020: 0x0000000000000000
+  +0028: 0xfffffff00a9a06a4  -> code: FUN_fffffff00a9a06a4
+  +0030: 0xfffffff00a9a0640  -> code: FUN_fffffff00a9a0640
+  +0038: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +0040: 0xfffffff00a857f9c
+  +0048: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +0050: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +0058: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +0060: 0xfffffff00a9a0630  -> code: FUN_fffffff00a9a0630
+  +0068: 0xfffffff00a854cc8
+  +0070: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +0078: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +0080: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +0088: 0xfffffff00a8b61b4  -> code: FUN_fffffff00a8b61b4
+  +0090: 0xfffffff00a963f5c  -> code: FUN_fffffff00a963f5c
+  +0098: 0xfffffff00a963e78  -> code: FUN_fffffff00a963e78
+  +00a0: 0xfffffff00a8d0180  -> code: FUN_fffffff00a8d0180
+  +00a8: 0xfffffff00a8cffa0  -> code: FUN_fffffff00a8cffa0
+  +00b0: 0xfffffff00a8cfdc0  -> code: FUN_fffffff00a8cfdc0
+  +00b8: 0xfffffff00a8cfcfc  -> code: FUN_fffffff00a8cfcfc
+  +00c0: 0xfffffff00a8cfc38  -> code: FUN_fffffff00a8cfc38
+  +00c8: 0xfffffff00a8cfb1c  -> code: FUN_fffffff00a8cfb1c
+  +00d0: 0xfffffff00a963d60  -> code: FUN_fffffff00a963d60
+  +00d8: 0xfffffff00a8cf6bc  -> code: FUN_fffffff00a8cf6bc
+  +00e0: 0xfffffff00a8cf490  -> code: FUN_fffffff00a8cf490
+  +00e8: 0xfffffff00a8cf408  -> code: FUN_fffffff00a8cf408
+  +00f0: 0xfffffff00a8cf380  -> code: FUN_fffffff00a8cf380
+  +00f8: 0xfffffff00a8cf2c8  -> code: FUN_fffffff00a8cf2c8
+  +0100: 0xfffffff00a8cf208  -> code: FUN_fffffff00a8cf208
+  +0108: 0xfffffff00a8cf0ec  -> code: FUN_fffffff00a8cf0ec
+  +0110: 0xfffffff00a8cefd0  -> code: FUN_fffffff00a8cefd0
+  +0118: 0xfffffff00a8ceed0  -> code: FUN_fffffff00a8ceed0
+  +0120: 0xfffffff00a8cee54  -> code: FUN_fffffff00a8cee54
+  +0128: 0xfffffff00a8cedd8  -> code: FUN_fffffff00a8cedd8
+  +0130: 0xfffffff00a8cecd8  -> code: FUN_fffffff00a8cecd8
+  +0138: 0xfffffff00a8cec58  -> code: FUN_fffffff00a8cec58
+  +0140: 0xfffffff00a8cebd8  -> code: FUN_fffffff00a8cebd8
+  +0148: 0xfffffff00a8ce9f8  -> code: FUN_fffffff00a8ce9f8
+  +0150: 0xfffffff00a8ce818  -> code: FUN_fffffff00a8ce818
+  +0158: 0xfffffff00a8ce638  -> code: FUN_fffffff00a8ce638
+  +0160: 0xfffffff00a8ce510  -> code: FUN_fffffff00a8ce510
+  +0168: 0xfffffff00a8ce3e8  -> code: FUN_fffffff00a8ce3e8
+  +0170: 0xfffffff00a8ce2c0  -> code: FUN_fffffff00a8ce2c0
+  +0178: 0xfffffff00a8ce140  -> code: FUN_fffffff00a8ce140
+  +0180: 0xfffffff00a8e6004  -> code: thunk_FUN_fffffff00a8cdff4
+  +0188: 0xfffffff00a8cdfe4  -> code: FUN_fffffff00a8cdfe4
+  +0190: 0xfffffff00a8cddcc  -> code: FUN_fffffff00a8cddcc
+  +0198: 0xfffffff00a8cdc14  -> code: FUN_fffffff00a8cdc14
+  +01a0: 0xfffffff00a8cdbb4  -> code: FUN_fffffff00a8cdbb4
+  +01a8: 0xfffffff00a8cd99c  -> code: FUN_fffffff00a8cd99c
+  +01b0: 0xfffffff00a8cd7e4  -> code: FUN_fffffff00a8cd7e4
+  +01b8: 0xfffffff00a8cd784  -> code: FUN_fffffff00a8cd784
+  +01c0: 0xfffffff00a8cd5ac  -> code: FUN_fffffff00a8cd5ac
+  +01c8: 0xfffffff00a8cd3d4  -> code: FUN_fffffff00a8cd3d4
+  +01d0: 0xfffffff00a8cd1dc  -> code: FUN_fffffff00a8cd1dc
+  +01d8: 0xfffffff00a8cd020  -> code: FUN_fffffff00a8cd020
+  +01e0: 0xfffffff00a8ccbf4  -> code: FUN_fffffff00a8ccbf4
+  +01e8: 0xfffffff00a8cca38  -> code: FUN_fffffff00a8cca38
+  +01f0: 0xfffffff00a8cc8a0  -> code: FUN_fffffff00a8cc8a0
+  +01f8: 0xfffffff00a8cc6e4  -> code: FUN_fffffff00a8cc6e4
+  +0200: 0xfffffff00a8cc5d8  -> code: FUN_fffffff00a8cc5d8
+  +0208: 0xfffffff00a8cbaa8  -> code: FUN_fffffff00a8cbaa8
+  +0210: 0xfffffff00a8cb984  -> code: FUN_fffffff00a8cb984
+  +0218: 0xfffffff00a8cb864  -> code: FUN_fffffff00a8cb864
+  +0220: 0xfffffff00a8cb668  -> code: FUN_fffffff00a8cb668
+  +0228: 0xfffffff00a8cb588  -> code: FUN_fffffff00a8cb588
+  +0230: 0xfffffff00a8cb48c  -> code: FUN_fffffff00a8cb48c
+  +0238: 0xfffffff00a8cb3e4  -> code: FUN_fffffff00a8cb3e4
+  +0240: 0xfffffff00a8cb358  -> code: FUN_fffffff00a8cb358
+  +0248: 0xfffffff00a8cb284  -> code: FUN_fffffff00a8cb284
+  +0250: 0xfffffff00a8cb1e4  -> code: FUN_fffffff00a8cb1e4
+  +0258: 0xfffffff00a8cb13c  -> code: FUN_fffffff00a8cb13c
+  +0260: 0xfffffff00a8ca82c  -> code: FUN_fffffff00a8ca82c
+  +0268: 0xfffffff00a8ca6ec  -> code: FUN_fffffff00a8ca6ec
+  +0270: 0xfffffff00a8c9f30  -> code: FUN_fffffff00a8c9f30
+  +0278: 0xfffffff00a8e5f54  -> code: FUN_fffffff00a8e5f54
+  +0280: 0xfffffff00a8e5eb0  -> code: FUN_fffffff00a8e5eb0
+  +0288: 0xfffffff00a8e5e20  -> code: FUN_fffffff00a8e5e20
+  +0290: 0xfffffff00a8e5cc4  -> code: FUN_fffffff00a8e5cc4
+  +0298: 0xfffffff00a90dde4  -> code: FUN_fffffff00a90dde4
+  +02a0: 0xfffffff00a90f464  -> code: FUN_fffffff00a90f464
+  +02a8: 0xfffffff00a8e5b3c  -> code: FUN_fffffff00a8e5b3c
+  +02b0: 0xfffffff00a8e587c  -> code: FUN_fffffff00a8e587c
+  +02b8: 0xfffffff00a8e55b8  -> code: FUN_fffffff00a8e55b8
+  +02c0: 0xfffffff00a8e55ac  -> code: FUN_fffffff00a8e55ac
+  +02c8: 0xfffffff00a8de7f0  -> code: FUN_fffffff00a8de7f0
+  +02d0: 0xfffffff00a8de7e8  -> code: FUN_fffffff00a8de7e8
+  +02d8: 0xfffffff00a9a0538  -> code: FUN_fffffff00a9a0538
+  +02e0: 0xfffffff00a9a04b0  -> code: FUN_fffffff00a9a04b0
+  +02e8: 0xfffffff00a8de550  -> code: FUN_fffffff00a8de550
+  +02f0: 0xfffffff00a8de324  -> code: FUN_fffffff00a8de324
+  +02f8: 0xfffffff00a8de27c  -> code: FUN_fffffff00a8de27c
+
+========================================================================
+[SECTION 4 — WRITE XREFS ON GATE GLOBALS]
+========================================================================
+
+--- xrefs to fffffff007c08e58 ---
+  WRITES (1):
+  <- 0xfffffff00a726388 [WRITE] FUN_fffffff00a725f74 @ fffffff00a725f74
+  OTHER (2):
+  <- 0xfffffff00a723468 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+  <- 0xfffffff00a724290 [READ] FUN_fffffff00a724288 @ fffffff00a724288
+
+--- xrefs to fffffff007c08a40 ---
+  WRITES (0):
+    not found
+  OTHER (1):
+  <- 0xfffffff00a723330 [DATA] FUN_fffffff00a723294 @ fffffff00a723294
+
+--- xrefs to fffffff007c1b3e8 ---
+  WRITES (1):
+  <- 0xfffffff00a8ad800 [WRITE] FUN_fffffff00a8ad7f0 @ fffffff00a8ad7f0
+  OTHER (8):
+  <- 0xfffffff00a723304 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+  <- 0xfffffff00a723410 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+  <- 0xfffffff00a7a3f20 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3dd4 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3e04 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3e1c [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a722f64 [READ] FUN_fffffff00a722f50 @ fffffff00a722f50
+  <- 0xfffffff00a8ad7f8 [READ] FUN_fffffff00a8ad7f0 @ fffffff00a8ad7f0
+
+--- xrefs to fffffff00ad94570 ---
+  WRITES (1):
+  <- 0xfffffff00a7234b4 [WRITE] FUN_fffffff00a723294 @ fffffff00a723294
+  OTHER (1):
+  <- 0xfffffff00a7233b4 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+
+========================================================================
+[SECTION 5 — INDIRECT CALLS IN TARGET FUNCTIONS]
+========================================================================
+
+--- indirect calls in fffffff00a723528 ---
+  not found: no indirect calls
+
+--- indirect calls in fffffff008e86f50 ---
+  not found: no indirect calls
+
+========================================================================
+[DONE]
+========================================================================

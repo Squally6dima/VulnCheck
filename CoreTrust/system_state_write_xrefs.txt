@@ -1,0 +1,20 @@
+======================================================================
+[SYSTEM STATE WRITE XREFS] program = kcache.raw
+[SYSTEM STATE WRITE XREFS] target  = fffffff007e68c10
+[SYSTEM STATE WRITE XREFS] output  = /home/femboychik/femboychik/system_state_write_xrefs.txt
+======================================================================
+  total refs : 4
+  writes     : 2
+  reads      : 2
+  other      : 0
+
+--- WRITES ---
+  <- 0xfffffff008e86bb0  [WRITE]  in CT_T6_FUN_fffffff008e86b4c @ fffffff008e86b4c
+  <- 0xfffffff008e86c98  [WRITE]  in CT_T6_FUN_fffffff008e86b4c @ fffffff008e86b4c
+
+--- READS ---
+  <- 0xfffffff008e86d50  [READ]  in CT_T6_FUN_fffffff008e86cec @ fffffff008e86cec
+  <- 0xfffffff008e86fd8  [READ]  in FUN_fffffff008e86f60 @ fffffff008e86f60
+
+--- OTHER ---
+  not found

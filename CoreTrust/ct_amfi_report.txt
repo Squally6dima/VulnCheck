@@ -1,0 +1,297 @@
+======================================================================
+[CT/AMFI Hunter] program = kcache.raw
+[CT/AMFI Hunter] output  = /home/femboychik/femboychik/ct_amfi_report.txt
+======================================================================
+
+--- Tier 1 (6 needles) ---
+  not found: CTEvaluateAMFICodeSignature
+  not found: CTParseAmfiInputs
+  not found: CTEvaluateSignature
+  not found: ct_validate_cert_chain
+  not found: CTVerifyConstraints
+  [hit ] T1 @ fffffff0070074a8 : com.apple.kext.CoreTrust
+  [hit ] T1 @ fffffff00709443e : coretrust interface not available @%s:%d
+  [hit ] T1 @ fffffff0070af164 : coretrust interface already set @%s:%d
+  [hit ] T1 @ fffffff0070af18b : coretrust.c
+  [hit ] T1 @ fffffff0079258b7 : Image4: manifest evaluation: coreTrustVerifyChain failure: 0x%0X
+
+  [hit ] T1 @ fffffff0079258f9 : Image4: manifest evaluation: coreTrustVerifySignature failure: 0x%0X
+
+
+--- Tier 2 (12 needles) ---
+  not found: amfi_check_signature
+  not found: AMFI_check_signature
+  not found: hook_policy_check_signature
+  not found: AMFITrustCacheContains
+  not found: trustCacheLookupHash
+  not found: amfi_check_dyld_policy_self
+  [hit ] T2 @ fffffff0070060d8 : com.apple.driver.AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff0070af27a : AppleMobileFileIntegrity interface already set @%s:%d
+  [hit ] T2 @ fffffff00762d727 : AppleMobileFileIntegrityUserClient
+  [hit ] T2 @ fffffff00762d74a : site.AppleMobileFileIntegrityUserClient
+  [hit ] T2 @ fffffff00762d7ba : virtual IOReturn AppleMobileFileIntegrityUserClient::externalMethod(uint32_t, IO
+  [hit ] T2 @ fffffff00762d86f : static IOReturn AppleMobileFileIntegrityUserClient::setDenylist(OSObject *, void
+  [hit ] T2 @ fffffff00762d8e0 : %s: target is not AppleMobileFileIntegrity object
+
+  [hit ] T2 @ fffffff00762da13 : static IOReturn AppleMobileFileIntegrityUserClient::copyBytesFromInputArguments(
+  [hit ] T2 @ fffffff00762dc2e : static IOReturn AppleMobileFileIntegrityUserClient::loadTrustCache(OSObject *, v
+  [hit ] T2 @ fffffff00762ddd0 : static IOReturn AppleMobileFileIntegrityUserClient::loadCompilationServiceCodeDi
+  [hit ] T2 @ fffffff00762deed : static IOReturn AppleMobileFileIntegrityUserClient::isCdhashInTrustCache(OSObjec
+  [hit ] T2 @ fffffff00763069c : AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff007632a9e : AppleMobileFileIntegrity.cpp
+  [hit ] T2 @ fffffff0076330d0 : site.AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff007633113 : virtual bool AppleMobileFileIntegrity::start(IOService *)
+  [hit ] T2 @ fffffff0076331b1 : virtual void AppleMobileFileIntegrity::stop(IOService *)
+  [hit ] T2 @ fffffff00763336f : kern_return_t _initializeAppleMobileFileIntegrity()
+  [hit ] T2 @ fffffff007825e3b : AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff00786e6bd : AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff007b3131c : AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff00ae89cb8 : com.apple.driver.AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff0070060d8 : com.apple.driver.AppleMobileFileIntegrity
+  [hit ] T2 @ fffffff00ae89cb8 : com.apple.driver.AppleMobileFileIntegrity
+  not found: cs_validate_page
+  not found: cs_verify_fn
+  [hit ] T2 @ fffffff0070955ff : cs_blob zone
+  [hit ] T2 @ fffffff007095705 : cs_blob_count
+  [hit ] T2 @ fffffff00709573a : cs_blob_size
+  [hit ] T2 @ fffffff007095770 : cs_blob_count_peak
+  [hit ] T2 @ fffffff0070957a7 : cs_blob_size_peak
+  [hit ] T2 @ fffffff0070957db : cs_blob_size_max
+  [hit ] T2 @ fffffff0070958b3 : cs_blob vnode backref mismatch: blob=%p, vp=%p, blob->csb_vnode=%p @%s:%d
+  [hit ] T2 @ fffffff00709593a : validated cs_blob has no code directory @%s:%d
+  [hit ] T2 @ fffffff007631348 : AMFI: %s: required cs_blobs not available
+
+  [hit ] T2 @ fffffff0076323da : AMFI: profile not registered with XNU monitor without cs_blob
+
+  [hit ] T2 @ fffffff007634895 : AMFI: %s: unable to obtain cs_blob on current_proc
+
+  [hit ] T2 @ fffffff00708cbda : log cdhashes for all platform binary executions
+  [hit ] T2 @ fffffff00708d38a : executable_cdhash=
+  [hit ] T2 @ fffffff00708e183 : proc_getcdhash_with_length: NULL length parameter @%s:%d
+  [hit ] T2 @ fffffff007095813 : ubc_cs_getcdhash: NULL cdhash parameter @%s:%d
+  [hit ] T2 @ fffffff0070dc528 : (%u): failed to append the cdhash: %d
+
+  [hit ] T2 @ fffffff0070dc54f : (%u): failed to get the cdhash
+
+  [hit ] T2 @ fffffff0070e9937 : CS Platform Exec Logging: Executing platform signed binary '%s' with cdhash %s
+
+  [hit ] T2 @ fffffff00762de5d : com.apple.private.amfi.can-load-cdhash
+  [hit ] T2 @ fffffff00762deed : static IOReturn AppleMobileFileIntegrityUserClient::isCdhashInTrustCache(OSObjec
+  [hit ] T2 @ fffffff00762df67 : %s: Process %d is checking if a cdhash is in the trust cache
+
+  [hit ] T2 @ fffffff00762ec83 : com.apple.private.amfi.can-execute-cdhash
+  [hit ] T2 @ fffffff00762f55c : cdhash
+  [hit ] T2 @ fffffff00762f563 : AMFI: Failed to set cdhash in the SHA1 code directory usage event payload
+
+  [hit ] T2 @ fffffff007630044 : cdhash-full
+  [hit ] T2 @ fffffff00763106b : mapped file has no cdhash, completely unsigned? Code has to be at least ad-hoc s
+  [hit ] T2 @ fffffff007631fda : %s: token is untrusted: error %d getting cdhash
+
+  [hit ] T2 @ fffffff00763397b : Internal Error: No cdhash found.
+  [hit ] T2 @ fffffff0076339c6 : AMFI: can-execute-cdhash is disabled by system configuration
+
+  [hit ] T2 @ fffffff007633a04 : can-execute-cdhash
+  [hit ] T2 @ fffffff007633a17 : AMFI: can-execute-cdhash code in non-entitled context.
+
+  [hit ] T2 @ fffffff00763406f : cdhash != NULL
+  [hit ] T2 @ fffffff007634c16 : int _check_cdhash_in_trustcache(struct proc *, user_addr_t)
+  [hit ] T2 @ fffffff007634c52 : %s: failed to copy in cdhash %d
+
+  [hit ] T2 @ fffffff0076bb344 : %s:%spid:%d,%s:%s%s%s%s%s%u:%s %sfailed to get cdhash of process%s
+
+  [hit ] T2 @ fffffff0079587ba : com.apple.private.amfi.can-execute-cdhash
+  [hit ] T2 @ fffffff0079d123a : com.apple.private.amfi.can-execute-cdhash
+  [hit ] T2 @ fffffff0079fc8ca : com.apple.private.amfi.can-load-cdhash
+  [hit ] T2 @ fffffff007b2f7fe : process-legacy-codesigning-cdhash-get
+  [hit ] T2 @ fffffff007b306e7 : com.apple.private.amfi.can-execute-cdhash
+
+--- Tier 3 (6 needles) ---
+  [hit ] T3 @ fffffff007130478 : {"kMAOptionsBAAValidity": 525600, "kMAOptionsBAAOIDSToInclude": ["1.2.840.113635
+  [hit ] T3 @ fffffff0071305ae : 1.2.840.113635.100.10.1
+  [hit ] T3 @ fffffff0071305c6 : 1.2.840.113635.100.8.3
+  [hit ] T3 @ fffffff0071305dd : 1.2.840.113635.100.8.4
+  [hit ] T3 @ fffffff0071305f4 : 1.2.840.113635.100.8.5
+  [hit ] T3 @ fffffff00713060b : 1.2.840.113635.100.8.6
+  [hit ] T3 @ fffffff007130622 : 1.2.840.113635.100.8.7
+  not found: 1.2.840.113635.100.6.1.2
+  not found: 1.2.840.113635.100.6.1.4
+  not found: 1.2.840.113635.100.6.1.13
+  not found: 1.2.840.113635.100.6.11.1
+  not found: 1.2.840.113635.100.6.2.1
+
+--- Tier 4 (8 needles) ---
+  not found: anchor apple
+  not found: anchor trusted
+  not found: certificate chain
+  not found: invalid chain
+  not found: certificate anchor
+  not found: root certificate
+  [hit ] T4 @ fffffff0073d2c03 : AppleEffaceableStorageUserClient::%s():[%s] format attempt from untrusted root
+
+  [hit ] T4 @ fffffff0073d2c53 : AppleEffaceableStorageUserClient::%s():[%s] wipe attempt from untrusted root
+
+  not found: verify anchor
+
+--- Tier 5 (13 needles) ---
+  [hit ] T5 @ fffffff007095713 : Current number of code signature blobs
+  [hit ] T5 @ fffffff007095747 : Current size of all code signature blobs
+  [hit ] T5 @ fffffff007095783 : Peak number of code signature blobs
+  [hit ] T5 @ fffffff0070957b9 : Peak size of code signature blobs
+  [hit ] T5 @ fffffff0070957ec : Size of biggest code signature blob
+  [hit ] T5 @ fffffff0076323ae : AMFI: profile validated the code signature
+
+  [hit ] T5 @ fffffff007632b2f : %s: Internal error when creating code signature validation error (buffer allocat
+  [hit ] T5 @ fffffff007633a7d : AMFI: code signature validation failed.
+
+  [hit ] T5 @ fffffff007633b67 : Code has restricted entitlements, but the validation of its code signature faile
+  [hit ] T5 @ fffffff00763555f : no code signature
+  not found: signature invalid
+  [hit ] T5 @ fffffff0070d4623 : %s: necp_client_set_signed_client_id signature validation failed (%d)
+
+  [hit ] T5 @ fffffff007632b2f : %s: Internal error when creating code signature validation error (buffer allocat
+  [hit ] T5 @ fffffff007633a7d : AMFI: code signature validation failed.
+
+  [hit ] T5 @ fffffff007633c35 : fatal error detected during OOP-JIT signature validation
+  [hit ] T5 @ fffffff007508ac5 : panic: unexpected trust evaluation entry: i = %lu
+  [hit ] T5 @ fffffff007508af7 : trust evaluation failed: coprocessor = %s, sequence number = %lu, chain length =
+  [hit ] T5 @ fffffff007508b5c : panic: critical trust evaluation failure: chip = %s, p = %s, payload = %s
+  [hit ] T5 @ fffffff00750a493 : perform diagnostic trust evaluation
+  [hit ] T5 @ fffffff00750c032 : trust evaluation failed: %d
+  [hit ] T5 @ fffffff00750c25e : trust evaluation: dr = %d, ct = 0x%x, error = %d
+  [hit ] T5 @ fffffff007925b18 : Image4: manifest evaluation: starting trust evaluation
+
+  [hit ] T5 @ fffffff007925b50 : Image4: manifest evaluation: trust evaluation successful
+
+  [hit ] T5 @ fffffff007925b8a : Image4: payload evaluation: starting trust evaluation
+
+  [hit ] T5 @ fffffff007925bc1 : Image4: payload evaluation: trust evaluation successful
+
+  [hit ] T5 @ fffffff007925bfa : Image4: satellite trust evaluation disallowed with type: 0x%08X
+
+  [hit ] T5 @ fffffff007b49eac : %s:%d: failed trust evaluation: 4cc 0x%x, type %u
+
+  [hit ] T5 @ fffffff007044543 : Expected to continue after handling IPC security policy violation policy %d, but
+  [hit ] T5 @ fffffff0070445a2 : Expected to deny after handling IPC security policy violation policy %d, but got
+  [hit ] T5 @ fffffff00712f40d : finishFileCreate: unexpected policy violation for process=%s class=%d path=%s
+
+  not found: CSSMERR
+  not found: CERT_EXPIRED
+  not found: CERT_NOT_YET_VALID
+  [hit ] T5 @ fffffff007632f29 : AMFI: process with pid %u is not CS_VALID, not honoring entitlements.
+
+  not found: CS_INVALID
+  not found: CS_ADHOC
+  [hit ] T5 @ fffffff00708dbb9 : CS_KILLED
+  [hit ] T5 @ fffffff00acc1a70 : panic_on_cs_killed
+  not found: CS_HARD
+
+--- Tier 6 (8 needles) ---
+  [hit ] T6 @ fffffff007125e2b : com.apple.MobileInstallationHelperService
+  [hit ] T6 @ fffffff007afc83a : com.apple.MobileInstallationHelperService
+  [hit ] T6 @ fffffff007125e18 : com.apple.installd
+  [hit ] T6 @ fffffff007127c3e : com.apple.CoreDevice.dtdarwinupinstalld
+  [hit ] T6 @ fffffff00712d7cf : installd
+  [hit ] T6 @ fffffff007a04b02 : installd
+  [hit ] T6 @ fffffff007b0f782 : installd
+  [hit ] T6 @ fffffff007b30789 : /private/var/installd
+  [hit ] T6 @ fffffff007c9f7a0 : installd
+  not found: MIInstall
+  [hit ] T6 @ fffffff007093b83 : XNU Trust Caches
+  [hit ] T6 @ fffffff007093b9f : number of static trust caches loaded
+  [hit ] T6 @ fffffff007093bd4 : number of engineering trust caches loaded
+  [hit ] T6 @ fffffff007093c0b : number of loadable trust caches loaded
+  [hit ] T6 @ fffffff007093cb1 : attempting to unload trust cache with UUID: %s
+
+  [hit ] T6 @ fffffff007093d06 : successfully unloaded trust cache with UUID: %s
+
+  [hit ] T6 @ fffffff007093d37 : unable to unload trust cache with UUID: %s | %d
+
+  [hit ] T6 @ fffffff007093e6a : trust cache segment is zero length but trust caches are available: %u @%s:%d
+  [hit ] T6 @ fffffff007093eb7 : trust cache segment isn't zero but no trust caches available: %lu @%s:%d
+  [hit ] T6 @ fffffff007093f00 : trust cache segment length smaller than required: %lu | %lu @%s:%d
+  [hit ] T6 @ fffffff007093f43 : trust cache module start overflows: %u | %lu | %u @%s:%d
+  [hit ] T6 @ fffffff007093f7c : trust cache module begins after segment ends: %u | %lx | %lx @%s:%d
+  [hit ] T6 @ fffffff007093fd2 : failed to load static trust cache module: %u @%s:%d
+  [hit ] T6 @ fffffff007094006 : attempted to query static trust cache capabilities without init @%s:%d
+  [hit ] T6 @ fffffff00709423d : legacy trust caches are not supported on this platform @%s:%d
+  [hit ] T6 @ fffffff00762dc01 : %s: PID %d is requesting a trust cache load
+
+  [hit ] T6 @ fffffff00762dcce : %s: failure getting load trust cache entitlement for process %d
+
+  [hit ] T6 @ fffffff00762dd0f : %s: process %d not allowed to load trust cache
+
+  [hit ] T6 @ fffffff00762dda6 : %s: invalid load trust cache selector %d
+
+  [hit ] T6 @ fffffff00762dea4 : %s: only allowed process can modify the compilation service trust cache
+
+  [hit ] T6 @ fffffff00762df67 : %s: Process %d is checking if a cdhash is in the trust cache
+
+  [hit ] T6 @ fffffff00762fd93 : AMFI: research variant relaxes lock-state for trust caches: %u
+
+  [hit ] T6 @ fffffff00762fe2e : %s: loading duplicate trust cache (success)
+
+  [hit ] T6 @ fffffff00762fe7e : %s: loading trust caches disallowed by system state
+
+  [hit ] T6 @ fffffff00762feb3 : %s: attempted to load duplicate trust cache -- switching to success
+
+  [hit ] T6 @ fffffff00762fef8 : %s: unable to load trust cache: %d
+
+  [hit ] T6 @ fffffff00763009b : AMFI: Failed to get trust cache UUID for %s (TCReturn: 0x%02X | 0x%02X | %u)
+
+  [hit ] T6 @ fffffff0076300e9 : AMFI: Failed to get trust cache type for %s: (TCReturn: 0x%02X | 0x%02X | %u)
+  [hit ] T6 @ fffffff00763118a : Couldn't find trust cache UUID for process when mapping library from SMAC
+  [hit ] T6 @ fffffff0076311d4 : Couldn't find trust cache UUID for library from SMAC
+  [hit ] T6 @ fffffff00763174b : AMFI Trust Cache Interface
+  [hit ] T6 @ fffffff007633ab0 : AMFI: Platform binary with platform identifier not in trust cache
+
+  [hit ] T6 @ fffffff007633af3 : platform binary with platform identifier not in trust cache
+
+  [hit ] T6 @ fffffff007093b9f : number of static trust caches loaded
+  [hit ] T6 @ fffffff007093fd2 : failed to load static trust cache module: %u @%s:%d
+  [hit ] T6 @ fffffff007094006 : attempted to query static trust cache capabilities without init @%s:%d
+  [hit ] T6 @ fffffff007093bd4 : number of engineering trust caches loaded
+  not found: TCEntry
+  not found: cdhash not found
+
+--- Маркировка функций ---
+
+======================================================================
+[CT/AMFI Hunter] Итог: строк=156, функций помечено=0, not found=35
+======================================================================
+
+--- Полный список not found ---
+  T1  CTEvaluateAMFICodeSignature
+  T1  CTParseAmfiInputs
+  T1  CTEvaluateSignature
+  T1  ct_validate_cert_chain
+  T1  CTVerifyConstraints
+  T2  amfi_check_signature
+  T2  AMFI_check_signature
+  T2  hook_policy_check_signature
+  T2  AMFITrustCacheContains
+  T2  trustCacheLookupHash
+  T2  amfi_check_dyld_policy_self
+  T2  cs_validate_page
+  T2  cs_verify_fn
+  T3  1.2.840.113635.100.6.1.2
+  T3  1.2.840.113635.100.6.1.4
+  T3  1.2.840.113635.100.6.1.13
+  T3  1.2.840.113635.100.6.11.1
+  T3  1.2.840.113635.100.6.2.1
+  T4  anchor apple
+  T4  anchor trusted
+  T4  certificate chain
+  T4  invalid chain
+  T4  certificate anchor
+  T4  root certificate
+  T4  verify anchor
+  T5  signature invalid
+  T5  CSSMERR
+  T5  CERT_EXPIRED
+  T5  CERT_NOT_YET_VALID
+  T5  CS_INVALID
+  T5  CS_ADHOC
+  T5  CS_HARD
+  T6  MIInstall
+  T6  TCEntry
+  T6  cdhash not found

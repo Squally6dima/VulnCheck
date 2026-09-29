@@ -1,0 +1,3582 @@
+========================================================================
+[CORETRUST CERT VECTOR] program = kcache.raw
+[CORETRUST CERT VECTOR] output  = /home/femboychik/femboychik/coretrust_cert_report.txt
+========================================================================
+
+========================================================================
+[SECTION A — WRITE XREFS ON CT INTERFACE GLOBALS]
+========================================================================
+
+--- xrefs to fffffff007c1b3d0 ---
+  WRITES (1):
+  <- 0xfffffff00a8ad764 [WRITE] CT_T1_FUN_fffffff00a8ad754 @ fffffff00a8ad754
+  OTHER (2):
+  <- 0xfffffff00a8ad75c [READ] CT_T1_FUN_fffffff00a8ad754 @ fffffff00a8ad754
+  <- 0xfffffff00a724494 [READ] CT_T1_FUN_fffffff00a724480 @ fffffff00a724480
+
+--- xrefs to fffffff007c1b3e8 ---
+  WRITES (1):
+  <- 0xfffffff00a8ad800 [WRITE] FUN_fffffff00a8ad7f0 @ fffffff00a8ad7f0
+  OTHER (8):
+  <- 0xfffffff00a723304 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+  <- 0xfffffff00a723410 [READ] FUN_fffffff00a723294 @ fffffff00a723294
+  <- 0xfffffff00a7a3f20 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3dd4 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3e04 [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a7a3e1c [READ] FUN_fffffff00a7a37b0 @ fffffff00a7a37b0
+  <- 0xfffffff00a722f64 [READ] FUN_fffffff00a722f50 @ fffffff00a722f50
+  <- 0xfffffff00a8ad7f8 [READ] FUN_fffffff00a8ad7f0 @ fffffff00a8ad7f0
+
+========================================================================
+[SECTION D — CORETRUST KEXT REGION]
+========================================================================
+  kextbundle / version strings found: 6
+  @ fffffff0070074a8 : com.apple.kext.CoreTrust
+  @ fffffff00709443e : coretrust interface not available @%s:%d
+  @ fffffff0070af164 : coretrust interface already set @%s:%d
+  @ fffffff0070af18b : coretrust.c
+  @ fffffff0079258b7 : Image4: manifest evaluation: coreTrustVerifyChain failure: 0x%0X
+
+  @ fffffff0079258f9 : Image4: manifest evaluation: coreTrustVerifySignature failure: 0x%0X
+
+
+========================================================================
+[SECTION B — RESOLVE INTERFACE STRUCTS]
+========================================================================
+
+========================================================================
+[INTERFACE] AMFI_CoreTrust_interface @ fffffff007c1b3d0
+========================================================================
+  ptr value @fffffff007c1b3d0 = 0x0000000000000000
+  -> interpreting as INLINE struct at fffffff007c1b3d0
+
+--- dump ---
+  +0000: 0x0000000000000000
+  +0008: 0x0000000000000000
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000000
+  +0020: 0x0000000000000000
+  +0028: 0x0000000000000000
+  +0030: 0x0000000000000000
+  +0038: 0x0000000000000000
+  +0040: 0x0000000000000000
+  +0048: 0xfffffff00ad586b8  (data ptr)
+  +0050: 0x0000000000000000
+  +0058: 0x0000000000000000
+  +0060: 0xfffffff00a8ae830  -> code: FUN_fffffff00a8ae830
+  +0068: 0xfffffff00a8ae7cc  -> code: FUN_fffffff00a8ae7cc
+  +0070: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +0078: 0xfffffff00a857f9c  (data ptr)
+  +0080: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +0088: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +0090: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +0098: 0xfffffff00a8ae7bc  -> code: FUN_fffffff00a8ae7bc
+  +00a0: 0xfffffff00a854cc8  (data ptr)
+  +00a8: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +00b0: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +00b8: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +00c0: 0xfffffff00a8ae6f0  -> code: FUN_fffffff00a8ae6f0
+  +00c8: 0xfffffff00a857b90  -> code: FUN_fffffff00a857b90
+  +00d0: 0xfffffff00a98a6ec  -> code: FUN_fffffff00a98a6ec
+  +00d8: 0x0000000000000000
+  +00e0: 0x0000000000000000
+  +00e8: 0x0000000000000000
+  +00f0: 0xfffffff00a8aedf8  -> code: FUN_fffffff00a8aedf8
+  +00f8: 0xfffffff00a8aebe4  -> code: FUN_fffffff00a8aebe4
+  +0100: 0xfffffff00a854d28  -> code: FUN_fffffff00a854d28
+  +0108: 0xfffffff00a854d1c  -> code: FUN_fffffff00a854d1c
+  +0110: 0xfffffff00a854d14  -> code: FUN_fffffff00a854d14
+  +0118: 0xfffffff00a854d0c  -> code: FUN_fffffff00a854d0c
+  +0120: 0xfffffff00aa20a94  -> code: FUN_fffffff00aa20a94
+  +0128: 0xfffffff00a854cfc  -> code: FUN_fffffff00a854cfc
+  +0130: 0xfffffff00a854cc8  (data ptr)
+  +0138: 0xfffffff00a854cf4  -> code: FUN_fffffff00a854cf4
+  +0140: 0xfffffff00a854cec  -> code: FUN_fffffff00a854cec
+  +0148: 0xfffffff00a854ce4  -> code: FUN_fffffff00a854ce4
+  +0150: 0xfffffff00a8ae8e8  -> code: FUN_fffffff00a8ae8e8
+  +0158: 0xfffffff00a8ae840  -> code: FUN_fffffff00a8ae840
+  +0160: 0x0000000000000000
+  +0168: 0x0000000000000000
+  +0170: 0xfffffff00ad563f0  (data ptr)
+  +0178: 0x0000000000000000
+  +0180: 0x0000000000000000
+  +0188: 0xfffffff00a8b5c74  -> code: FUN_fffffff00a8b5c74
+  +0190: 0xfffffff00a8b5c14  -> code: FUN_fffffff00a8b5c14
+  +0198: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +01a0: 0xfffffff00a857f9c  (data ptr)
+  +01a8: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +01b0: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +01b8: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +01c0: 0xfffffff00a8b5c04  -> code: FUN_fffffff00a8b5c04
+  +01c8: 0xfffffff00a854cc8  (data ptr)
+  +01d0: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +01d8: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +01e0: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +01e8: 0xfffffff00a8b5bd8  -> code: FUN_fffffff00a8b5bd8
+  +01f0: 0xfffffff00a857b90  -> code: FUN_fffffff00a857b90
+  +01f8: 0xfffffff00a98a6ec  -> code: FUN_fffffff00a98a6ec
+
+--- METHOD DECOMPILES (39) ---
+
+------------------------------------------------------------------------
+[METHOD +0x60] 0xfffffff00a8ae830  FUN_fffffff00a8ae830
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae830(undefined8 *param_1)
+
+{
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x68] 0xfffffff00a8ae7cc  FUN_fffffff00a8ae7cc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae7cc(undefined8 *param_1)
+
+{
+  undefined8 in_x2;
+  undefined8 in_x3;
+  undefined *in_x4;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  
+  *param_1 = 0xffffffffffffffff;
+  if ((DAT_fffffff007c6f3dc & 0xfffff8) < 0x18) {
+    FUN_fffffff00a1e5000
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+               (undefined **)param_1,&DAT_00000018,in_x3,in_x4);
+  }
+  else {
+    FUN_fffffff00a1e5df0
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c6f3b0,
+               (undefined **)param_1,in_x2,in_x3,in_x4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + -0x18;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x70] 0xfffffff00a857fa8  FUN_fffffff00a857fa8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857fa8(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857fd8. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,0,param_2,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x80] 0xfffffff00a857f6c  FUN_fffffff00a857f6c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f6c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f98. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x48))(param_1,0,(undefined8 *)(*param_1 + 0x48));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x88] 0xfffffff00a857f3c  FUN_fffffff00a857f3c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f3c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f68. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x50))(param_1,0,(undefined8 *)(*param_1 + 0x50));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x90] 0xfffffff00a857db4  FUN_fffffff00a857db4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857db4(long *param_1,undefined8 param_2)
+
+{
+  int iVar1;
+  long lVar2;
+  long *plVar3;
+  undefined8 uVar4;
+  undefined8 local_c0;
+  undefined8 uStack_b8;
+  undefined8 uStack_b0;
+  undefined8 uStack_a8;
+  undefined8 local_a0;
+  undefined8 uStack_98;
+  undefined8 uStack_90;
+  undefined8 uStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  long local_38;
+  
+  local_38 = DAT_fffffff00acf0000;
+  uStack_58 = 0;
+  local_60 = 0;
+  uStack_48 = 0;
+  uStack_50 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  uStack_98 = 0;
+  local_a0 = 0;
+  uStack_88 = 0;
+  uStack_90 = 0;
+  uStack_b8 = 0;
+  local_c0 = 0;
+  uStack_a8 = 0;
+  uStack_b0 = 0;
+  lVar2 = (**(code **)(*param_1 + 0x38))();
+  if ((lVar2 != 0) && (*(long **)(lVar2 + 0x18) != (long *)0x0)) {
+    (**(code **)(**(long **)(lVar2 + 0x18) + 0xa8))();
+  }
+  FUN_fffffff00a72dd04((undefined1 *)&local_c0,0x80,(byte *)"%s is not serializable");
+  plVar3 = (long *)(**(code **)(DAT_fffffff00ad55e00 + 0x68))();
+  if (plVar3 == (long *)0x0) {
+    uVar4 = 0;
+  }
+  else {
+    iVar1 = (**(code **)(*plVar3 + 0x88))(plVar3,&local_c0);
+    lVar2 = *plVar3;
+    if (iVar1 == 0) {
+      uVar4 = 0;
+    }
+    else {
+      uVar4 = (**(code **)(lVar2 + 0x30))(plVar3,param_2);
+      lVar2 = *plVar3;
+    }
+    (**(code **)(lVar2 + 0x28))(plVar3);
+  }
+  if (DAT_fffffff00acf0000 != local_38) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0b974();
+  }
+  return uVar4;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x98] 0xfffffff00a8ae7bc  FUN_fffffff00a8ae7bc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 * FUN_fffffff00a8ae7bc(void)
+
+{
+  return &DAT_fffffff00ad563f0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xa8] 0xfffffff00a857d24  FUN_fffffff00a857d24
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857d24
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,
+               undefined *param_8)
+
+{
+  uint uVar1;
+  int iVar2;
+  
+  iVar2 = 0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar2 = 1;
+  }
+  do {
+    uVar1 = *(uint *)(param_7 + 8);
+    if (((uVar1 ^ 0xffffffff) & 0xfffe) == 0) {
+      if ((uVar1 & 1) == 0) {
+        return;
+      }
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"OSObject(%p)::refcount: Attempting to retain a freed object @%s:%d");
+    }
+  } while (*(uint *)(param_7 + 8) != uVar1);
+  *(uint *)(param_7 + 8) = uVar1 + iVar2;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xb0] 0xfffffff00a857cf4  FUN_fffffff00a857cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857cf4(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857d20. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,param_2,1,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xb8] 0xfffffff00a857b9c  FUN_fffffff00a857b9c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857b9c
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined *param_8,int param_9)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  undefined1 extraout_q0 [16];
+  
+  iVar4 = -0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar4 = -1;
+  }
+  do {
+    uVar3 = *(uint *)(param_7 + 1);
+    if (((uVar3 ^ 0xffffffff) & 0xfffe) == 0) {
+      return;
+    }
+    uVar1 = uVar3 + iVar4;
+    uVar2 = 0xffff;
+    if (param_9 <= (int)(uVar1 & 0xffff)) {
+      uVar2 = uVar1;
+    }
+  } while (*(uint *)(param_7 + 1) != uVar3);
+  *(uint *)(param_7 + 1) = uVar2;
+  if (uVar1 >> 0x10 <= (uVar1 & 0xffff)) {
+    if (uVar2 != 0xffff) {
+      return;
+    }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857c44. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_7 + 0x70))(param_7,(undefined8 *)(*param_7 + 0x70));
+    return;
+  }
+  FUN_fffffff00a857c80(param_7);
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (extraout_q0,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"A kext releasing a(n) %s %p has corrupted the registry. @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xc0] 0xfffffff00a8ae6f0  FUN_fffffff00a8ae6f0
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a8ae6f0(long param_1,long *param_2)
+
+{
+  char *pcVar1;
+  undefined8 uVar2;
+  long lVar3;
+  
+  uVar2 = 0xe00002bf;
+  if (*(long *)param_2[3] != -0x4046af6b39a82971) {
+    return 0xe00002c7;
+  }
+  if ((((*(int *)(*param_2 + 0x20) == 1) && (((long *)param_2[3])[2] == 1)) &&
+      (0x53 < *(uint *)(param_2 + 2))) &&
+     ((param_2[1] == 0 || (0x3b < *(uint *)((long)param_2 + 0x14))))) {
+    pcVar1 = (char *)(*(long *)(param_1 + 0x10) + 0x40);
+    if (*pcVar1 != '\0') {
+      return 0;
+    }
+    *pcVar1 = '\x01';
+    lVar3 = *(long *)(*(long *)(param_1 + 0x10) + 0x20);
+    uVar2 = 0;
+    if (lVar3 != 0) {
+      (**(code **)(lVar3 + 0x10))();
+      return 0;
+    }
+  }
+  return uVar2;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xc8] 0xfffffff00a857b90  FUN_fffffff00a857b90
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857b90(void)
+
+{
+  return 1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xd0] 0xfffffff00a98a6ec  FUN_fffffff00a98a6ec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a98a6ec
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,
+               undefined4 param_4,undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined8 param_8,undefined8 param_9,undefined8 param_10,undefined *param_11)
+
+{
+  undefined *puVar1;
+  undefined **ppuVar2;
+  long *plVar3;
+  long lVar4;
+  undefined **ppuVar5;
+  undefined1 extraout_q0 [16];
+  
+  plVar3 = (long *)param_7[2];
+  if (plVar3 != (long *)0x0) {
+    if (plVar3[4] != 0) {
+      param_1 = FUN_fffffff00a8adb74(plVar3[4]);
+      *(undefined8 *)(param_7[2] + 0x20) = 0;
+      plVar3 = (long *)param_7[2];
+    }
+    if ((long *)*plVar3 != (long *)0x0) {
+      param_1 = (**(code **)(*(long *)*plVar3 + 0x28))();
+      plVar3 = (long *)param_7[2];
+    }
+    *plVar3 = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x28) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x28) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x28) = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x18) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x18) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x18) = 0;
+    ppuVar2 = (undefined **)param_7[2];
+    ppuVar5 = (undefined **)ppuVar2[6];
+    if (ppuVar5 != (undefined **)0x0) {
+      ppuVar2[6] = (undefined *)0x0;
+      puVar1 = (undefined *)0x8000000000000000;
+      if (-1 < (long)ppuVar2[7]) {
+        puVar1 = ppuVar2[7];
+      }
+      param_1 = FUN_fffffff00a1e5000
+                          (param_1,param_2,param_3,param_4,param_5,param_6,&DAT_fffffff007c5ee68,
+                           ppuVar5,puVar1,param_10,param_11);
+      DAT_fffffff00ad57e00 = DAT_fffffff00ad57e00 - (long)puVar1;
+      ppuVar2 = (undefined **)param_7[2];
+    }
+    param_7[2] = 0;
+    FUN_fffffff00a1e5000
+              (param_1,param_2,param_3,param_4,param_5,param_6,(long *)&DAT_fffffff007c7c129,ppuVar2
+               ,&DAT_00000048,param_10,param_11);
+  }
+  lVar4 = (**(code **)(*param_7 + 0x38))(param_7);
+  if (lVar4 != 0) {
+    FUN_fffffff00a8564d4(extraout_q0,param_2,param_3,param_4,param_5,param_6,lVar4);
+  }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a98a868. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_7 + 8))(param_7,(undefined8 *)(*param_7 + 8));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xf0] 0xfffffff00a8aedf8  FUN_fffffff00a8aedf8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 * FUN_fffffff00a8aedf8(undefined8 *param_1)
+
+{
+  uint uVar1;
+  undefined8 *puVar2;
+  long lVar3;
+  uint uVar4;
+  ulong uVar5;
+  long lVar6;
+  long *plVar7;
+  uint in_wzr;
+  
+  *param_1 = &PTR_FUN_fffffff007c18e38;
+  plVar7 = *(long **)(param_1[1] + 8);
+  lVar3 = tpidr_el1;
+  if (*(ulong *)(DAT_fffffff00ad55ad8 + 2) == 0) {
+    *(ulong *)(DAT_fffffff00ad55ad8 + 2) = (ulong)*(uint *)(lVar3 + 0x4e8);
+  }
+  else {
+    FUN_fffffff00a1ea02c(DAT_fffffff00ad55ad8,lVar3,(undefined **)0x0);
+  }
+  if (DAT_fffffff00ad96d48 == (long *)0x0) {
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+    if (plVar7 == (long *)0x0) goto LAB_fffffff00a8aef58;
+  }
+  else {
+    lVar6 = *DAT_fffffff00ad96d48;
+    if (plVar7 == (long *)0x0) {
+      (**(code **)(lVar6 + 0x118))(lVar6 + 0x118,DAT_fffffff00ad96d48,param_1[3]);
+      uVar1 = DAT_fffffff00ad55ad8[2];
+      if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+        DAT_fffffff00ad55ad8[2] = in_wzr;
+      }
+      else {
+        FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+      }
+      goto LAB_fffffff00a8aef58;
+    }
+    (**(code **)(lVar6 + 0x108))(lVar6 + 0x108);
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+  }
+  (**(code **)(*plVar7 + 0x168))(plVar7,param_1);
+  (**(code **)(*(long *)param_1[3] + 0x28))();
+LAB_fffffff00a8aef58:
+  if (DAT_fffffff00ad96d40 != 0) {
+    uVar1 = *(uint *)(DAT_fffffff00ad96d40 + 0x10);
+    if (uVar1 != 0) {
+      uVar5 = 0;
+      lVar3 = *(long *)(DAT_fffffff00ad96d40 + 0x18);
+      do {
+        if (param_1 == *(undefined8 **)(lVar3 + uVar5 * 8)) {
+          uVar1 = uVar1 - 1;
+          *(uint *)(DAT_fffffff00ad96d40 + 0x10) = uVar1;
+          uVar4 = (uint)uVar5;
+          if (uVar4 <= uVar1 && uVar1 - uVar4 != 0) {
+            FUN_fffffff00aa24d30
+                      ((undefined8 *)(lVar3 + (uVar5 & 0xffffffff) * 8),
+                       (undefined8 *)(lVar3 + (ulong)(uVar4 + 1) * 8),(ulong)(uVar1 - uVar4) << 3);
+          }
+          break;
+        }
+        uVar5 = uVar5 + 1;
+      } while (uVar1 != uVar5);
+    }
+  }
+  puVar2 = (undefined8 *)param_1[1];
+  param_1[1] = 0;
+  FUN_fffffff00a1e5464((long *)&DAT_fffffff007c6e970,puVar2);
+  *param_1 = 0xffffffffffffffff;
+  return param_1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xf8] 0xfffffff00a8aebe4  FUN_fffffff00a8aebe4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8aebe4(undefined8 *param_1)
+
+{
+  uint uVar1;
+  undefined8 *puVar2;
+  long lVar3;
+  uint uVar4;
+  ulong uVar5;
+  long lVar6;
+  long *plVar7;
+  uint in_wzr;
+  
+  *param_1 = &PTR_FUN_fffffff007c18e38;
+  plVar7 = *(long **)(param_1[1] + 8);
+  lVar3 = tpidr_el1;
+  if (*(ulong *)(DAT_fffffff00ad55ad8 + 2) == 0) {
+    *(ulong *)(DAT_fffffff00ad55ad8 + 2) = (ulong)*(uint *)(lVar3 + 0x4e8);
+  }
+  else {
+    FUN_fffffff00a1ea02c(DAT_fffffff00ad55ad8,lVar3,(undefined **)0x0);
+  }
+  if (DAT_fffffff00ad96d48 == (long *)0x0) {
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+    if (plVar7 == (long *)0x0) goto LAB_fffffff00a8aed44;
+  }
+  else {
+    lVar6 = *DAT_fffffff00ad96d48;
+    if (plVar7 == (long *)0x0) {
+      (**(code **)(lVar6 + 0x118))(lVar6 + 0x118,DAT_fffffff00ad96d48,param_1[3]);
+      uVar1 = DAT_fffffff00ad55ad8[2];
+      if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+        DAT_fffffff00ad55ad8[2] = in_wzr;
+      }
+      else {
+        FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+      }
+      goto LAB_fffffff00a8aed44;
+    }
+    (**(code **)(lVar6 + 0x108))(lVar6 + 0x108);
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+  }
+  (**(code **)(*plVar7 + 0x168))(plVar7,param_1);
+  (**(code **)(*(long *)param_1[3] + 0x28))();
+LAB_fffffff00a8aed44:
+  if (DAT_fffffff00ad96d40 != 0) {
+    uVar1 = *(uint *)(DAT_fffffff00ad96d40 + 0x10);
+    if (uVar1 != 0) {
+      uVar5 = 0;
+      lVar3 = *(long *)(DAT_fffffff00ad96d40 + 0x18);
+      do {
+        if (param_1 == *(undefined8 **)(lVar3 + uVar5 * 8)) {
+          uVar1 = uVar1 - 1;
+          *(uint *)(DAT_fffffff00ad96d40 + 0x10) = uVar1;
+          uVar4 = (uint)uVar5;
+          if (uVar4 <= uVar1 && uVar1 - uVar4 != 0) {
+            FUN_fffffff00aa24d30
+                      ((undefined8 *)(lVar3 + (uVar5 & 0xffffffff) * 8),
+                       (undefined8 *)(lVar3 + (ulong)(uVar4 + 1) * 8),(ulong)(uVar1 - uVar4) << 3);
+          }
+          break;
+        }
+        uVar5 = uVar5 + 1;
+      } while (uVar1 != uVar5);
+    }
+  }
+  puVar2 = (undefined8 *)param_1[1];
+  param_1[1] = 0;
+  FUN_fffffff00a1e5464((long *)&DAT_fffffff007c6e970,puVar2);
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x100] 0xfffffff00a854d28  FUN_fffffff00a854d28
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d28(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x108] 0xfffffff00a854d1c  FUN_fffffff00a854d1c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a854d1c(void)
+
+{
+  return 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x110] 0xfffffff00a854d14  FUN_fffffff00a854d14
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d14(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x118] 0xfffffff00a854d0c  FUN_fffffff00a854d0c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d0c(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x120] 0xfffffff00aa20a94  FUN_fffffff00aa20a94
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00aa20a94
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6)
+
+{
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (param_1,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"OSMetaClass::serialize(): Obsoleted @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x128] 0xfffffff00a854cfc  FUN_fffffff00a854cfc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined * FUN_fffffff00a854cfc(void)
+
+{
+  return &DAT_fffffff00ad96d18;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x138] 0xfffffff00a854cf4  FUN_fffffff00a854cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854cf4(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x140] 0xfffffff00a854cec  FUN_fffffff00a854cec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854cec(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x148] 0xfffffff00a854ce4  FUN_fffffff00a854ce4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854ce4(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x150] 0xfffffff00a8ae8e8  FUN_fffffff00a8ae8e8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8
+FUN_fffffff00a8ae8e8
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,undefined4 param_4,
+          undefined4 param_5,undefined4 param_6,undefined8 param_7,long *param_8)
+
+{
+  undefined1 auVar1 [16];
+  undefined1 auVar2 [16];
+  undefined8 uVar3;
+  undefined *puVar4;
+  long *plVar5;
+  long lVar6;
+  long *plVar7;
+  undefined8 extraout_d0;
+  undefined8 uVar8;
+  undefined8 extraout_var;
+  undefined8 uVar9;
+  undefined8 uVar10;
+  undefined8 uVar11;
+  long local_50;
+  long lStack_48;
+  long lStack_40;
+  long lStack_38;
+  
+  uVar11 = param_2._8_8_;
+  uVar10 = param_2._0_8_;
+  uVar9 = param_1._8_8_;
+  uVar8 = param_1._0_8_;
+  plVar7 = (long *)param_8[3];
+  if (*plVar7 == -0x5f3a4c12a5715d7d) {
+    lStack_48 = param_8[1];
+    local_50 = *param_8;
+    lStack_38 = param_8[3];
+    lStack_40 = param_8[2];
+    uVar3 = FUN_fffffff00a8aea70(&local_50,FUN_fffffff00a98a6dc);
+  }
+  else {
+    uVar3 = 0xe00002bf;
+    if (*plVar7 == -0x55e03c317a31ab69) {
+      if ((((*(int *)(*param_8 + 0x20) == 2) && (plVar7[2] == 2)) && (0x83 < *(uint *)(param_8 + 2))
+          ) && (0x53 < *(uint *)((long)param_8 + 0x14))) {
+        lVar6 = param_8[1];
+        plVar5 = (long *)plVar7[4];
+        if (plVar5 != (long *)0x0) {
+          puVar4 = (undefined *)(**(code **)(*plVar5 + 0x38))(plVar5);
+          do {
+            uVar8 = extraout_d0;
+            uVar9 = extraout_var;
+            if (puVar4 == &DAT_fffffff00ad586b8) goto LAB_fffffff00a8aea18;
+            puVar4 = *(undefined **)(puVar4 + 0x10);
+          } while (puVar4 != (undefined *)0x0);
+          if (plVar7[4] != 0) {
+            return 0xe00002c2;
+          }
+          plVar5 = (long *)0x0;
+        }
+LAB_fffffff00a8aea18:
+        auVar1._8_8_ = uVar9;
+        auVar1._0_8_ = uVar8;
+        auVar2._8_8_ = uVar11;
+        auVar2._0_8_ = uVar10;
+        uVar3 = FUN_fffffff00a98a314
+                          (auVar1,auVar2,param_3,param_4,param_5,param_6,plVar5,plVar7[5],plVar7[6],
+                           (ulong *)plVar7[7],(long *)0x0,0,(undefined8 *)(lVar6 + 0x4c));
+        uVar8 = _DAT_fffffff00700fbc0;
+        if ((int)uVar3 == 0) {
+          *(undefined8 *)(lVar6 + 0x3c) = _UNK_fffffff00700fbc8;
+          *(undefined8 *)(lVar6 + 0x34) = uVar8;
+          *(undefined4 *)(lVar6 + 4) = 0x54;
+          *(undefined8 *)(lVar6 + 0x1c) = DAT_fffffff00700e620;
+          *(undefined8 *)(lVar6 + 0x44) = 1;
+          *(uint *)(lVar6 + 0x2c) = *(uint *)(lVar6 + 0x2c) & 0xffffff;
+        }
+      }
+    }
+    else {
+      uVar3 = 0xe00002c7;
+    }
+  }
+  return uVar3;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x158] 0xfffffff00a8ae840  FUN_fffffff00a8ae840
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae840(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  undefined1 auVar3 [16];
+  
+  if ((DAT_fffffff007c6f3dc & 0xfffff8) < 0x18) {
+    auVar3 = FUN_fffffff00a1e4988
+                       (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+                        (ulong *)&DAT_00000018,0x41004,(undefined *)0x0);
+    puVar2 = auVar3._0_8_;
+  }
+  else {
+    puVar2 = (undefined8 *)FUN_fffffff00a1e4f44((long *)&DAT_fffffff007c6f3b0,4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + 0x18;
+  *(undefined4 *)(puVar2 + 1) = 1;
+  *puVar2 = &PTR_FUN_fffffff007c1b430;
+  puVar2 = &DAT_fffffff00ad563f0;
+  do {
+    iVar1 = *(int *)((long)puVar2 + 0x24);
+    *(int *)((long)puVar2 + 0x24) = iVar1 + 1;
+    if (iVar1 != 0) {
+      return;
+    }
+    puVar2 = (undefined8 *)puVar2[2];
+  } while (puVar2 != (undefined8 *)0x0);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x188] 0xfffffff00a8b5c74  FUN_fffffff00a8b5c74
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5c74(undefined8 *param_1)
+
+{
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x190] 0xfffffff00a8b5c14  FUN_fffffff00a8b5c14
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5c14(undefined8 *param_1)
+
+{
+  undefined8 in_x2;
+  undefined8 in_x3;
+  undefined *in_x4;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  
+  *param_1 = 0xffffffffffffffff;
+  if ((DAT_fffffff007c6f41c & 0xffffe0) == 0) {
+    FUN_fffffff00a1e5000
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+               (undefined **)param_1,&DAT_00000020,in_x3,in_x4);
+  }
+  else {
+    FUN_fffffff00a1e5df0
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c6f3f0,
+               (undefined **)param_1,in_x2,in_x3,in_x4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + -0x20;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x198] 0xfffffff00a857fa8  FUN_fffffff00a857fa8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857fa8(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857fd8. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,0,param_2,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1a8] 0xfffffff00a857f6c  FUN_fffffff00a857f6c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f6c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f98. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x48))(param_1,0,(undefined8 *)(*param_1 + 0x48));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1b0] 0xfffffff00a857f3c  FUN_fffffff00a857f3c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f3c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f68. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x50))(param_1,0,(undefined8 *)(*param_1 + 0x50));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1b8] 0xfffffff00a857db4  FUN_fffffff00a857db4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857db4(long *param_1,undefined8 param_2)
+
+{
+  int iVar1;
+  long lVar2;
+  long *plVar3;
+  undefined8 uVar4;
+  undefined8 local_c0;
+  undefined8 uStack_b8;
+  undefined8 uStack_b0;
+  undefined8 uStack_a8;
+  undefined8 local_a0;
+  undefined8 uStack_98;
+  undefined8 uStack_90;
+  undefined8 uStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  long local_38;
+  
+  local_38 = DAT_fffffff00acf0000;
+  uStack_58 = 0;
+  local_60 = 0;
+  uStack_48 = 0;
+  uStack_50 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  uStack_98 = 0;
+  local_a0 = 0;
+  uStack_88 = 0;
+  uStack_90 = 0;
+  uStack_b8 = 0;
+  local_c0 = 0;
+  uStack_a8 = 0;
+  uStack_b0 = 0;
+  lVar2 = (**(code **)(*param_1 + 0x38))();
+  if ((lVar2 != 0) && (*(long **)(lVar2 + 0x18) != (long *)0x0)) {
+    (**(code **)(**(long **)(lVar2 + 0x18) + 0xa8))();
+  }
+  FUN_fffffff00a72dd04((undefined1 *)&local_c0,0x80,(byte *)"%s is not serializable");
+  plVar3 = (long *)(**(code **)(DAT_fffffff00ad55e00 + 0x68))();
+  if (plVar3 == (long *)0x0) {
+    uVar4 = 0;
+  }
+  else {
+    iVar1 = (**(code **)(*plVar3 + 0x88))(plVar3,&local_c0);
+    lVar2 = *plVar3;
+    if (iVar1 == 0) {
+      uVar4 = 0;
+    }
+    else {
+      uVar4 = (**(code **)(lVar2 + 0x30))(plVar3,param_2);
+      lVar2 = *plVar3;
+    }
+    (**(code **)(lVar2 + 0x28))(plVar3);
+  }
+  if (DAT_fffffff00acf0000 != local_38) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0b974();
+  }
+  return uVar4;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1c0] 0xfffffff00a8b5c04  FUN_fffffff00a8b5c04
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined * FUN_fffffff00a8b5c04(void)
+
+{
+  return &DAT_fffffff00ad563c8;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1d0] 0xfffffff00a857d24  FUN_fffffff00a857d24
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857d24
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,
+               undefined *param_8)
+
+{
+  uint uVar1;
+  int iVar2;
+  
+  iVar2 = 0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar2 = 1;
+  }
+  do {
+    uVar1 = *(uint *)(param_7 + 8);
+    if (((uVar1 ^ 0xffffffff) & 0xfffe) == 0) {
+      if ((uVar1 & 1) == 0) {
+        return;
+      }
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"OSObject(%p)::refcount: Attempting to retain a freed object @%s:%d");
+    }
+  } while (*(uint *)(param_7 + 8) != uVar1);
+  *(uint *)(param_7 + 8) = uVar1 + iVar2;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1d8] 0xfffffff00a857cf4  FUN_fffffff00a857cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857cf4(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857d20. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,param_2,1,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1e0] 0xfffffff00a857b9c  FUN_fffffff00a857b9c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857b9c
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined *param_8,int param_9)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  undefined1 extraout_q0 [16];
+  
+  iVar4 = -0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar4 = -1;
+  }
+  do {
+    uVar3 = *(uint *)(param_7 + 1);
+    if (((uVar3 ^ 0xffffffff) & 0xfffe) == 0) {
+      return;
+    }
+    uVar1 = uVar3 + iVar4;
+    uVar2 = 0xffff;
+    if (param_9 <= (int)(uVar1 & 0xffff)) {
+      uVar2 = uVar1;
+    }
+  } while (*(uint *)(param_7 + 1) != uVar3);
+  *(uint *)(param_7 + 1) = uVar2;
+  if (uVar1 >> 0x10 <= (uVar1 & 0xffff)) {
+    if (uVar2 != 0xffff) {
+      return;
+    }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857c44. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_7 + 0x70))(param_7,(undefined8 *)(*param_7 + 0x70));
+    return;
+  }
+  FUN_fffffff00a857c80(param_7);
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (extraout_q0,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"A kext releasing a(n) %s %p has corrupted the registry. @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1e8] 0xfffffff00a8b5bd8  FUN_fffffff00a8b5bd8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5bd8(long param_1,long *param_2)
+
+{
+  long local_30;
+  long lStack_28;
+  long lStack_20;
+  long lStack_18;
+  
+  lStack_28 = param_2[1];
+  local_30 = *param_2;
+  lStack_18 = param_2[3];
+  lStack_20 = param_2[2];
+  FUN_fffffff00a8af09c(param_1,&local_30);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1f0] 0xfffffff00a857b90  FUN_fffffff00a857b90
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857b90(void)
+
+{
+  return 1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1f8] 0xfffffff00a98a6ec  FUN_fffffff00a98a6ec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a98a6ec
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,
+               undefined4 param_4,undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined8 param_8,undefined8 param_9,undefined8 param_10,undefined *param_11)
+
+{
+  undefined *puVar1;
+  undefined **ppuVar2;
+  long *plVar3;
+  long lVar4;
+  undefined **ppuVar5;
+  undefined1 extraout_q0 [16];
+  
+  plVar3 = (long *)param_7[2];
+  if (plVar3 != (long *)0x0) {
+    if (plVar3[4] != 0) {
+      param_1 = FUN_fffffff00a8adb74(plVar3[4]);
+      *(undefined8 *)(param_7[2] + 0x20) = 0;
+      plVar3 = (long *)param_7[2];
+    }
+    if ((long *)*plVar3 != (long *)0x0) {
+      param_1 = (**(code **)(*(long *)*plVar3 + 0x28))();
+      plVar3 = (long *)param_7[2];
+    }
+    *plVar3 = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x28) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x28) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x28) = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x18) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x18) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x18) = 0;
+    ppuVar2 = (undefined **)param_7[2];
+    ppuVar5 = (undefined **)ppuVar2[6];
+    if (ppuVar5 != (undefined **)0x0) {
+      ppuVar2[6] = (undefined *)0x0;
+      puVar1 = (undefined *)0x8000000000000000;
+      if (-1 < (long)ppuVar2[7]) {
+        puVar1 = ppuVar2[7];
+      }
+      param_1 = FUN_fffffff00a1e5000
+                          (param_1,param_2,param_3,param_4,param_5,param_6,&DAT_fffffff007c5ee68,
+                           ppuVar5,puVar1,param_10,param_11);
+      DAT_fffffff00ad57e00 = DAT_fffffff00ad57e00 - (long)puVar1;
+      ppuVar2 = (undefined **)param_7[2];
+    }
+    param_7[2] = 0;
+    FUN_fffffff00a1e5000
+              (param_1,param_2,param_3,param_4,param_5,param_6,(long *)&DAT_fffffff007c7c129,ppuVar2
+               ,&DAT_00000048,param_10,param_11);
+  }
+  lVar4 = (**(code **)(*param_7 + 0x38))(param_7);
+  if (lVar4 != 0) {
+    FUN_fffffff00a8564d4(extraout_q0,param_2,param_3,param_4,param_5,param_6,lVar4);
+  }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a98a868. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_7 + 8))(param_7,(undefined8 *)(*param_7 + 8));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[INTERFACE] LibTC_CoreTrust_interface @ fffffff007c1b3e8
+========================================================================
+  ptr value @fffffff007c1b3e8 = 0x0000000000000000
+  -> interpreting as INLINE struct at fffffff007c1b3e8
+
+--- dump ---
+  +0000: 0x0000000000000000
+  +0008: 0x0000000000000000
+  +0010: 0x0000000000000000
+  +0018: 0x0000000000000000
+  +0020: 0x0000000000000000
+  +0028: 0x0000000000000000
+  +0030: 0xfffffff00ad586b8  (data ptr)
+  +0038: 0x0000000000000000
+  +0040: 0x0000000000000000
+  +0048: 0xfffffff00a8ae830  -> code: FUN_fffffff00a8ae830
+  +0050: 0xfffffff00a8ae7cc  -> code: FUN_fffffff00a8ae7cc
+  +0058: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +0060: 0xfffffff00a857f9c  (data ptr)
+  +0068: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +0070: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +0078: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +0080: 0xfffffff00a8ae7bc  -> code: FUN_fffffff00a8ae7bc
+  +0088: 0xfffffff00a854cc8  (data ptr)
+  +0090: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +0098: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +00a0: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +00a8: 0xfffffff00a8ae6f0  -> code: FUN_fffffff00a8ae6f0
+  +00b0: 0xfffffff00a857b90  -> code: FUN_fffffff00a857b90
+  +00b8: 0xfffffff00a98a6ec  -> code: FUN_fffffff00a98a6ec
+  +00c0: 0x0000000000000000
+  +00c8: 0x0000000000000000
+  +00d0: 0x0000000000000000
+  +00d8: 0xfffffff00a8aedf8  -> code: FUN_fffffff00a8aedf8
+  +00e0: 0xfffffff00a8aebe4  -> code: FUN_fffffff00a8aebe4
+  +00e8: 0xfffffff00a854d28  -> code: FUN_fffffff00a854d28
+  +00f0: 0xfffffff00a854d1c  -> code: FUN_fffffff00a854d1c
+  +00f8: 0xfffffff00a854d14  -> code: FUN_fffffff00a854d14
+  +0100: 0xfffffff00a854d0c  -> code: FUN_fffffff00a854d0c
+  +0108: 0xfffffff00aa20a94  -> code: FUN_fffffff00aa20a94
+  +0110: 0xfffffff00a854cfc  -> code: FUN_fffffff00a854cfc
+  +0118: 0xfffffff00a854cc8  (data ptr)
+  +0120: 0xfffffff00a854cf4  -> code: FUN_fffffff00a854cf4
+  +0128: 0xfffffff00a854cec  -> code: FUN_fffffff00a854cec
+  +0130: 0xfffffff00a854ce4  -> code: FUN_fffffff00a854ce4
+  +0138: 0xfffffff00a8ae8e8  -> code: FUN_fffffff00a8ae8e8
+  +0140: 0xfffffff00a8ae840  -> code: FUN_fffffff00a8ae840
+  +0148: 0x0000000000000000
+  +0150: 0x0000000000000000
+  +0158: 0xfffffff00ad563f0  (data ptr)
+  +0160: 0x0000000000000000
+  +0168: 0x0000000000000000
+  +0170: 0xfffffff00a8b5c74  -> code: FUN_fffffff00a8b5c74
+  +0178: 0xfffffff00a8b5c14  -> code: FUN_fffffff00a8b5c14
+  +0180: 0xfffffff00a857fa8  -> code: FUN_fffffff00a857fa8
+  +0188: 0xfffffff00a857f9c  (data ptr)
+  +0190: 0xfffffff00a857f6c  -> code: FUN_fffffff00a857f6c
+  +0198: 0xfffffff00a857f3c  -> code: FUN_fffffff00a857f3c
+  +01a0: 0xfffffff00a857db4  -> code: FUN_fffffff00a857db4
+  +01a8: 0xfffffff00a8b5c04  -> code: FUN_fffffff00a8b5c04
+  +01b0: 0xfffffff00a854cc8  (data ptr)
+  +01b8: 0xfffffff00a857d24  -> code: FUN_fffffff00a857d24
+  +01c0: 0xfffffff00a857cf4  -> code: FUN_fffffff00a857cf4
+  +01c8: 0xfffffff00a857b9c  -> code: FUN_fffffff00a857b9c
+  +01d0: 0xfffffff00a8b5bd8  -> code: FUN_fffffff00a8b5bd8
+  +01d8: 0xfffffff00a857b90  -> code: FUN_fffffff00a857b90
+  +01e0: 0xfffffff00a98a6ec  -> code: FUN_fffffff00a98a6ec
+  +01e8: 0x0000000000000000
+  +01f0: 0x0000000000000000
+  +01f8: 0x0000000000000000
+
+--- METHOD DECOMPILES (39) ---
+
+------------------------------------------------------------------------
+[METHOD +0x48] 0xfffffff00a8ae830  FUN_fffffff00a8ae830
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae830(undefined8 *param_1)
+
+{
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x50] 0xfffffff00a8ae7cc  FUN_fffffff00a8ae7cc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae7cc(undefined8 *param_1)
+
+{
+  undefined8 in_x2;
+  undefined8 in_x3;
+  undefined *in_x4;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  
+  *param_1 = 0xffffffffffffffff;
+  if ((DAT_fffffff007c6f3dc & 0xfffff8) < 0x18) {
+    FUN_fffffff00a1e5000
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+               (undefined **)param_1,&DAT_00000018,in_x3,in_x4);
+  }
+  else {
+    FUN_fffffff00a1e5df0
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c6f3b0,
+               (undefined **)param_1,in_x2,in_x3,in_x4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + -0x18;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x58] 0xfffffff00a857fa8  FUN_fffffff00a857fa8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857fa8(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857fd8. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,0,param_2,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x68] 0xfffffff00a857f6c  FUN_fffffff00a857f6c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f6c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f98. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x48))(param_1,0,(undefined8 *)(*param_1 + 0x48));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x70] 0xfffffff00a857f3c  FUN_fffffff00a857f3c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f3c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f68. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x50))(param_1,0,(undefined8 *)(*param_1 + 0x50));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x78] 0xfffffff00a857db4  FUN_fffffff00a857db4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857db4(long *param_1,undefined8 param_2)
+
+{
+  int iVar1;
+  long lVar2;
+  long *plVar3;
+  undefined8 uVar4;
+  undefined8 local_c0;
+  undefined8 uStack_b8;
+  undefined8 uStack_b0;
+  undefined8 uStack_a8;
+  undefined8 local_a0;
+  undefined8 uStack_98;
+  undefined8 uStack_90;
+  undefined8 uStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  long local_38;
+  
+  local_38 = DAT_fffffff00acf0000;
+  uStack_58 = 0;
+  local_60 = 0;
+  uStack_48 = 0;
+  uStack_50 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  uStack_98 = 0;
+  local_a0 = 0;
+  uStack_88 = 0;
+  uStack_90 = 0;
+  uStack_b8 = 0;
+  local_c0 = 0;
+  uStack_a8 = 0;
+  uStack_b0 = 0;
+  lVar2 = (**(code **)(*param_1 + 0x38))();
+  if ((lVar2 != 0) && (*(long **)(lVar2 + 0x18) != (long *)0x0)) {
+    (**(code **)(**(long **)(lVar2 + 0x18) + 0xa8))();
+  }
+  FUN_fffffff00a72dd04((undefined1 *)&local_c0,0x80,(byte *)"%s is not serializable");
+  plVar3 = (long *)(**(code **)(DAT_fffffff00ad55e00 + 0x68))();
+  if (plVar3 == (long *)0x0) {
+    uVar4 = 0;
+  }
+  else {
+    iVar1 = (**(code **)(*plVar3 + 0x88))(plVar3,&local_c0);
+    lVar2 = *plVar3;
+    if (iVar1 == 0) {
+      uVar4 = 0;
+    }
+    else {
+      uVar4 = (**(code **)(lVar2 + 0x30))(plVar3,param_2);
+      lVar2 = *plVar3;
+    }
+    (**(code **)(lVar2 + 0x28))(plVar3);
+  }
+  if (DAT_fffffff00acf0000 != local_38) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0b974();
+  }
+  return uVar4;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x80] 0xfffffff00a8ae7bc  FUN_fffffff00a8ae7bc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 * FUN_fffffff00a8ae7bc(void)
+
+{
+  return &DAT_fffffff00ad563f0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x90] 0xfffffff00a857d24  FUN_fffffff00a857d24
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857d24
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,
+               undefined *param_8)
+
+{
+  uint uVar1;
+  int iVar2;
+  
+  iVar2 = 0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar2 = 1;
+  }
+  do {
+    uVar1 = *(uint *)(param_7 + 8);
+    if (((uVar1 ^ 0xffffffff) & 0xfffe) == 0) {
+      if ((uVar1 & 1) == 0) {
+        return;
+      }
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"OSObject(%p)::refcount: Attempting to retain a freed object @%s:%d");
+    }
+  } while (*(uint *)(param_7 + 8) != uVar1);
+  *(uint *)(param_7 + 8) = uVar1 + iVar2;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x98] 0xfffffff00a857cf4  FUN_fffffff00a857cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857cf4(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857d20. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,param_2,1,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xa0] 0xfffffff00a857b9c  FUN_fffffff00a857b9c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857b9c
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined *param_8,int param_9)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  undefined1 extraout_q0 [16];
+  
+  iVar4 = -0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar4 = -1;
+  }
+  do {
+    uVar3 = *(uint *)(param_7 + 1);
+    if (((uVar3 ^ 0xffffffff) & 0xfffe) == 0) {
+      return;
+    }
+    uVar1 = uVar3 + iVar4;
+    uVar2 = 0xffff;
+    if (param_9 <= (int)(uVar1 & 0xffff)) {
+      uVar2 = uVar1;
+    }
+  } while (*(uint *)(param_7 + 1) != uVar3);
+  *(uint *)(param_7 + 1) = uVar2;
+  if (uVar1 >> 0x10 <= (uVar1 & 0xffff)) {
+    if (uVar2 != 0xffff) {
+      return;
+    }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857c44. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_7 + 0x70))(param_7,(undefined8 *)(*param_7 + 0x70));
+    return;
+  }
+  FUN_fffffff00a857c80(param_7);
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (extraout_q0,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"A kext releasing a(n) %s %p has corrupted the registry. @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xa8] 0xfffffff00a8ae6f0  FUN_fffffff00a8ae6f0
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a8ae6f0(long param_1,long *param_2)
+
+{
+  char *pcVar1;
+  undefined8 uVar2;
+  long lVar3;
+  
+  uVar2 = 0xe00002bf;
+  if (*(long *)param_2[3] != -0x4046af6b39a82971) {
+    return 0xe00002c7;
+  }
+  if ((((*(int *)(*param_2 + 0x20) == 1) && (((long *)param_2[3])[2] == 1)) &&
+      (0x53 < *(uint *)(param_2 + 2))) &&
+     ((param_2[1] == 0 || (0x3b < *(uint *)((long)param_2 + 0x14))))) {
+    pcVar1 = (char *)(*(long *)(param_1 + 0x10) + 0x40);
+    if (*pcVar1 != '\0') {
+      return 0;
+    }
+    *pcVar1 = '\x01';
+    lVar3 = *(long *)(*(long *)(param_1 + 0x10) + 0x20);
+    uVar2 = 0;
+    if (lVar3 != 0) {
+      (**(code **)(lVar3 + 0x10))();
+      return 0;
+    }
+  }
+  return uVar2;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xb0] 0xfffffff00a857b90  FUN_fffffff00a857b90
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857b90(void)
+
+{
+  return 1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xb8] 0xfffffff00a98a6ec  FUN_fffffff00a98a6ec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a98a6ec
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,
+               undefined4 param_4,undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined8 param_8,undefined8 param_9,undefined8 param_10,undefined *param_11)
+
+{
+  undefined *puVar1;
+  undefined **ppuVar2;
+  long *plVar3;
+  long lVar4;
+  undefined **ppuVar5;
+  undefined1 extraout_q0 [16];
+  
+  plVar3 = (long *)param_7[2];
+  if (plVar3 != (long *)0x0) {
+    if (plVar3[4] != 0) {
+      param_1 = FUN_fffffff00a8adb74(plVar3[4]);
+      *(undefined8 *)(param_7[2] + 0x20) = 0;
+      plVar3 = (long *)param_7[2];
+    }
+    if ((long *)*plVar3 != (long *)0x0) {
+      param_1 = (**(code **)(*(long *)*plVar3 + 0x28))();
+      plVar3 = (long *)param_7[2];
+    }
+    *plVar3 = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x28) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x28) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x28) = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x18) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x18) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x18) = 0;
+    ppuVar2 = (undefined **)param_7[2];
+    ppuVar5 = (undefined **)ppuVar2[6];
+    if (ppuVar5 != (undefined **)0x0) {
+      ppuVar2[6] = (undefined *)0x0;
+      puVar1 = (undefined *)0x8000000000000000;
+      if (-1 < (long)ppuVar2[7]) {
+        puVar1 = ppuVar2[7];
+      }
+      param_1 = FUN_fffffff00a1e5000
+                          (param_1,param_2,param_3,param_4,param_5,param_6,&DAT_fffffff007c5ee68,
+                           ppuVar5,puVar1,param_10,param_11);
+      DAT_fffffff00ad57e00 = DAT_fffffff00ad57e00 - (long)puVar1;
+      ppuVar2 = (undefined **)param_7[2];
+    }
+    param_7[2] = 0;
+    FUN_fffffff00a1e5000
+              (param_1,param_2,param_3,param_4,param_5,param_6,(long *)&DAT_fffffff007c7c129,ppuVar2
+               ,&DAT_00000048,param_10,param_11);
+  }
+  lVar4 = (**(code **)(*param_7 + 0x38))(param_7);
+  if (lVar4 != 0) {
+    FUN_fffffff00a8564d4(extraout_q0,param_2,param_3,param_4,param_5,param_6,lVar4);
+  }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a98a868. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_7 + 8))(param_7,(undefined8 *)(*param_7 + 8));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xd8] 0xfffffff00a8aedf8  FUN_fffffff00a8aedf8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 * FUN_fffffff00a8aedf8(undefined8 *param_1)
+
+{
+  uint uVar1;
+  undefined8 *puVar2;
+  long lVar3;
+  uint uVar4;
+  ulong uVar5;
+  long lVar6;
+  long *plVar7;
+  uint in_wzr;
+  
+  *param_1 = &PTR_FUN_fffffff007c18e38;
+  plVar7 = *(long **)(param_1[1] + 8);
+  lVar3 = tpidr_el1;
+  if (*(ulong *)(DAT_fffffff00ad55ad8 + 2) == 0) {
+    *(ulong *)(DAT_fffffff00ad55ad8 + 2) = (ulong)*(uint *)(lVar3 + 0x4e8);
+  }
+  else {
+    FUN_fffffff00a1ea02c(DAT_fffffff00ad55ad8,lVar3,(undefined **)0x0);
+  }
+  if (DAT_fffffff00ad96d48 == (long *)0x0) {
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+    if (plVar7 == (long *)0x0) goto LAB_fffffff00a8aef58;
+  }
+  else {
+    lVar6 = *DAT_fffffff00ad96d48;
+    if (plVar7 == (long *)0x0) {
+      (**(code **)(lVar6 + 0x118))(lVar6 + 0x118,DAT_fffffff00ad96d48,param_1[3]);
+      uVar1 = DAT_fffffff00ad55ad8[2];
+      if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+        DAT_fffffff00ad55ad8[2] = in_wzr;
+      }
+      else {
+        FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+      }
+      goto LAB_fffffff00a8aef58;
+    }
+    (**(code **)(lVar6 + 0x108))(lVar6 + 0x108);
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+  }
+  (**(code **)(*plVar7 + 0x168))(plVar7,param_1);
+  (**(code **)(*(long *)param_1[3] + 0x28))();
+LAB_fffffff00a8aef58:
+  if (DAT_fffffff00ad96d40 != 0) {
+    uVar1 = *(uint *)(DAT_fffffff00ad96d40 + 0x10);
+    if (uVar1 != 0) {
+      uVar5 = 0;
+      lVar3 = *(long *)(DAT_fffffff00ad96d40 + 0x18);
+      do {
+        if (param_1 == *(undefined8 **)(lVar3 + uVar5 * 8)) {
+          uVar1 = uVar1 - 1;
+          *(uint *)(DAT_fffffff00ad96d40 + 0x10) = uVar1;
+          uVar4 = (uint)uVar5;
+          if (uVar4 <= uVar1 && uVar1 - uVar4 != 0) {
+            FUN_fffffff00aa24d30
+                      ((undefined8 *)(lVar3 + (uVar5 & 0xffffffff) * 8),
+                       (undefined8 *)(lVar3 + (ulong)(uVar4 + 1) * 8),(ulong)(uVar1 - uVar4) << 3);
+          }
+          break;
+        }
+        uVar5 = uVar5 + 1;
+      } while (uVar1 != uVar5);
+    }
+  }
+  puVar2 = (undefined8 *)param_1[1];
+  param_1[1] = 0;
+  FUN_fffffff00a1e5464((long *)&DAT_fffffff007c6e970,puVar2);
+  *param_1 = 0xffffffffffffffff;
+  return param_1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xe0] 0xfffffff00a8aebe4  FUN_fffffff00a8aebe4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8aebe4(undefined8 *param_1)
+
+{
+  uint uVar1;
+  undefined8 *puVar2;
+  long lVar3;
+  uint uVar4;
+  ulong uVar5;
+  long lVar6;
+  long *plVar7;
+  uint in_wzr;
+  
+  *param_1 = &PTR_FUN_fffffff007c18e38;
+  plVar7 = *(long **)(param_1[1] + 8);
+  lVar3 = tpidr_el1;
+  if (*(ulong *)(DAT_fffffff00ad55ad8 + 2) == 0) {
+    *(ulong *)(DAT_fffffff00ad55ad8 + 2) = (ulong)*(uint *)(lVar3 + 0x4e8);
+  }
+  else {
+    FUN_fffffff00a1ea02c(DAT_fffffff00ad55ad8,lVar3,(undefined **)0x0);
+  }
+  if (DAT_fffffff00ad96d48 == (long *)0x0) {
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+    if (plVar7 == (long *)0x0) goto LAB_fffffff00a8aed44;
+  }
+  else {
+    lVar6 = *DAT_fffffff00ad96d48;
+    if (plVar7 == (long *)0x0) {
+      (**(code **)(lVar6 + 0x118))(lVar6 + 0x118,DAT_fffffff00ad96d48,param_1[3]);
+      uVar1 = DAT_fffffff00ad55ad8[2];
+      if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+        DAT_fffffff00ad55ad8[2] = in_wzr;
+      }
+      else {
+        FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+      }
+      goto LAB_fffffff00a8aed44;
+    }
+    (**(code **)(lVar6 + 0x108))(lVar6 + 0x108);
+    uVar1 = DAT_fffffff00ad55ad8[2];
+    if (uVar1 == *(uint *)(lVar3 + 0x4e8)) {
+      DAT_fffffff00ad55ad8[2] = in_wzr;
+    }
+    else {
+      FUN_fffffff00a1eab60((ulong)DAT_fffffff00ad55ad8,lVar3,uVar1);
+    }
+  }
+  (**(code **)(*plVar7 + 0x168))(plVar7,param_1);
+  (**(code **)(*(long *)param_1[3] + 0x28))();
+LAB_fffffff00a8aed44:
+  if (DAT_fffffff00ad96d40 != 0) {
+    uVar1 = *(uint *)(DAT_fffffff00ad96d40 + 0x10);
+    if (uVar1 != 0) {
+      uVar5 = 0;
+      lVar3 = *(long *)(DAT_fffffff00ad96d40 + 0x18);
+      do {
+        if (param_1 == *(undefined8 **)(lVar3 + uVar5 * 8)) {
+          uVar1 = uVar1 - 1;
+          *(uint *)(DAT_fffffff00ad96d40 + 0x10) = uVar1;
+          uVar4 = (uint)uVar5;
+          if (uVar4 <= uVar1 && uVar1 - uVar4 != 0) {
+            FUN_fffffff00aa24d30
+                      ((undefined8 *)(lVar3 + (uVar5 & 0xffffffff) * 8),
+                       (undefined8 *)(lVar3 + (ulong)(uVar4 + 1) * 8),(ulong)(uVar1 - uVar4) << 3);
+          }
+          break;
+        }
+        uVar5 = uVar5 + 1;
+      } while (uVar1 != uVar5);
+    }
+  }
+  puVar2 = (undefined8 *)param_1[1];
+  param_1[1] = 0;
+  FUN_fffffff00a1e5464((long *)&DAT_fffffff007c6e970,puVar2);
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xe8] 0xfffffff00a854d28  FUN_fffffff00a854d28
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d28(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xf0] 0xfffffff00a854d1c  FUN_fffffff00a854d1c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a854d1c(void)
+
+{
+  return 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0xf8] 0xfffffff00a854d14  FUN_fffffff00a854d14
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d14(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x100] 0xfffffff00a854d0c  FUN_fffffff00a854d0c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854d0c(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x108] 0xfffffff00aa20a94  FUN_fffffff00aa20a94
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00aa20a94
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6)
+
+{
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (param_1,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"OSMetaClass::serialize(): Obsoleted @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x110] 0xfffffff00a854cfc  FUN_fffffff00a854cfc
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined * FUN_fffffff00a854cfc(void)
+
+{
+  return &DAT_fffffff00ad96d18;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x120] 0xfffffff00a854cf4  FUN_fffffff00a854cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854cf4(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x128] 0xfffffff00a854cec  FUN_fffffff00a854cec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854cec(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x130] 0xfffffff00a854ce4  FUN_fffffff00a854ce4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a854ce4(void)
+
+{
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x138] 0xfffffff00a8ae8e8  FUN_fffffff00a8ae8e8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8
+FUN_fffffff00a8ae8e8
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,undefined4 param_4,
+          undefined4 param_5,undefined4 param_6,undefined8 param_7,long *param_8)
+
+{
+  undefined1 auVar1 [16];
+  undefined1 auVar2 [16];
+  undefined8 uVar3;
+  undefined *puVar4;
+  long *plVar5;
+  long lVar6;
+  long *plVar7;
+  undefined8 extraout_d0;
+  undefined8 uVar8;
+  undefined8 extraout_var;
+  undefined8 uVar9;
+  undefined8 uVar10;
+  undefined8 uVar11;
+  long local_50;
+  long lStack_48;
+  long lStack_40;
+  long lStack_38;
+  
+  uVar11 = param_2._8_8_;
+  uVar10 = param_2._0_8_;
+  uVar9 = param_1._8_8_;
+  uVar8 = param_1._0_8_;
+  plVar7 = (long *)param_8[3];
+  if (*plVar7 == -0x5f3a4c12a5715d7d) {
+    lStack_48 = param_8[1];
+    local_50 = *param_8;
+    lStack_38 = param_8[3];
+    lStack_40 = param_8[2];
+    uVar3 = FUN_fffffff00a8aea70(&local_50,FUN_fffffff00a98a6dc);
+  }
+  else {
+    uVar3 = 0xe00002bf;
+    if (*plVar7 == -0x55e03c317a31ab69) {
+      if ((((*(int *)(*param_8 + 0x20) == 2) && (plVar7[2] == 2)) && (0x83 < *(uint *)(param_8 + 2))
+          ) && (0x53 < *(uint *)((long)param_8 + 0x14))) {
+        lVar6 = param_8[1];
+        plVar5 = (long *)plVar7[4];
+        if (plVar5 != (long *)0x0) {
+          puVar4 = (undefined *)(**(code **)(*plVar5 + 0x38))(plVar5);
+          do {
+            uVar8 = extraout_d0;
+            uVar9 = extraout_var;
+            if (puVar4 == &DAT_fffffff00ad586b8) goto LAB_fffffff00a8aea18;
+            puVar4 = *(undefined **)(puVar4 + 0x10);
+          } while (puVar4 != (undefined *)0x0);
+          if (plVar7[4] != 0) {
+            return 0xe00002c2;
+          }
+          plVar5 = (long *)0x0;
+        }
+LAB_fffffff00a8aea18:
+        auVar1._8_8_ = uVar9;
+        auVar1._0_8_ = uVar8;
+        auVar2._8_8_ = uVar11;
+        auVar2._0_8_ = uVar10;
+        uVar3 = FUN_fffffff00a98a314
+                          (auVar1,auVar2,param_3,param_4,param_5,param_6,plVar5,plVar7[5],plVar7[6],
+                           (ulong *)plVar7[7],(long *)0x0,0,(undefined8 *)(lVar6 + 0x4c));
+        uVar8 = _DAT_fffffff00700fbc0;
+        if ((int)uVar3 == 0) {
+          *(undefined8 *)(lVar6 + 0x3c) = _UNK_fffffff00700fbc8;
+          *(undefined8 *)(lVar6 + 0x34) = uVar8;
+          *(undefined4 *)(lVar6 + 4) = 0x54;
+          *(undefined8 *)(lVar6 + 0x1c) = DAT_fffffff00700e620;
+          *(undefined8 *)(lVar6 + 0x44) = 1;
+          *(uint *)(lVar6 + 0x2c) = *(uint *)(lVar6 + 0x2c) & 0xffffff;
+        }
+      }
+    }
+    else {
+      uVar3 = 0xe00002c7;
+    }
+  }
+  return uVar3;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x140] 0xfffffff00a8ae840  FUN_fffffff00a8ae840
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ae840(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  undefined1 auVar3 [16];
+  
+  if ((DAT_fffffff007c6f3dc & 0xfffff8) < 0x18) {
+    auVar3 = FUN_fffffff00a1e4988
+                       (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+                        (ulong *)&DAT_00000018,0x41004,(undefined *)0x0);
+    puVar2 = auVar3._0_8_;
+  }
+  else {
+    puVar2 = (undefined8 *)FUN_fffffff00a1e4f44((long *)&DAT_fffffff007c6f3b0,4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + 0x18;
+  *(undefined4 *)(puVar2 + 1) = 1;
+  *puVar2 = &PTR_FUN_fffffff007c1b430;
+  puVar2 = &DAT_fffffff00ad563f0;
+  do {
+    iVar1 = *(int *)((long)puVar2 + 0x24);
+    *(int *)((long)puVar2 + 0x24) = iVar1 + 1;
+    if (iVar1 != 0) {
+      return;
+    }
+    puVar2 = (undefined8 *)puVar2[2];
+  } while (puVar2 != (undefined8 *)0x0);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x170] 0xfffffff00a8b5c74  FUN_fffffff00a8b5c74
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5c74(undefined8 *param_1)
+
+{
+  *param_1 = 0xffffffffffffffff;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x178] 0xfffffff00a8b5c14  FUN_fffffff00a8b5c14
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5c14(undefined8 *param_1)
+
+{
+  undefined8 in_x2;
+  undefined8 in_x3;
+  undefined *in_x4;
+  undefined1 in_q0 [16];
+  undefined1 in_q1 [16];
+  undefined4 in_s2;
+  undefined4 in_s3;
+  undefined4 in_s4;
+  undefined4 in_s5;
+  
+  *param_1 = 0xffffffffffffffff;
+  if ((DAT_fffffff007c6f41c & 0xffffe0) == 0) {
+    FUN_fffffff00a1e5000
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c1bf68,
+               (undefined **)param_1,&DAT_00000020,in_x3,in_x4);
+  }
+  else {
+    FUN_fffffff00a1e5df0
+              (in_q0,in_q1,in_s2,in_s3,in_s4,in_s5,(long *)&DAT_fffffff007c6f3f0,
+               (undefined **)param_1,in_x2,in_x3,in_x4);
+  }
+  DAT_fffffff00ad57e18 = DAT_fffffff00ad57e18 + -0x20;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x180] 0xfffffff00a857fa8  FUN_fffffff00a857fa8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857fa8(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857fd8. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,0,param_2,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x190] 0xfffffff00a857f6c  FUN_fffffff00a857f6c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f6c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f98. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x48))(param_1,0,(undefined8 *)(*param_1 + 0x48));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x198] 0xfffffff00a857f3c  FUN_fffffff00a857f3c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857f3c(long *param_1)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857f68. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x50))(param_1,0,(undefined8 *)(*param_1 + 0x50));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1a0] 0xfffffff00a857db4  FUN_fffffff00a857db4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857db4(long *param_1,undefined8 param_2)
+
+{
+  int iVar1;
+  long lVar2;
+  long *plVar3;
+  undefined8 uVar4;
+  undefined8 local_c0;
+  undefined8 uStack_b8;
+  undefined8 uStack_b0;
+  undefined8 uStack_a8;
+  undefined8 local_a0;
+  undefined8 uStack_98;
+  undefined8 uStack_90;
+  undefined8 uStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  long local_38;
+  
+  local_38 = DAT_fffffff00acf0000;
+  uStack_58 = 0;
+  local_60 = 0;
+  uStack_48 = 0;
+  uStack_50 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  uStack_98 = 0;
+  local_a0 = 0;
+  uStack_88 = 0;
+  uStack_90 = 0;
+  uStack_b8 = 0;
+  local_c0 = 0;
+  uStack_a8 = 0;
+  uStack_b0 = 0;
+  lVar2 = (**(code **)(*param_1 + 0x38))();
+  if ((lVar2 != 0) && (*(long **)(lVar2 + 0x18) != (long *)0x0)) {
+    (**(code **)(**(long **)(lVar2 + 0x18) + 0xa8))();
+  }
+  FUN_fffffff00a72dd04((undefined1 *)&local_c0,0x80,(byte *)"%s is not serializable");
+  plVar3 = (long *)(**(code **)(DAT_fffffff00ad55e00 + 0x68))();
+  if (plVar3 == (long *)0x0) {
+    uVar4 = 0;
+  }
+  else {
+    iVar1 = (**(code **)(*plVar3 + 0x88))(plVar3,&local_c0);
+    lVar2 = *plVar3;
+    if (iVar1 == 0) {
+      uVar4 = 0;
+    }
+    else {
+      uVar4 = (**(code **)(lVar2 + 0x30))(plVar3,param_2);
+      lVar2 = *plVar3;
+    }
+    (**(code **)(lVar2 + 0x28))(plVar3);
+  }
+  if (DAT_fffffff00acf0000 != local_38) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0b974();
+  }
+  return uVar4;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1a8] 0xfffffff00a8b5c04  FUN_fffffff00a8b5c04
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined * FUN_fffffff00a8b5c04(void)
+
+{
+  return &DAT_fffffff00ad563c8;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1b8] 0xfffffff00a857d24  FUN_fffffff00a857d24
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857d24
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,
+               undefined *param_8)
+
+{
+  uint uVar1;
+  int iVar2;
+  
+  iVar2 = 0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar2 = 1;
+  }
+  do {
+    uVar1 = *(uint *)(param_7 + 8);
+    if (((uVar1 ^ 0xffffffff) & 0xfffe) == 0) {
+      if ((uVar1 & 1) == 0) {
+        return;
+      }
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"OSObject(%p)::refcount: Attempting to retain a freed object @%s:%d");
+    }
+  } while (*(uint *)(param_7 + 8) != uVar1);
+  *(uint *)(param_7 + 8) = uVar1 + iVar2;
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1c0] 0xfffffff00a857cf4  FUN_fffffff00a857cf4
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857cf4(long *param_1,undefined8 param_2)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857d20. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 0x58))(param_1,param_2,1,(undefined8 *)(*param_1 + 0x58));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1c8] 0xfffffff00a857b9c  FUN_fffffff00a857b9c
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a857b9c
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined *param_8,int param_9)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  undefined1 extraout_q0 [16];
+  
+  iVar4 = -0x10001;
+  if (param_8 != &DAT_fffffff00ad55db0) {
+    iVar4 = -1;
+  }
+  do {
+    uVar3 = *(uint *)(param_7 + 1);
+    if (((uVar3 ^ 0xffffffff) & 0xfffe) == 0) {
+      return;
+    }
+    uVar1 = uVar3 + iVar4;
+    uVar2 = 0xffff;
+    if (param_9 <= (int)(uVar1 & 0xffff)) {
+      uVar2 = uVar1;
+    }
+  } while (*(uint *)(param_7 + 1) != uVar3);
+  *(uint *)(param_7 + 1) = uVar2;
+  if (uVar1 >> 0x10 <= (uVar1 & 0xffff)) {
+    if (uVar2 != 0xffff) {
+      return;
+    }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a857c44. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_7 + 0x70))(param_7,(undefined8 *)(*param_7 + 0x70));
+    return;
+  }
+  FUN_fffffff00a857c80(param_7);
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (extraout_q0,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"A kext releasing a(n) %s %p has corrupted the registry. @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1d0] 0xfffffff00a8b5bd8  FUN_fffffff00a8b5bd8
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8b5bd8(long param_1,long *param_2)
+
+{
+  long local_30;
+  long lStack_28;
+  long lStack_20;
+  long lStack_18;
+  
+  lStack_28 = param_2[1];
+  local_30 = *param_2;
+  lStack_18 = param_2[3];
+  lStack_20 = param_2[2];
+  FUN_fffffff00a8af09c(param_1,&local_30);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1d8] 0xfffffff00a857b90  FUN_fffffff00a857b90
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff00a857b90(void)
+
+{
+  return 1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[METHOD +0x1e0] 0xfffffff00a98a6ec  FUN_fffffff00a98a6ec
+------------------------------------------------------------------------
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a98a6ec
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,
+               undefined4 param_4,undefined4 param_5,undefined4 param_6,long *param_7,
+               undefined8 param_8,undefined8 param_9,undefined8 param_10,undefined *param_11)
+
+{
+  undefined *puVar1;
+  undefined **ppuVar2;
+  long *plVar3;
+  long lVar4;
+  undefined **ppuVar5;
+  undefined1 extraout_q0 [16];
+  
+  plVar3 = (long *)param_7[2];
+  if (plVar3 != (long *)0x0) {
+    if (plVar3[4] != 0) {
+      param_1 = FUN_fffffff00a8adb74(plVar3[4]);
+      *(undefined8 *)(param_7[2] + 0x20) = 0;
+      plVar3 = (long *)param_7[2];
+    }
+    if ((long *)*plVar3 != (long *)0x0) {
+      param_1 = (**(code **)(*(long *)*plVar3 + 0x28))();
+      plVar3 = (long *)param_7[2];
+    }
+    *plVar3 = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x28) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x28) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x28) = 0;
+    lVar4 = param_7[2];
+    if (*(long **)(lVar4 + 0x18) != (long *)0x0) {
+      param_1 = (**(code **)(**(long **)(lVar4 + 0x18) + 0x28))();
+      lVar4 = param_7[2];
+    }
+    *(undefined8 *)(lVar4 + 0x18) = 0;
+    ppuVar2 = (undefined **)param_7[2];
+    ppuVar5 = (undefined **)ppuVar2[6];
+    if (ppuVar5 != (undefined **)0x0) {
+      ppuVar2[6] = (undefined *)0x0;
+      puVar1 = (undefined *)0x8000000000000000;
+      if (-1 < (long)ppuVar2[7]) {
+        puVar1 = ppuVar2[7];
+      }
+      param_1 = FUN_fffffff00a1e5000
+                          (param_1,param_2,param_3,param_4,param_5,param_6,&DAT_fffffff007c5ee68,
+                           ppuVar5,puVar1,param_10,param_11);
+      DAT_fffffff00ad57e00 = DAT_fffffff00ad57e00 - (long)puVar1;
+      ppuVar2 = (undefined **)param_7[2];
+    }
+    param_7[2] = 0;
+    FUN_fffffff00a1e5000
+              (param_1,param_2,param_3,param_4,param_5,param_6,(long *)&DAT_fffffff007c7c129,ppuVar2
+               ,&DAT_00000048,param_10,param_11);
+  }
+  lVar4 = (**(code **)(*param_7 + 0x38))(param_7);
+  if (lVar4 != 0) {
+    FUN_fffffff00a8564d4(extraout_q0,param_2,param_3,param_4,param_5,param_6,lVar4);
+  }
+                    /* WARNING: Could not recover jumptable at 0xfffffff00a98a868. Too many branches
+                        */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_7 + 8))(param_7,(undefined8 *)(*param_7 + 8));
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[SECTION C — EXTRA FUNCTION DECOMPILE]
+========================================================================
+
+========================================================================
+[FN] fffffff00a8ad7f0 | interface_0x10_writer
+========================================================================
+  entry  : 0xfffffff00a8ad7f0
+  name   : FUN_fffffff00a8ad7f0
+  size   : 68
+  crypto : IMG4, img4
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff00a8ad7f0
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 param_7)
+
+{
+  if (DAT_fffffff007c1b3e8 == 0) {
+    DAT_fffffff007c1b3e8 = param_7;
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_fffffff00aa0c4f8
+            (param_1,param_2,param_3,param_4,param_5,param_6,
+             (byte *)"img4 interface already set @%s:%d");
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[FN] fffffff00a725f74 | tc_disabled_flag_writer
+========================================================================
+  entry  : 0xfffffff00a725f74
+  name   : FUN_fffffff00a725f74
+  size   : 1364
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_fffffff00a725f74
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6)
+
+{
+  uint uVar1;
+  undefined1 auVar2 [16];
+  int iVar3;
+  int iVar4;
+  undefined8 uVar5;
+  undefined8 extraout_d0;
+  undefined8 extraout_d0_00;
+  undefined8 extraout_d0_01;
+  undefined8 extraout_d0_02;
+  undefined8 extraout_d0_03;
+  undefined8 extraout_d0_04;
+  undefined8 extraout_d0_05;
+  undefined8 extraout_d0_06;
+  undefined8 uVar6;
+  undefined8 extraout_var;
+  undefined8 extraout_var_00;
+  undefined8 extraout_var_01;
+  undefined8 extraout_var_02;
+  undefined8 extraout_var_03;
+  undefined8 extraout_var_04;
+  undefined8 extraout_var_05;
+  undefined8 extraout_var_06;
+  undefined8 uVar7;
+  ulong local_90 [12];
+  
+  DAT_fffffff00ad4fe98 = **(ulong **)(DAT_fffffff007c5e460 + 0x30);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4fe98,local_90);
+  uVar6 = extraout_d0;
+  uVar7 = extraout_var;
+  if ((int)uVar5 != 0) {
+LAB_fffffff00a7264a0:
+    auVar2._8_8_ = uVar7;
+    auVar2._0_8_ = uVar6;
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0c4f8
+              (auVar2,param_2,param_3,param_4,param_5,param_6,
+               (byte *)"%s: VA->PA translation failed for va %p @%s:%d");
+  }
+  DAT_fffffff00ad4fea8 = DAT_fffffff00ad4fe98 + 0x3c00;
+  DAT_fffffff00ad4fea0 = local_90[0];
+  DAT_fffffff00ad4feb0 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4fe98;
+  DAT_fffffff00ad4feb8 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 8);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4feb8,local_90);
+  uVar6 = extraout_d0_00;
+  uVar7 = extraout_var_00;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4fec8 = DAT_fffffff00ad4feb8 + 0x3c00;
+  DAT_fffffff00ad4fec0 = local_90[0];
+  DAT_fffffff00ad4fed0 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4feb8;
+  DAT_fffffff00ad4fed8 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x10);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4fed8,local_90);
+  uVar6 = extraout_d0_01;
+  uVar7 = extraout_var_01;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4fee8 = DAT_fffffff00ad4fed8 + 0x3c00;
+  DAT_fffffff00ad4fee0 = local_90[0];
+  DAT_fffffff00ad4fef0 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4fed8;
+  DAT_fffffff00ad4fef8 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x18);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4fef8,local_90);
+  uVar6 = extraout_d0_02;
+  uVar7 = extraout_var_02;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4ff08 = DAT_fffffff00ad4fef8 + 0x3c00;
+  DAT_fffffff00ad4ff00 = local_90[0];
+  DAT_fffffff00ad4ff10 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4fef8;
+  DAT_fffffff00ad4ff18 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x20);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4ff18,local_90);
+  uVar6 = extraout_d0_03;
+  uVar7 = extraout_var_03;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4ff28 = DAT_fffffff00ad4ff18 + 0x3c00;
+  DAT_fffffff00ad4ff20 = local_90[0];
+  DAT_fffffff00ad4ff30 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4ff18;
+  DAT_fffffff00ad4ff38 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x28);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4ff38,local_90);
+  uVar6 = extraout_d0_04;
+  uVar7 = extraout_var_04;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4ff48 = DAT_fffffff00ad4ff38 + 0x3c00;
+  DAT_fffffff00ad4ff40 = local_90[0];
+  DAT_fffffff00ad4ff50 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4ff38;
+  DAT_fffffff00ad4ff58 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x30);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4ff58,local_90);
+  uVar6 = extraout_d0_05;
+  uVar7 = extraout_var_05;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4ff68 = DAT_fffffff00ad4ff58 + 0x3c00;
+  DAT_fffffff00ad4ff60 = local_90[0];
+  DAT_fffffff00ad4ff70 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4ff58;
+  DAT_fffffff00ad4ff78 = *(ulong *)(*(long *)(DAT_fffffff007c5e460 + 0x30) + 0x38);
+  local_90[0] = 0;
+  uVar5 = FUN_fffffff00aa21f84(DAT_fffffff00ad4ff78,local_90);
+  uVar6 = extraout_d0_06;
+  uVar7 = extraout_var_06;
+  if ((int)uVar5 != 0) goto LAB_fffffff00a7264a0;
+  DAT_fffffff00ad4ff88 = DAT_fffffff00ad4ff78 + 0x3c00;
+  DAT_fffffff00ad4ff80 = local_90[0];
+  DAT_fffffff00ad4ff90 = DAT_fffffff00ad4ff98;
+  DAT_fffffff00ad4ff98 = &DAT_fffffff00ad4ff78;
+  DAT_fffffff00ad945b8 = DAT_fffffff00ace45a0 & 0xffffff | 0x22000000;
+  DAT_fffffff00ad945bc = 0;
+  DAT_fffffff00ad945c0 = 0;
+  if ((int)DAT_fffffff00ace45a0 < 0) {
+    iVar3 = DAT_fffffff00ace459c + 1;
+    iVar4 = DAT_fffffff00ace45ac + 1;
+    if (DAT_fffffff00ace459c + 0xf0000001U < 0xf0000002) goto LAB_fffffff00a726478;
+    DAT_fffffff00ad94584 = 0;
+    _DAT_fffffff00ad94588 = 0;
+    uVar1 = DAT_fffffff00ace459c + 0xf0000002;
+    iVar3 = DAT_fffffff00ace459c + 2;
+    DAT_fffffff00ace459c = DAT_fffffff00ace459c + 2;
+    iVar4 = DAT_fffffff00ace45ac + 2;
+    DAT_fffffff00ad94580 = DAT_fffffff00ad945b8;
+    if (uVar1 < 0xf0000002) goto LAB_fffffff00a726478;
+  }
+  DAT_fffffff00ace45ac = DAT_fffffff00ace45ac + 2;
+  _DAT_fffffff00ad94588 = 0;
+  DAT_fffffff00ad94584 = 0;
+  local_90[1] = 0;
+  local_90[3] = 0;
+  local_90[10] = 0;
+  local_90[7] = 0;
+  local_90[6] = 0;
+  local_90[9] = 0;
+  local_90[8] = 0;
+  local_90[5] = 0;
+  local_90[4] = 0;
+  local_90[0] = 0x1000000000001;
+  local_90[2] = 3;
+  DAT_fffffff00ad94580 = DAT_fffffff00ad945b8;
+  FUN_fffffff00a725590((int *)local_90);
+  DAT_fffffff007c08e28 = local_90[5];
+  DAT_fffffff007c08e30 = local_90[6];
+  DAT_fffffff007c08e38 = local_90[7];
+  local_90[1] = 0;
+  local_90[3] = 0;
+  local_90[10] = 0;
+  local_90[7] = 0;
+  local_90[6] = 0;
+  local_90[9] = 0;
+  local_90[8] = 0;
+  local_90[5] = 0;
+  local_90[4] = 0;
+  local_90[0] = 0x1000000000002;
+  local_90[2] = 6;
+  FUN_fffffff00a725590((int *)local_90);
+  DAT_fffffff007c08e40 = local_90[5];
+  DAT_fffffff007c08e68 = local_90[6];
+  DAT_fffffff007c08e74 = (undefined4)local_90[8];
+  DAT_fffffff007c08e48 = local_90[10];
+  DAT_fffffff007c08e60 = local_90[5] + 0x938;
+  DAT_fffffff007c08e70 = *(byte *)(local_90[10] + 0x2d8) & 1 ^ 1;
+  DAT_fffffff007c08e50 = local_90[10] + 0x158;
+  if ((*(byte *)(*(long *)(local_90[10] + 0x158) + 0x48) & 1) != 0) {
+    DAT_fffffff007c08e58 = *(undefined8 *)(local_90[10] + 0x2b0);
+  }
+  DAT_fffffff007c08e78 = *(byte *)(local_90[10] + 5) & 1;
+  DAT_fffffff007c08e79 = *(byte *)(local_90[10] + 6) & 1;
+  DAT_fffffff007c08e7c = *(undefined4 *)(local_90[5] + 0x9a4);
+  DAT_fffffff007c08e80 = *(undefined4 *)(local_90[5] + 0x9a8);
+  DAT_fffffff00ad94598 = DAT_fffffff00ace45a0 & 0xffffff | 0x22000000;
+  DAT_fffffff00ad9459c = 0;
+  DAT_fffffff00ad945a0 = 0;
+  if ((int)DAT_fffffff00ace45a0 < 0) {
+    iVar3 = DAT_fffffff00ace459c + 1;
+    iVar4 = DAT_fffffff00ace45ac + 1;
+    if (0xf0000001 < DAT_fffffff00ace459c + 0xf0000001U) {
+      DAT_fffffff00ad945ac = 0;
+      DAT_fffffff00ad945b0 = 0;
+      uVar1 = DAT_fffffff00ace459c + 0xf0000002;
+      iVar3 = DAT_fffffff00ace459c + 2;
+      DAT_fffffff00ace459c = DAT_fffffff00ace459c + 2;
+      iVar4 = DAT_fffffff00ace45ac + 2;
+      DAT_fffffff00ad945a8 = DAT_fffffff00ad94598;
+      if (0xf0000001 < uVar1) goto LAB_fffffff00a726454;
+    }
+LAB_fffffff00a726478:
+    DAT_fffffff00ace45ac = iVar4;
+    DAT_fffffff00ace459c = iVar3;
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa21104((uint *)&DAT_fffffff00ace459c);
+  }
+LAB_fffffff00a726454:
+  DAT_fffffff00ace45ac = DAT_fffffff00ace45ac + 2;
+  DAT_fffffff00ad945b0 = 0;
+  DAT_fffffff00ad945ac = 0;
+  DAT_fffffff00ad945a8 = DAT_fffffff00ad94598;
+  if ((*(byte *)(local_90[10] + 0x2d8) & 1) == 0) {
+    DAT_fffffff00ad4ffa0 = 1;
+  }
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[FN] fffffff00a723294 | selector_validator
+========================================================================
+  entry  : 0xfffffff00a723294
+  name   : FUN_fffffff00a723294
+  size   : 660
+  crypto : IMG4, img4, trust
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff00a723294
+                (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+                undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,ulong param_7,
+                undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11,
+                ulong param_12,ulong param_13)
+
+{
+  undefined1 *puVar1;
+  undefined1 auVar2 [16];
+  int iVar3;
+  int iVar4;
+  long lVar5;
+  ulong uVar6;
+  undefined8 *puVar7;
+  ulong *puVar8;
+  long lVar9;
+  undefined8 uVar10;
+  undefined8 extraout_d0;
+  undefined8 extraout_d0_00;
+  undefined8 uVar11;
+  undefined8 extraout_var;
+  undefined8 extraout_var_00;
+  undefined8 local_60;
+  undefined8 *puStack_58;
+  ulong *puStack_50;
+  undefined8 uStack_48;
+  
+  uVar10 = param_1._0_8_;
+  uVar11 = param_1._8_8_;
+  if (param_8 == (undefined8 *)0x0) {
+    return 4;
+  }
+  if (param_9 == (ulong *)0x0) {
+    return 4;
+  }
+  if (CARRY8((ulong)param_8,(ulong)param_9)) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0c4f8
+              (param_1,param_2,param_3,param_4,param_5,param_6,
+               (byte *)"overflow on the img4 object: %p | %lu @%s:%d");
+  }
+  if (param_11 != (ulong *)0x0) {
+    if (param_10 == (undefined8 *)0x0) {
+      return 4;
+    }
+    if (CARRY8((ulong)param_10,(ulong)param_11)) goto LAB_fffffff00a72351c;
+  }
+  if (param_13 != 0) {
+    if (param_12 == 0) {
+      return 4;
+    }
+    if (CARRY8(param_12,param_13)) {
+LAB_fffffff00a72351c:
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"overflow on the ext manifest: %p | %lu @%s:%d");
+    }
+  }
+  puVar7 = param_8;
+  puVar8 = param_9;
+  if (param_11 == (ulong *)0x0) {
+    if (*DAT_fffffff007c1b3e8 < 0xf) {
+      return 0x2e;
+    }
+    puStack_58 = (undefined8 *)0x0;
+    local_60 = 0;
+    uStack_48 = 0;
+    puStack_50 = (ulong *)0x0;
+    lVar9 = (**(code **)(DAT_fffffff007c1b3e8 + 0xa6))(param_8,param_9,&local_60);
+    puVar8 = puStack_50;
+    puVar7 = puStack_58;
+    if ((lVar9 == 0) ||
+       (lVar9 = (**(code **)(DAT_fffffff007c1b3e8 + 0xa4))(param_8,param_9,&local_60),
+       param_10 = puStack_58, param_11 = puStack_50, uVar10 = extraout_d0_00,
+       uVar11 = extraout_var_00, lVar9 == 0)) {
+      return 0x38;
+    }
+  }
+  iVar3 = (int)param_7;
+  if ((iVar3 - 0x1cU & 0xff) < 0xe7) {
+    return 4;
+  }
+  lVar9 = *(long *)(&DAT_fffffff007c08a40 + (param_7 & 0xffffffff) * 0x18);
+  if (lVar9 != 0) {
+    lVar5 = tpidr_el1;
+    lVar5 = FUN_fffffff00a25f6f4(lVar5);
+    if (lVar5 == DAT_fffffff007c5bf10) {
+      return 0x35;
+    }
+    uVar6 = FUN_fffffff00a25ecac(lVar5);
+    if (uVar6 == 0) {
+      return 0x35;
+    }
+    iVar4 = (**(code **)(DAT_fffffff007c58cf0 + 0x1d8))
+                      (uVar6,"com.apple.private.pmap.load-trust-cache",lVar9);
+    uVar10 = extraout_d0;
+    uVar11 = extraout_var;
+    if (iVar4 != 0) {
+      return 0x35;
+    }
+  }
+  if ((((iVar3 - 0xdU != 0) || ((DAT_fffffff00ad94570 & 1) == 0)) &&
+      ((iVar3 != 0xe || ((DAT_fffffff00ad94571 & 1) == 0)))) &&
+     ((DAT_fffffff007c08e58 == (int *)0x0 || (*DAT_fffffff007c08e58 != -1)))) {
+    auVar2._8_8_ = uVar11;
+    auVar2._0_8_ = uVar10;
+    uVar6 = FUN_fffffff00a723528
+                      (auVar2,param_2,param_3,param_4,param_5,param_6,param_7,puVar7,puVar8,param_10
+                       ,param_11);
+    if ((int)uVar6 == 0) {
+      if ((iVar3 - 0xdU & 0xff) < 2) {
+        puVar1 = &DAT_fffffff00ad94570;
+        if (iVar3 != 0xd) {
+          puVar1 = &DAT_fffffff00ad94571;
+        }
+        *puVar1 = 1;
+      }
+      DAT_fffffff00ad4fe80 = DAT_fffffff00ad4fe80 + 1;
+      return 0;
+    }
+    return uVar6;
+  }
+  return 0x35;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[FN] fffffff00a723528 | PPL_hypercall
+========================================================================
+  entry  : 0xfffffff00a723528
+  name   : FUN_fffffff00a723528
+  size   : 444
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff00a723528
+                (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+                undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 param_7,
+                undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11)
+
+{
+  bool bVar1;
+  undefined1 auVar2 [16];
+  undefined1 auVar3 [16];
+  undefined1 auVar4 [16];
+  undefined1 auVar5 [16];
+  bool bVar6;
+  uint uVar7;
+  undefined8 uVar8;
+  undefined **ppuVar10;
+  ulong *puVar11;
+  ulong uVar12;
+  ulong uVar13;
+  ulong uVar14;
+  undefined8 extraout_d0;
+  undefined8 extraout_var;
+  undefined4 uVar15;
+  undefined1 auVar16 [12];
+  undefined4 uVar17;
+  undefined1 auVar18 [12];
+  undefined1 auVar19 [16];
+  undefined8 local_b0;
+  undefined4 uStack_a8;
+  undefined4 uStack_a4;
+  undefined4 uStack_a0;
+  short local_9c;
+  undefined2 uStack_9a;
+  undefined8 uStack_98;
+  undefined8 local_90;
+  long lStack_88;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined **ppuVar9;
+  
+  uVar17 = param_4._0_4_;
+  auVar18 = param_4._4_12_;
+  uVar15 = param_3._0_4_;
+  auVar16 = param_3._4_12_;
+  uStack_a8 = 0;
+  uStack_98 = 0;
+  local_9c = 0;
+  uStack_9a = 0;
+  local_60 = 0;
+  uStack_78 = 0;
+  local_80 = 0;
+  uStack_68 = 0;
+  uStack_70 = 0;
+  lStack_88 = 0;
+  local_90 = 0;
+  local_b0 = 0xc;
+  uStack_a4 = (undefined4)DAT_fffffff00700e090;
+  uStack_a0 = (undefined4)((ulong)DAT_fffffff00700e090 >> 0x20);
+  auVar19 = FUN_fffffff00a2a03fc
+                      ((long *)DAT_fffffff007c5b790,param_9,(undefined ********)0x0,
+                       (undefined ********)0x4180,(undefined ********)0x17,0);
+  ppuVar9 = auVar19._8_8_;
+  uVar14 = auVar19._0_8_;
+  if (auVar19._0_4_ == 0) {
+    FUN_fffffff00aa24d30(ppuVar9,param_8,(ulong)param_9);
+    uVar12 = 0x4180;
+    uVar13 = 0x17;
+    auVar19 = FUN_fffffff00a2a03fc
+                        ((long *)DAT_fffffff007c5b790,param_11,(undefined ********)0x0,
+                         (undefined ********)0x4180,(undefined ********)0x17,0);
+    ppuVar10 = auVar19._8_8_;
+    uVar14 = auVar19._0_8_;
+    if (auVar19._0_4_ == 0) {
+      puVar11 = param_11;
+      auVar19 = FUN_fffffff00aa24d30(ppuVar10,param_10,(ulong)param_11);
+      auVar2._4_12_ = auVar16;
+      auVar2._0_4_ = uVar15;
+      auVar4._4_12_ = auVar18;
+      auVar4._0_4_ = uVar17;
+      FUN_fffffff00a725dc0
+                (auVar19,param_2,auVar2,auVar4,param_5,param_6,(ulong)ppuVar9,(ulong)param_9,
+                 (long)puVar11,uVar12,uVar13);
+      auVar19._8_8_ = extraout_var;
+      auVar19._0_8_ = extraout_d0;
+      auVar3._4_12_ = auVar16;
+      auVar3._0_4_ = uVar15;
+      auVar5._4_12_ = auVar18;
+      auVar5._0_4_ = uVar17;
+      FUN_fffffff00a725dc0
+                (auVar19,param_2,auVar3,auVar5,param_5,param_6,(ulong)ppuVar10,(ulong)param_11,
+                 (long)puVar11,uVar12,uVar13);
+      uVar8 = FUN_fffffff00a725590((int *)&local_b0);
+      uVar7 = 0xb;
+      if (uStack_98._1_1_ != '#' || local_9c != 3) {
+        uVar7 = (uint)uVar8;
+      }
+      uVar14 = (ulong)uVar7;
+      if (uVar7 != 0) goto LAB_fffffff00a723648;
+      bVar6 = lStack_88 != 0;
+    }
+    else {
+LAB_fffffff00a723648:
+      bVar6 = false;
+    }
+    if (ppuVar10 != (undefined **)0x0) {
+      auVar19 = FUN_fffffff00a725ea4((ulong)ppuVar10,(ulong)param_11);
+      FUN_fffffff00a2a279c
+                (auVar19,param_2,uVar15,uVar17,param_5,param_6,DAT_fffffff007c5b790,ppuVar10,
+                 (ulong)param_11,0,(undefined **)0x0);
+    }
+    if ((int)uVar14 == 0) {
+      bVar1 = false;
+      if (ppuVar9 != (undefined **)0x0) {
+        bVar1 = bVar6;
+      }
+      if (!bVar1) {
+        return uVar14;
+      }
+      goto LAB_fffffff00a72367c;
+    }
+  }
+  if (ppuVar9 == (undefined **)0x0) {
+    return uVar14;
+  }
+LAB_fffffff00a72367c:
+  auVar19 = FUN_fffffff00a725ea4((ulong)ppuVar9,(ulong)param_9);
+  FUN_fffffff00a2a279c
+            (auVar19,param_2,uVar15,uVar17,param_5,param_6,DAT_fffffff007c5b790,ppuVar9,
+             (ulong)param_9,0,(undefined **)0x0);
+  return uVar14;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[DONE]
+========================================================================

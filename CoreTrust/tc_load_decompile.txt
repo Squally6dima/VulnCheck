@@ -1,0 +1,126 @@
+======================================================================
+[DECOMPILE TC-LOAD] program = kcache.raw
+[DECOMPILE TC-LOAD] output  = /home/femboychik/femboychik/tc_load_decompile.txt
+======================================================================
+
+======================================================================
+[FN] fffffff008e8fc70 | TC_load_selector2_no_manifest
+======================================================================
+  entry    : 0xfffffff008e8fc70
+  name     : FUN_fffffff008e8fc70
+  size     : 16 bytes
+  params   : 12
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e8fc70
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 param_7,
+               undefined8 *param_8,ulong *param_9,undefined8 param_10,ulong param_11,ulong param_12)
+
+{
+  FUN_fffffff008e86f50
+            (param_1,param_2,param_3,param_4,param_5,param_6,param_8,param_9,param_9,param_10,
+             param_11,param_12);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e8fc80 | TC_load_selector7_with_manifest
+======================================================================
+  entry    : 0xfffffff008e8fc80
+  name     : FUN_fffffff008e8fc80
+  size     : 24 bytes
+  params   : 12
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e8fc80
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 param_7,
+               undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11,
+               ulong param_12)
+
+{
+  CT_T6_FUN_fffffff008e86cec
+            (param_1,param_2,param_3,param_4,param_5,param_6,param_8,param_9,param_10,param_11,
+             (ulong)param_11,param_12);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff00a705260 | LibTrustCache_lookup_fn
+======================================================================
+  entry    : 0xfffffff00a705260
+  name     : FUN_fffffff00a705260
+  size     : 228 bytes
+  params   : 4
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff00a705260(undefined8 param_1,int *param_2,int param_3,long param_4)
+
+{
+  long *plVar1;
+  bool bVar2;
+  ulong uVar3;
+  int local_2c;
+  long local_28;
+  
+  if (param_2 != (int *)0x0) {
+    param_3 = *param_2;
+  }
+  local_28 = (long)param_3;
+  bVar2 = *(long *)(param_4 + 0x10) != 0;
+  plVar1 = &local_28;
+  if (bVar2) {
+    plVar1 = (long *)&local_2c;
+  }
+  local_2c = 0;
+  if (bVar2) {
+    local_2c = param_3;
+  }
+  uVar3 = (**(code **)(param_4 + 0x28))(param_4,plVar1,4);
+  if ((int)uVar3 == 0) {
+    uVar3 = (ulong)(*(long *)(param_4 + 0x30) != 0);
+    if ((param_2 != (int *)0x0) && (*(long *)(param_4 + 0x30) != 0)) {
+      if (*(long *)(param_4 + 0x38) == 8) {
+        uVar3 = (**(code **)(param_4 + 0x48))(param_4,&local_28,8);
+        if ((int)uVar3 == 0) {
+          if (local_28 == (int)local_28) {
+            uVar3 = 0;
+            *param_2 = (int)local_28;
+          }
+          else {
+            uVar3 = 0x22;
+          }
+        }
+      }
+      else {
+        uVar3 = (**(code **)(param_4 + 0x48))(param_4,param_2,4);
+      }
+    }
+  }
+  return uVar3;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff007632a15 | AMFI_TC_interface_fn3
+======================================================================
+  not found: no function at/around this address
+
+======================================================================
+[DECOMPILE TC-LOAD] done. targets=4, not_found=1
+======================================================================
+
+--- not found ---
+  fffffff007632a15

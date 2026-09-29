@@ -1,0 +1,359 @@
+========================================================================
+[LOADTC REAL HANDLER] program = kcache.raw
+[LOADTC REAL HANDLER] output  = /home/femboychik/femboychik/loadtc_real_handler.txt
+========================================================================
+
+========================================================================
+[SECTION 1 — MAIN TARGETS]
+========================================================================
+
+------------------------------------------------------------------------
+[FN] fffffff008e86f60 | ★★★ loadTrustCache_img4_real_handler (case 0x65)
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e86f60
+  name   : FUN_fffffff008e86f60
+  size   : 316 bytes
+  crypto : trust
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff008e86f60
+                (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+                undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,ulong param_7,
+                undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11,
+                ulong param_12,ulong param_13)
+
+{
+  bool bVar1;
+  byte bVar2;
+  undefined8 uVar3;
+  ulong uVar4;
+  char *pcVar5;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 extraout_q0_01 [16];
+  undefined1 auVar6 [16];
+  
+  bVar1 = FUN_fffffff008e86e98
+                    ((ulong)param_8,(ulong)param_9,param_9,param_10,(ulong)param_11,param_12);
+  if (bVar1) {
+    pcVar5 = "%s: loading duplicate trust cache (success)\n";
+  }
+  else {
+    auVar6 = extraout_q0;
+    if ((((2 < (int)param_7 - 0xdU) && ((DAT_fffffff007e68c10 & 1) == 0)) &&
+        ((bVar2 = thunk_FUN_fffffff00a724204(), (int)param_7 != 0x16 ||
+         (auVar6 = extraout_q0_00, (bVar2 & 1) == 0)))) &&
+       (uVar3 = FUN_fffffff008e837c8((byte *)0x0), auVar6 = extraout_q0_01, (int)uVar3 == 0)) {
+      thunk_FUN_fffffff00a8c28ac((byte *)"%s: loading trust caches disallowed by system state\n");
+      return 0x31;
+    }
+    uVar4 = thunk_FUN_fffffff00a723294
+                      (auVar6,param_2,param_3,param_4,param_5,param_6,param_7,param_8,param_9,
+                       param_10,param_11,param_12,param_13);
+    if ((int)uVar4 == 0) {
+      return uVar4;
+    }
+    if ((int)uVar4 != 0xb) {
+      thunk_FUN_fffffff00a8c28ac((byte *)"%s: unable to load trust cache: %d\n");
+      return uVar4;
+    }
+    pcVar5 = "%s: attempted to load duplicate trust cache -- switching to success\n";
+  }
+  thunk_FUN_fffffff00a8c28ac((byte *)pcVar5);
+  return 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e86af0 | cdhash_in_cache_check (case 0x5f, x3 calls)
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e86af0
+  name   : FUN_fffffff008e86af0
+  size   : 92 bytes
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+bool FUN_fffffff008e86af0(uint param_1,long param_2,undefined8 param_3,ulong *param_4)
+
+{
+  int iVar1;
+  long local_30 [2];
+  
+  local_30[0] = 0;
+  local_30[1] = 0;
+  iVar1 = thunk_FUN_fffffff00a723750(param_1,param_2,param_3,local_30);
+  if (iVar1 == 0) {
+    if (param_4 != (ulong *)0x0) {
+      *param_4 = 0;
+    }
+    FUN_fffffff008e9b414(local_30,param_4);
+  }
+  return iVar1 == 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e93bd8 | return_wrapper_errno
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e93bd8
+  name   : FUN_fffffff008e93bd8
+  size   : 128 bytes
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8 FUN_fffffff008e93bd8(undefined8 param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = (int)param_1;
+  if (iVar1 < 6) {
+    if (iVar1 == 0) {
+      return param_1;
+    }
+    if (iVar1 == 4) {
+      return 0x16;
+    }
+    if (iVar1 == 5) {
+      return 0x59;
+    }
+  }
+  else if (iVar1 < 0x31) {
+    if (iVar1 == 6) {
+      return 0xc;
+    }
+    if (iVar1 == 0x2e) {
+      return 0x2d;
+    }
+  }
+  else {
+    if (iVar1 == 0x31) {
+      return 0x23;
+    }
+    if (iVar1 == 0x38) {
+      return 2;
+    }
+  }
+  return 1;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e8f43c | entitlement_check (from 0x63/0x64)
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e8f43c
+  name   : FUN_fffffff008e8f43c
+  size   : 120 bytes
+  crypto : not found
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+undefined8
+FUN_fffffff008e8f43c
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+          undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long param_7,long param_8,
+          undefined8 param_9,ulong *param_10,undefined8 param_11)
+
+{
+  bool bVar1;
+  long *plVar2;
+  undefined8 uVar3;
+  undefined1 extraout_q0 [16];
+  
+  plVar2 = FUN_fffffff008e8b4c4(param_7,param_8,param_9,param_10,param_11);
+  if (plVar2 == (long *)0x0) {
+    uVar3 = 0xe00002f0;
+  }
+  else {
+    bVar1 = FUN_fffffff008e97150
+                      (extraout_q0,param_2,param_3,param_4,param_5,param_6,(long)plVar2,param_8);
+    *(bool *)param_9 = bVar1;
+    (**(code **)(*plVar2 + 0x28))(plVar2);
+    uVar3 = 0;
+  }
+  return uVar3;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e86cec | TC_selector7_manifest_loader (из прошлого)
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e86cec
+  name   : CT_T6_FUN_fffffff008e86cec
+  size   : 428 bytes
+  crypto : trust, ct_, coretrust
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+/* CoreTrust/AMFI Tier 6 hits:
+     - trust cache (T6 @ fffffff00762fe2e)
+     - trust cache (T6 @ fffffff00762fe7e)
+     - trust cache (T6 @ fffffff00762feb3)
+     - trust cache (T6 @ fffffff00762fef8) */
+
+undefined8
+CT_T6_FUN_fffffff008e86cec
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+          undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+          ulong *param_8,undefined8 *param_9,ulong *param_10,ulong param_11,ulong param_12)
+
+{
+  bool bVar1;
+  byte bVar2;
+  int iVar3;
+  char *pcVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 auVar7 [16];
+  undefined1 extraout_q0_01 [16];
+  byte local_41;
+  
+  bVar1 = FUN_fffffff008e86e98((ulong)param_7,(ulong)param_8,param_9,param_10,param_11,param_12);
+  if (bVar1) {
+    pcVar4 = "%s: loading duplicate trust cache (success)\n";
+LAB_fffffff008e86d38:
+    thunk_FUN_fffffff00a8c28ac((byte *)pcVar4);
+    uVar5 = 0;
+  }
+  else {
+    uVar5 = 0xe00002d8;
+    auVar7 = extraout_q0;
+    if (((DAT_fffffff007e68c10 & 1) == 0) &&
+       (uVar6 = FUN_fffffff008e837c8((byte *)0x0), auVar7 = extraout_q0_00, (int)uVar6 == 0)) {
+      bVar2 = thunk_FUN_fffffff00a724204();
+      if (bVar2 == 0) {
+LAB_fffffff008e86e14:
+        thunk_FUN_fffffff00a8c28ac((byte *)"%s: loading trust caches disallowed by system state\n");
+        return 0xe00002d8;
+      }
+      local_41 = 0;
+      uVar6 = FUN_fffffff008e837c8(&local_41);
+      auVar7 = extraout_q0_01;
+      if (((local_41 & 1) == 0) && ((int)uVar6 == 0)) goto LAB_fffffff008e86e14;
+    }
+    uVar6 = thunk_FUN_fffffff00a723218
+                      (auVar7,param_2,param_3,param_4,param_5,param_6,param_7,param_8,param_9,
+                       param_10);
+    iVar3 = (int)uVar6;
+    if (iVar3 < 0xb) {
+      if (iVar3 < 5) {
+        if (iVar3 == 0) {
+          return uVar6;
+        }
+        if (iVar3 == 4) {
+          uVar5 = 0xe00002c2;
+        }
+        else {
+LAB_fffffff008e86e60:
+          uVar5 = 0xe00002bc;
+        }
+      }
+      else if (iVar3 == 5) {
+        uVar5 = 0xe00002eb;
+      }
+      else {
+        if (iVar3 != 6) goto LAB_fffffff008e86e60;
+        uVar5 = 0xe00002bd;
+      }
+    }
+    else if (iVar3 < 0x31) {
+      if (iVar3 == 0xb) {
+        pcVar4 = "%s: attempted to load duplicate trust cache -- switching to success\n";
+        goto LAB_fffffff008e86d38;
+      }
+      if (iVar3 != 0x2e) goto LAB_fffffff008e86e60;
+      uVar5 = 0xe00002c7;
+    }
+    else if (iVar3 != 0x31) {
+      if (iVar3 == 0x35) {
+        uVar5 = 0xe00002e2;
+      }
+      else {
+        if (iVar3 != 0x38) goto LAB_fffffff008e86e60;
+        uVar5 = 0xe00002f0;
+      }
+    }
+    thunk_FUN_fffffff00a8c28ac((byte *)"%s: unable to load trust cache: %d\n");
+  }
+  return uVar5;
+}
+
+
+--- /PSEUDOCODE ---
+
+------------------------------------------------------------------------
+[FN] fffffff008e86f50 | TC_selector2_loader_no_manifest (из прошлого)
+------------------------------------------------------------------------
+  entry  : 0xfffffff008e86f50
+  name   : FUN_fffffff008e86f50
+  size   : 16 bytes
+  crypto : ct_
+  gates  : not found
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e86f50
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+               ulong *param_8,undefined8 param_9,undefined8 param_10,ulong param_11,ulong param_12)
+
+{
+  CT_T6_FUN_fffffff008e86cec
+            (param_1,param_2,param_3,param_4,param_5,param_6,param_7,param_8,(undefined8 *)0x0,
+             (ulong *)0x0,param_11,param_12);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+========================================================================
+[SECTION 2 — XREFS]
+========================================================================
+
+--- xrefs to fffffff008e86f60 ---
+  <- 0xfffffff00af95cf7 [DATA] (no fn)
+  <- 0xfffffff008e92b60 [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e9217c @ fffffff008e9217c
+
+--- xrefs to fffffff008e86af0 ---
+  <- 0xfffffff00af95cee [DATA] (no fn)
+  <- 0xfffffff008e8e95c [UNCONDITIONAL_CALL] FUN_fffffff008e8e924 @ fffffff008e8e924
+  <- 0xfffffff008e8e978 [UNCONDITIONAL_CALL] FUN_fffffff008e8e924 @ fffffff008e8e924
+  <- 0xfffffff008e8e990 [UNCONDITIONAL_CALL] FUN_fffffff008e8e924 @ fffffff008e8e924
+  <- 0xfffffff008e8d740 [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e8d650 @ fffffff008e8d650
+  <- 0xfffffff008e84f84 [UNCONDITIONAL_CALL] FUN_fffffff008e84d68 @ fffffff008e84d68
+  <- 0xfffffff008e8e9e4 [UNCONDITIONAL_CALL] FUN_fffffff008e8e9b0 @ fffffff008e8e9b0
+  <- 0xfffffff008e8ea08 [UNCONDITIONAL_CALL] FUN_fffffff008e8e9b0 @ fffffff008e8e9b0
+  <- 0xfffffff008e8ea2c [UNCONDITIONAL_CALL] FUN_fffffff008e8e9b0 @ fffffff008e8e9b0
+  <- 0xfffffff008e90eb0 [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e90470 @ fffffff008e90470
+  <- 0xfffffff008e928e4 [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e9217c @ fffffff008e9217c
+  <- 0xfffffff008e928fc [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e9217c @ fffffff008e9217c
+  <- 0xfffffff008e9291c [UNCONDITIONAL_CALL] CT_T2_FUN_fffffff008e9217c @ fffffff008e9217c
+
+--- xrefs to fffffff00a723294 ---
+  <- 0xfffffff00af7cdc4 [DATA] (no fn)
+  <- 0xfffffff007e6dfd8 [DATA] (no fn)
+  <- 0xfffffff00a723260 [UNCONDITIONAL_CALL] FUN_fffffff00a723218 @ fffffff00a723218
+  <- 0xfffffff008eac8d4 [COMPUTED_CALL] thunk_FUN_fffffff00a723294 @ fffffff008eac8c8
+
+========================================================================
+[DONE]
+========================================================================

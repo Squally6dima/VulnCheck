@@ -1,0 +1,22 @@
+======================================================================
+[HUB CORETRUST VTABLE CALLS] program = kcache.raw
+[HUB CORETRUST VTABLE CALLS] range   = fffffff008e91000 .. fffffff008e91500
+[HUB CORETRUST VTABLE CALLS] output  = /home/femboychik/femboychik/hub_coretrust_calls.txt
+======================================================================
+  instructions scanned : 321
+  indirect branches    : 2
+  vtable candidates    : 1
+
+--- vtable call candidates ---
+  @ 0xfffffff008e91280  off=0x28  blraa x8,x16
+    ^ context:
+      mov x6,x27
+      bl 0xfffffff008e9359c
+      mov x25,x0
+      ldr x16,[x22]
+      mov x17,x22
+      movk x17,#0xcda1, LSL #48
+      autda x16,x17
+      ldr x8,[x16, #0x28]!
+      mov x0,x22
+      movk x16,#0x3a87, LSL #48

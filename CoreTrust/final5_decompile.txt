@@ -1,0 +1,425 @@
+======================================================================
+[FINAL5 DECOMPILE] program = kcache.raw
+[FINAL5 DECOMPILE] output  = /home/femboychik/femboychik/final5_decompile.txt
+======================================================================
+
+======================================================================
+[FN] fffffff00a723294 | LibTC_PPL_dispatcher_actual
+[HINT] принимает ли NULL manifest — есть ли ветка default_allow без криптографии
+======================================================================
+  entry    : 0xfffffff00a723294
+  name     : FUN_fffffff00a723294
+  size     : 660 bytes
+  params   : 13
+
+--- MARKERS ---
+  crypto  : manifest, IMG4, img4
+  memory  : not found
+  gates   : not found
+
+--- PSEUDOCODE ---
+
+ulong FUN_fffffff00a723294
+                (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+                undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,ulong param_7,
+                undefined8 *param_8,ulong *param_9,undefined8 *param_10,ulong *param_11,
+                ulong param_12,ulong param_13)
+
+{
+  undefined1 *puVar1;
+  undefined1 auVar2 [16];
+  int iVar3;
+  int iVar4;
+  long lVar5;
+  ulong uVar6;
+  undefined8 *puVar7;
+  ulong *puVar8;
+  long lVar9;
+  undefined8 uVar10;
+  undefined8 extraout_d0;
+  undefined8 extraout_d0_00;
+  undefined8 uVar11;
+  undefined8 extraout_var;
+  undefined8 extraout_var_00;
+  undefined8 local_60;
+  undefined8 *puStack_58;
+  ulong *puStack_50;
+  undefined8 uStack_48;
+  
+  uVar10 = param_1._0_8_;
+  uVar11 = param_1._8_8_;
+  if (param_8 == (undefined8 *)0x0) {
+    return 4;
+  }
+  if (param_9 == (ulong *)0x0) {
+    return 4;
+  }
+  if (CARRY8((ulong)param_8,(ulong)param_9)) {
+                    /* WARNING: Subroutine does not return */
+    FUN_fffffff00aa0c4f8
+              (param_1,param_2,param_3,param_4,param_5,param_6,
+               (byte *)"overflow on the img4 object: %p | %lu @%s:%d");
+  }
+  if (param_11 != (ulong *)0x0) {
+    if (param_10 == (undefined8 *)0x0) {
+      return 4;
+    }
+    if (CARRY8((ulong)param_10,(ulong)param_11)) goto LAB_fffffff00a72351c;
+  }
+  if (param_13 != 0) {
+    if (param_12 == 0) {
+      return 4;
+    }
+    if (CARRY8(param_12,param_13)) {
+LAB_fffffff00a72351c:
+                    /* WARNING: Subroutine does not return */
+      FUN_fffffff00aa0c4f8
+                (param_1,param_2,param_3,param_4,param_5,param_6,
+                 (byte *)"overflow on the ext manifest: %p | %lu @%s:%d");
+    }
+  }
+  puVar7 = param_8;
+  puVar8 = param_9;
+  if (param_11 == (ulong *)0x0) {
+    if (*DAT_fffffff007c1b3e8 < 0xf) {
+      return 0x2e;
+    }
+    puStack_58 = (undefined8 *)0x0;
+    local_60 = 0;
+    uStack_48 = 0;
+    puStack_50 = (ulong *)0x0;
+    lVar9 = (**(code **)(DAT_fffffff007c1b3e8 + 0xa6))(param_8,param_9,&local_60);
+    puVar8 = puStack_50;
+    puVar7 = puStack_58;
+    if ((lVar9 == 0) ||
+       (lVar9 = (**(code **)(DAT_fffffff007c1b3e8 + 0xa4))(param_8,param_9,&local_60),
+       param_10 = puStack_58, param_11 = puStack_50, uVar10 = extraout_d0_00,
+       uVar11 = extraout_var_00, lVar9 == 0)) {
+      return 0x38;
+    }
+  }
+  iVar3 = (int)param_7;
+  if ((iVar3 - 0x1cU & 0xff) < 0xe7) {
+    return 4;
+  }
+  lVar9 = *(long *)(&DAT_fffffff007c08a40 + (param_7 & 0xffffffff) * 0x18);
+  if (lVar9 != 0) {
+    lVar5 = tpidr_el1;
+    lVar5 = FUN_fffffff00a25f6f4(lVar5);
+    if (lVar5 == DAT_fffffff007c5bf10) {
+      return 0x35;
+    }
+    uVar6 = FUN_fffffff00a25ecac(lVar5);
+    if (uVar6 == 0) {
+      return 0x35;
+    }
+    iVar4 = (**(code **)(DAT_fffffff007c58cf0 + 0x1d8))
+                      (uVar6,"com.apple.private.pmap.load-trust-cache",lVar9);
+    uVar10 = extraout_d0;
+    uVar11 = extraout_var;
+    if (iVar4 != 0) {
+      return 0x35;
+    }
+  }
+  if ((((iVar3 - 0xdU != 0) || ((DAT_fffffff00ad94570 & 1) == 0)) &&
+      ((iVar3 != 0xe || ((DAT_fffffff00ad94571 & 1) == 0)))) &&
+     ((DAT_fffffff007c08e58 == (int *)0x0 || (*DAT_fffffff007c08e58 != -1)))) {
+    auVar2._8_8_ = uVar11;
+    auVar2._0_8_ = uVar10;
+    uVar6 = FUN_fffffff00a723528
+                      (auVar2,param_2,param_3,param_4,param_5,param_6,param_7,puVar7,puVar8,param_10
+                       ,param_11);
+    if ((int)uVar6 == 0) {
+      if ((iVar3 - 0xdU & 0xff) < 2) {
+        puVar1 = &DAT_fffffff00ad94570;
+        if (iVar3 != 0xd) {
+          puVar1 = &DAT_fffffff00ad94571;
+        }
+        *puVar1 = 1;
+      }
+      DAT_fffffff00ad4fe80 = DAT_fffffff00ad4fe80 + 1;
+      return 0;
+    }
+    return uVar6;
+  }
+  return 0x35;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e86b4c | AMFI_system_state_setter
+[HINT] единственный setter system state gate — что пишет в DAT_007e68c10
+======================================================================
+  entry    : 0xfffffff008e86b4c
+  name     : CT_T6_FUN_fffffff008e86b4c
+  size     : 416 bytes
+  params   : 0
+
+--- MARKERS ---
+  crypto  : not found
+  memory  : not found
+  gates   : not found
+
+--- PSEUDOCODE ---
+
+/* WARNING: Removing unreachable block (ram,0xfffffff008e86c6c) */
+/* CoreTrust/AMFI Tier 6 hits:
+     - trust cache (T6 @ fffffff00762fd93) */
+
+void CT_T6_FUN_fffffff008e86b4c(void)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  long *plVar3;
+  long *plVar4;
+  int *piVar5;
+  uint local_34;
+  
+  uVar2 = FUN_fffffff008e8fe9c();
+  if ((int)uVar2 != 0) {
+    local_34 = 0;
+    iVar1 = thunk_FUN_fffffff00a9d4528((byte *)"srd_allow_trust_caches_when_locked",&local_34,4);
+    if (iVar1 != 0) {
+      thunk_FUN_fffffff00a8c28ac
+                ((byte *)"AMFI: research variant relaxes lock-state for trust caches: %u\n");
+      DAT_fffffff007e68c10 = local_34 != 0;
+      return;
+    }
+  }
+  plVar3 = thunk_FUN_fffffff00a8c9f50
+                     ("/chosen",*(long *)PTR_DAT_fffffff007e6e378,0,(int *)0x0,(long *)0x0);
+  if (plVar3 != (long *)0x0) {
+    plVar4 = (long *)(**(code **)(*plVar3 + 0x118))(plVar3,"amfi-allows-trust-cache-load");
+    plVar4 = thunk_FUN_fffffff00a855144(plVar4,*(long *)PTR_PTR_fffffff007e6e2f8);
+    if (plVar4 != (long *)0x0) {
+      iVar1 = (**(code **)(*plVar4 + 0xa0))();
+      if (iVar1 == 4) {
+        piVar5 = (int *)(**(code **)(*plVar4 + 0xd8))(plVar4);
+        DAT_fffffff007e68c10 = *piVar5 != 0;
+      }
+      else {
+        (**(code **)(*plVar4 + 0xa0))(plVar4);
+        thunk_FUN_fffffff00a8c28ac
+                  ((byte *)"AMFI: amfi-allows-trust-cache-load has unexpected size (%u).\n");
+      }
+    }
+    (**(code **)(*plVar3 + 0x28))(plVar3);
+  }
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e9359c | AMFI_hub_pre_vtable_call
+[HINT] что вызывается перед CoreTrust в middle hub
+======================================================================
+  entry    : 0xfffffff008e9359c
+  name     : FUN_fffffff008e9359c
+  size     : 312 bytes
+  params   : 13
+
+--- MARKERS ---
+  crypto  : not found
+  memory  : not found
+  gates   : entitlement
+
+--- PSEUDOCODE ---
+
+undefined8
+FUN_fffffff008e9359c
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined4 param_3,undefined4 param_4,
+          undefined4 param_5,undefined4 param_6,long *param_7,long param_8,uint param_9,
+          long *param_10,undefined *param_11,undefined8 *param_12,ulong *param_13)
+
+{
+  char cVar1;
+  long lVar2;
+  char *pcVar3;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 extraout_q0_01 [16];
+  undefined1 auVar4 [16];
+  
+  if (((param_9 >> 0x1a & 1) == 0) || (cVar1 = thunk_FUN_fffffff00a6ac6f8(param_8), cVar1 != '\x01')
+     ) {
+    lVar2 = (**(code **)(*param_10 + 0x138))(param_10,"com.apple.private.oop-jit.loader");
+    if (((param_9 >> 0x1a & 1) == 0) && (lVar2 != 0)) {
+      thunk_FUN_fffffff00a6ac7c8(param_8);
+      pcVar3 = "%s: %s disallowed due to OOP-JIT loader entitlement";
+      auVar4 = extraout_q0_00;
+    }
+    else {
+      lVar2 = (**(code **)(*param_10 + 0x138))(param_10,"com.apple.private.oop-jit.runner");
+      if ((param_9 >> 0x1a & 1) != 0) {
+        return 1;
+      }
+      if (lVar2 == 0) {
+        return 1;
+      }
+      thunk_FUN_fffffff00a6ac7c8(param_8);
+      pcVar3 = "%s: %s disallowed due to OOP-JIT runner entitlement";
+      auVar4 = extraout_q0_01;
+    }
+  }
+  else {
+    pcVar3 = "%s: Hash type is SHA1";
+    auVar4 = extraout_q0;
+  }
+  CT_T5_FUN_fffffff008e8eaf8
+            (auVar4,param_2,param_3,param_4,param_5,param_6,param_7,param_12,param_13,(byte *)pcVar3
+             ,param_11);
+  return 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e93340 | AMFI_full_validation_chain
+[HINT] validation chain после cs_blob получения
+======================================================================
+  entry    : 0xfffffff008e93340
+  name     : FUN_fffffff008e93340
+  size     : 604 bytes
+  params   : 11
+
+--- MARKERS ---
+  crypto  : not found
+  memory  : not found
+  gates   : entitlement
+
+--- PSEUDOCODE ---
+
+undefined8
+FUN_fffffff008e93340
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+          undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,long *param_7,long param_8,
+          long *param_9,undefined ********param_10,undefined ********param_11)
+
+{
+  uint uVar1;
+  undefined1 uVar2;
+  int iVar3;
+  long lVar4;
+  long *plVar5;
+  undefined8 uVar6;
+  uint *puVar7;
+  long *plVar8;
+  undefined8 extraout_x1;
+  undefined *********pppppppppuVar9;
+  undefined ********ppppppppuVar10;
+  char *pcVar11;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 extraout_q0_01 [16];
+  undefined ********local_70;
+  byte *local_68;
+  ulong local_60;
+  long local_58;
+  
+  local_60 = 0;
+  local_58 = 0;
+  local_70 = (undefined ********)0x0;
+  local_68 = (byte *)0x0;
+  ppppppppuVar10 = param_10;
+  lVar4 = thunk_FUN_fffffff00a6ac988(param_8);
+  uVar1 = *(uint *)(lVar4 + 8);
+  plVar5 = (long *)thunk_FUN_fffffff00a6aca6c(param_8);
+  if (plVar5 == (long *)0x0) {
+    iVar3 = thunk_FUN_fffffff00a746130(param_8,&local_58,&local_60);
+    if (iVar3 == 0) {
+      pppppppppuVar9 = &local_70;
+      iVar3 = thunk_FUN_fffffff00a7462fc(param_8,(long *)&local_68,(ulong *)pppppppppuVar9);
+      if (iVar3 == 0) {
+        if (local_58 == 0 && local_68 == (byte *)0x0) {
+LAB_fffffff008e9343c:
+          puVar7 = thunk_FUN_fffffff00a6ac7c8(param_8);
+          plVar8 = FUN_fffffff008e96334
+                             (extraout_q0_00,param_2,param_3,param_4,param_5,param_6,
+                              (undefined8 *)puVar7,extraout_x1,pppppppppuVar9,ppppppppuVar10,
+                              param_11);
+        }
+        else {
+          uVar1 = (uVar1 & 0xff00ff00) >> 8 | (uVar1 & 0xff00ff) << 8;
+          if ((0x80 < (uVar1 >> 0x10 | uVar1 << 0x10) >> 10) && ((*(byte *)(lVar4 + 0x57) & 1) == 0)
+             ) {
+            if ((*(byte *)(param_9 + 0x81) & 1) == 0) {
+              uVar2 = (**(code **)(*param_9 + 0x10))(param_9);
+              *(undefined1 *)(param_9 + 0x81) = uVar2;
+            }
+            thunk_FUN_fffffff00a8c28ac
+                      ((byte *)
+                       "AMFI: constraint violation %s has entitlements but is not a main binary\n");
+            goto LAB_fffffff008e9343c;
+          }
+          if (local_68 == (byte *)0x0) {
+            pcVar11 = 
+            "entitlement validation failed, binary has XML entitlements but no DER slot is present."
+            ;
+            goto LAB_fffffff008e93408;
+          }
+          if (local_70 < &DAT_00000008) {
+            pcVar11 = "entitlements too small";
+            goto LAB_fffffff008e93408;
+          }
+          local_68 = local_68 + 8;
+          local_70 = local_70 + -1;
+          if ((undefined ********)0x20000 < local_70) {
+            pcVar11 = "entitlements too large";
+            goto LAB_fffffff008e93408;
+          }
+          plVar8 = FUN_fffffff008e9623c
+                             (extraout_q0,param_2,param_3,param_4,param_5,param_6,local_68,local_70)
+          ;
+          if (plVar8 == (long *)0x0) {
+            pcVar11 = "failed parsing DER entitlements";
+            goto LAB_fffffff008e93408;
+          }
+          puVar7 = thunk_FUN_fffffff00a6ac7c8(param_8);
+          thunk_FUN_fffffff008e95d10
+                    (extraout_q0_01,param_2,param_3,param_4,param_5,param_6,(long)plVar8,
+                     (undefined8 *)puVar7);
+        }
+        thunk_FUN_fffffff00a1ea000(DAT_fffffff00ae8a1e8);
+        plVar5 = (long *)thunk_FUN_fffffff00a6aca6c(param_8);
+        if (plVar5 == (long *)0x0) {
+          thunk_FUN_fffffff00a6aca00(param_8,plVar8);
+          plVar5 = plVar8;
+        }
+        else if (plVar8 != (long *)0x0) {
+          (**(code **)(*plVar8 + 0x28))(plVar8);
+        }
+        thunk_FUN_fffffff00a1eab38((ulong)DAT_fffffff00ae8a1e8);
+        goto LAB_fffffff008e9339c;
+      }
+      thunk_FUN_fffffff00a8c28ac((byte *)"Error getting DER\n");
+      pcVar11 = "failed getting DER entitlements";
+    }
+    else {
+      thunk_FUN_fffffff00a8c28ac((byte *)"Error getting XML\n");
+      pcVar11 = "failed getting entitlements";
+    }
+LAB_fffffff008e93408:
+    uVar6 = 0;
+    plVar5 = (long *)0x0;
+    *param_10 = (undefined *******)pcVar11;
+  }
+  else {
+LAB_fffffff008e9339c:
+    uVar6 = 1;
+  }
+  *param_7 = (long)plVar5;
+  return uVar6;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FINAL5 DECOMPILE] done. targets=4, not_found=0
+======================================================================

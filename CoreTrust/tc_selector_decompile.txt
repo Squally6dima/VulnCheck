@@ -1,0 +1,202 @@
+======================================================================
+[DECOMPILE TC-SELECTORS] program = kcache.raw
+[DECOMPILE TC-SELECTORS] output  = /home/femboychik/femboychik/tc_selector_decompile.txt
+======================================================================
+
+======================================================================
+[FN] fffffff008e86f50 | TC_selector2_real_loader
+======================================================================
+  entry    : 0xfffffff008e86f50
+  name     : FUN_fffffff008e86f50
+  size     : 16 bytes
+  params   : 12
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e86f50
+               (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+               undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+               ulong *param_8,undefined8 param_9,undefined8 param_10,ulong param_11,ulong param_12)
+
+{
+  CT_T6_FUN_fffffff008e86cec
+            (param_1,param_2,param_3,param_4,param_5,param_6,param_7,param_8,(undefined8 *)0x0,
+             (ulong *)0x0,param_11,param_12);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e932d8 | CoreTrust_call_wrapper_0x10
+======================================================================
+  entry    : 0xfffffff008e932d8
+  name     : FUN_fffffff008e932d8
+  size     : 104 bytes
+  params   : 1
+
+--- PSEUDOCODE ---
+
+bool FUN_fffffff008e932d8(long param_1)
+
+{
+  ulong uVar1;
+  uint local_24;
+  
+  local_24 = 0x400;
+  uVar1 = thunk_FUN_fffffff00a3b16a4
+                    (*(undefined4 ***)(param_1 + 0x410),(undefined4 ***)(param_1 + 8),&local_24);
+  if ((int)uVar1 != 0) {
+    thunk_FUN_fffffff00a8c28ac((byte *)"AMFI: vn_getpath() returned %d.\n");
+    *(undefined1 *)(param_1 + 8) = 0;
+  }
+  return (int)uVar1 == 0;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e93270 | CoreTrust_call_wrapper_0x08
+======================================================================
+  entry    : 0xfffffff008e93270
+  name     : FUN_fffffff008e93270
+  size     : 104 bytes
+  params   : 1
+
+--- PSEUDOCODE ---
+
+void FUN_fffffff008e93270(undefined8 *param_1)
+
+{
+  code *pcVar1;
+  ulong unaff_x30;
+  
+  *param_1 = &PTR_FUN_fffffff007e6a1d8;
+  if ((byte *)param_1[0x83] != (byte *)0x0) {
+    thunk_FUN_fffffff00a392474((byte *)param_1[0x83]);
+  }
+  if (((unaff_x30 ^ unaff_x30 << 1) >> 0x3e & 1) != 0) {
+                    /* WARNING: Does not return */
+    pcVar1 = (code *)SoftwareBreakpoint(0xc471,0xfffffff008e932d4);
+    (*pcVar1)();
+  }
+  thunk_FUN_fffffff00a1e5464((long *)&DAT_fffffff007e6b930,param_1);
+  return;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[FN] fffffff008e86cec | TC_selector7_manifest_loader
+======================================================================
+  entry    : 0xfffffff008e86cec
+  name     : CT_T6_FUN_fffffff008e86cec
+  size     : 428 bytes
+  params   : 12
+
+--- PSEUDOCODE ---
+
+/* CoreTrust/AMFI Tier 6 hits:
+     - trust cache (T6 @ fffffff00762fe2e)
+     - trust cache (T6 @ fffffff00762fe7e)
+     - trust cache (T6 @ fffffff00762feb3)
+     - trust cache (T6 @ fffffff00762fef8) */
+
+undefined8
+CT_T6_FUN_fffffff008e86cec
+          (undefined1 param_1 [16],undefined1 param_2 [16],undefined1 param_3 [16],
+          undefined1 param_4 [16],undefined4 param_5,undefined4 param_6,undefined8 *param_7,
+          ulong *param_8,undefined8 *param_9,ulong *param_10,ulong param_11,ulong param_12)
+
+{
+  bool bVar1;
+  byte bVar2;
+  int iVar3;
+  char *pcVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined1 extraout_q0 [16];
+  undefined1 extraout_q0_00 [16];
+  undefined1 auVar7 [16];
+  undefined1 extraout_q0_01 [16];
+  byte local_41;
+  
+  bVar1 = FUN_fffffff008e86e98((ulong)param_7,(ulong)param_8,param_9,param_10,param_11,param_12);
+  if (bVar1) {
+    pcVar4 = "%s: loading duplicate trust cache (success)\n";
+LAB_fffffff008e86d38:
+    thunk_FUN_fffffff00a8c28ac((byte *)pcVar4);
+    uVar5 = 0;
+  }
+  else {
+    uVar5 = 0xe00002d8;
+    auVar7 = extraout_q0;
+    if (((DAT_fffffff007e68c10 & 1) == 0) &&
+       (uVar6 = FUN_fffffff008e837c8((byte *)0x0), auVar7 = extraout_q0_00, (int)uVar6 == 0)) {
+      bVar2 = thunk_FUN_fffffff00a724204();
+      if (bVar2 == 0) {
+LAB_fffffff008e86e14:
+        thunk_FUN_fffffff00a8c28ac((byte *)"%s: loading trust caches disallowed by system state\n");
+        return 0xe00002d8;
+      }
+      local_41 = 0;
+      uVar6 = FUN_fffffff008e837c8(&local_41);
+      auVar7 = extraout_q0_01;
+      if (((local_41 & 1) == 0) && ((int)uVar6 == 0)) goto LAB_fffffff008e86e14;
+    }
+    uVar6 = thunk_FUN_fffffff00a723218
+                      (auVar7,param_2,param_3,param_4,param_5,param_6,param_7,param_8,param_9,
+                       param_10);
+    iVar3 = (int)uVar6;
+    if (iVar3 < 0xb) {
+      if (iVar3 < 5) {
+        if (iVar3 == 0) {
+          return uVar6;
+        }
+        if (iVar3 == 4) {
+          uVar5 = 0xe00002c2;
+        }
+        else {
+LAB_fffffff008e86e60:
+          uVar5 = 0xe00002bc;
+        }
+      }
+      else if (iVar3 == 5) {
+        uVar5 = 0xe00002eb;
+      }
+      else {
+        if (iVar3 != 6) goto LAB_fffffff008e86e60;
+        uVar5 = 0xe00002bd;
+      }
+    }
+    else if (iVar3 < 0x31) {
+      if (iVar3 == 0xb) {
+        pcVar4 = "%s: attempted to load duplicate trust cache -- switching to success\n";
+        goto LAB_fffffff008e86d38;
+      }
+      if (iVar3 != 0x2e) goto LAB_fffffff008e86e60;
+      uVar5 = 0xe00002c7;
+    }
+    else if (iVar3 != 0x31) {
+      if (iVar3 == 0x35) {
+        uVar5 = 0xe00002e2;
+      }
+      else {
+        if (iVar3 != 0x38) goto LAB_fffffff008e86e60;
+        uVar5 = 0xe00002f0;
+      }
+    }
+    thunk_FUN_fffffff00a8c28ac((byte *)"%s: unable to load trust cache: %d\n");
+  }
+  return uVar5;
+}
+
+
+--- /PSEUDOCODE ---
+
+======================================================================
+[DECOMPILE TC-SELECTORS] done. targets=4, not_found=0
+======================================================================

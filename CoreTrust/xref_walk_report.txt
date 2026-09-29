@@ -1,0 +1,53 @@
+======================================================================
+[XREF Walker] program = kcache.raw
+[XREF Walker] output  = /home/femboychik/femboychik/xref_walk_report.txt
+======================================================================
+
+[TARGET] fffffff0070af164  (coretrust interface already set -> init fn)
+  xrefs: 1
+  <- fffffff00a8ad790  [PARAM]  in CT_T1_FUN_fffffff00a8ad754 @ fffffff00a8ad754
+
+[TARGET] fffffff0079258b7  (coreTrustVerifyChain failure -> caller)
+  xrefs: 1
+  <- fffffff009ed710c  [PARAM]  (no function)
+
+[TARGET] fffffff0079258f9  (coreTrustVerifySignature failure -> caller)
+  xrefs: 1
+  <- fffffff009ed7174  [PARAM]  in CT_T1_FUN_fffffff009ed7130 @ fffffff009ed7130
+
+[TARGET] fffffff00763174b  (AMFI Trust Cache Interface -> struct init)
+  xrefs: 1
+  <- fffffff00ae8a128  [DATA]  (no function)
+
+[TARGET] fffffff00762dc2e  (loadTrustCache string -> IOKit handler)
+  xrefs: 9
+  <- fffffff008e8198c  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e819ec  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81a84  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81b14  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81b00  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81a98  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81a34  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81a1c  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+  <- fffffff008e81a04  [DATA]  in CT_T2_FUN_fffffff008e8195c @ fffffff008e8195c
+
+[TARGET] fffffff007633a04  (can-execute-cdhash -> alt exec path)
+  xrefs: 1
+  <- fffffff008e91244  [PARAM]  in CT_T2_FUN_fffffff008e90470 @ fffffff008e90470
+
+[TARGET] fffffff00762ec83  (can-execute-cdhash entitlement string)
+  xrefs: 3
+  <- fffffff007e68310  [DATA]  (no function)
+  <- fffffff008e8afc0  [PARAM]  in CT_T2_FUN_fffffff008e8aea8 @ fffffff008e8aea8
+  <- fffffff008e91184  [PARAM]  in CT_T2_FUN_fffffff008e90470 @ fffffff008e90470
+
+======================================================================
+[XREF Walker] targets=7, with_xrefs=7, not_found=0
+======================================================================
+
+======================================================================
+[XREF Walker] decompile targets
+======================================================================
+
+[DECOMPILE TARGET] fffffff00762dc2e
+  not found: no containing function

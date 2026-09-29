@@ -1,0 +1,145 @@
+======================================================================
+[INDIRECT CALLS] program = kcache.raw
+[INDIRECT CALLS] hub     = fffffff008e90470
+[INDIRECT CALLS] output  = /home/femboychik/femboychik/indirect_calls.txt
+======================================================================
+  function : CT_T2_FUN_fffffff008e90470
+  entry    : 0xfffffff008e90470
+  size     : 7424 bytes
+======================================================================
+
+INDIRECT_CALL @ 0xfffffff008e90750 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov w21,#0x0
+    ldr x16,[x23]
+    mov x17,x23
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x23
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e90778 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov w21,#0x1
+    ldr x16,[x20]
+    mov x17,x20
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x20
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e908cc | blraa x8,x16
+  -> 0xfffffff008e932d8 (COMPUTED_CALL)
+  context (prev 8):
+    cbnz w22,0xfffffff008e908e4
+    ldrb w8,[x20, #0x408]
+    tbnz w8,#0x0,0xfffffff008e908d4
+    ldr x16,[x20]
+    autda x16,x28
+    ldr x8,[x16, #0x10]!
+    mov x0,x20
+    movk x16,#0xc647, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e90d14 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    cbz x22,0xfffffff008e90d18
+    ldr x16,[x22]
+    mov x17,x22
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x22
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e90d54 | blraa x8,x16
+  -> 0xfffffff008e93270 (COMPUTED_CALL)
+  context (prev 8):
+    mov w9,#0xfffff7fe
+    tst w8,w9
+    b.ne 0xfffffff008e91f58
+    ldr x16,[x20]
+    autda x16,x28
+    ldr x8,[x16, #0x8]!
+    mov x0,x20
+    movk x16,#0xdfae, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e90f44 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov x26,x0
+    ldr x16,[x22]
+    mov x17,x22
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x22
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e9101c | blraa x8,x16
+  -> 0xfffffff008e932d8 (COMPUTED_CALL)
+  context (prev 8):
+    str x22,[sp, #0x238]
+    ldrb w8,[x20, #0x408]
+    tbnz w8,#0x0,0xfffffff008e91028
+    ldr x16,[x20]
+    autda x16,x28
+    ldr x8,[x16, #0x10]!
+    mov x0,x20
+    movk x16,#0xc647, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e91280 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov x25,x0
+    ldr x16,[x22]
+    mov x17,x22
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x22
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e91584 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov x23,x22
+    cbz x0,0xfffffff008e91588
+    ldr x16,[x0]
+    mov x17,x0
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    movk x16,#0x3a87, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e919b4 | blraa x8,x16
+  -> 0xfffffff008e932d8 (COMPUTED_CALL)
+  context (prev 8):
+    mov x19,x0
+    ldrb w8,[x20, #0x408]
+    tbnz w8,#0x0,0xfffffff008e919bc
+    ldr x16,[x20]
+    autda x16,x22
+    ldr x8,[x16, #0x10]!
+    mov x0,x20
+    movk x16,#0xc647, LSL #48
+
+INDIRECT_CALL @ 0xfffffff008e91ec0 | blraa x8,x16
+  -> not found: no direct reference in operand
+  context (prev 8):
+    mov x23,x0
+    ldr x16,[x22]
+    mov x17,x22
+    movk x17,#0xcda1, LSL #48
+    autda x16,x17
+    ldr x8,[x16, #0x28]!
+    mov x0,x22
+    movk x16,#0x3a87, LSL #48
+
+======================================================================
+[INDIRECT CALLS] instructions=1856, indirect=11
+======================================================================
