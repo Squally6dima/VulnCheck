@@ -87,7 +87,7 @@ SwiftUI UI
    └── ScanReport / Finding models
 ```
 
-The UI is built with SwiftUI. The minimum deployment target is iOS 16, which matches the use of `NavigationStack` and other iOS 16-era SwiftUI APIs. citeturn719861search2turn719861search1
+The UI is built with SwiftUI. The minimum deployment target is iOS 16, which matches the use of `NavigationStack` and other iOS 16-era SwiftUI APIs.
 
 ## Build
 
