@@ -58,9 +58,7 @@ struct ContentView: View {
                             findingsSection
                         }
                     }
-                    .padding(.horizontal, 16)
-                        .frame(maxWidth: .infinity, minHeight: geometry.size.height, alignment: .top)
-                        .padding(.horizontal, 16)
+                    .frame(maxWidth: .infinity, minHeight: geometry.size.height, alignment: .top)
                         .padding(.top, 8)
                         .padding(.bottom, max(16, geometry.safeAreaInsets.bottom + 8))
                     }
