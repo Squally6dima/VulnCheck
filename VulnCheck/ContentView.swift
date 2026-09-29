@@ -46,6 +46,7 @@ struct ContentView: View {
                             Text("Scanner").tag(0)
                             Text("Exploits").tag(1)
                             Text("Findings").tag(2)
+                            Text("CoreTrust").tag(3)
                         }
                         .pickerStyle(.segmented)
 
@@ -54,6 +55,8 @@ struct ContentView: View {
                             scannerSection
                         case 1:
                             ExploitCatalogView()
+                        case 3:
+                            CoreTrustLabView()
                         default:
                             findingsSection
                         }
